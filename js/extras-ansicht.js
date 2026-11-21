@@ -114,15 +114,17 @@
     var schaubilder = ['grundherrschaft', 'lehnswesen', 'staendeschaubild'].filter(function (n) { return W.abb.liste[n]; });
     if (schaubilder.length) {
       seite.appendChild(h('h2', null, 'Schaubilder'));
-      seite.appendChild(h('div', null, schaubilder.map(function (n) { return h('figure', { class: 'abb' }, W.abb.zeichne(n, { beschriftet: true })); })));
+      seite.appendChild(h('div', { class: 'schaubilder' }, schaubilder.map(function (n) { return h('figure', { class: 'abb' }, W.abb.zeichne(n, { beschriftet: true, pfeile: true })); })));
     }
     seite.appendChild(h('h2', null, 'Zeitleiste'));
-    seite.appendChild(h('ul', null, W.zeitleisteGesamt.ereignisse.map(function (e) { return h('li', null, h('strong', null, e[2] + ': '), e[0]); })));
-    seite.appendChild(h('h2', null, 'Fachbegriffe'));
+    seite.appendChild(h('ul', { class: 'zeitliste' }, W.zeitleisteGesamt.ereignisse.map(function (e) { return h('li', null, h('strong', null, e[2] + ': '), e[0]); })));
     var begriffe = Object.keys(W.lexikon).sort(function (a, b) { return a.localeCompare(b, 'de'); });
-    seite.appendChild(h('div', { class: 'begriffe' }, begriffe.map(function (b) { return h('p', null, h('strong', null, b + ': '), h('span', { html: W.lexikon[b] })); })));
-    seite.appendChild(h('h2', null, 'Arbeitsaufträge'));
-    seite.appendChild(h('div', { class: 'begriffe' }, Object.keys(W.operatoren).map(function (k) { var o = W.operatoren[k]; return h('p', null, h('strong', null, o.wort + ' (' + o.bereich + '): '), o.bedeutet); })));
+    seite.appendChild(h('div', { class: 'nicht-drucken' },
+      h('p', { class: 'hinweis-klein' }, 'Fachbegriffe und Arbeitsaufträge stehen nur hier auf dem Bildschirm. Gedruckt werden Merksätze, Schaubilder und Zeitleiste auf höchstens zwei Seiten.'),
+      h('h2', null, 'Fachbegriffe'),
+      h('div', { class: 'begriffe' }, begriffe.map(function (b) { return h('p', null, h('strong', null, b + ': '), h('span', { html: W.lexikon[b] })); })),
+      h('h2', null, 'Arbeitsaufträge'),
+      h('div', { class: 'begriffe' }, Object.keys(W.operatoren).map(function (k) { var o = W.operatoren[k]; return h('p', null, h('strong', null, o.wort + ' (' + o.bereich + '): '), o.bedeutet); }))));
     host.appendChild(seite);
   }
 

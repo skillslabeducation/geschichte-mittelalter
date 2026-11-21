@@ -276,4 +276,14 @@ test('Richtfest wird nur einmal gefeiert', () => {
   eq(W.state.feiern('pfalz'), false);
 });
 
+test('Hoftag-Läufe behalten Antworten für die letzten fünf Läufe', () => {
+  const W = neu();
+  for (let i = 1; i <= 7; i++) { W.state.pruefungStarten(i, 45); W.state.pruefungBeenden({ punkte: i, max: 40, seed: i, antworten: { a: i } }); }
+  const l = W.state.data.pruefung.laeufe;
+  eq(l.length, 7);
+  eq(l.filter((x) => x.antworten).length, 5);
+  eq(l[6].seed, 7);
+  eq(l[6].antworten, { a: 7 });
+});
+
 fertig('logic');

@@ -49,7 +49,10 @@
       S.data = objekt(d) && d.v === 1 ? zusammen(d) : fresh();
       return S.data;
     },
-    save: function () { W.store.set(KEY, S.data); emit(); },
+    save: function () {
+      if (!W.store.set(KEY, S.data) && !S.warnung && W.toast) { S.warnung = true; W.toast('Dein Fortschritt kann auf diesem Gerät gerade nicht gespeichert werden.'); }
+      emit();
+    },
     reset: function () { S.data = fresh(); W.store.remove(KEY); emit(); },
 
     setName: function (n) { S.data.name = String(n || '').trim().slice(0, 30); S.save(); },
@@ -114,8 +117,12 @@
     pruefungAbgeben: function () { var l = S.data.pruefung.laufend; if (l) { l.abgegeben = true; S.save(); } },
     pruefungBeenden: function (e) {
       var q = e.max ? e.punkte / e.max : 0;
-      S.data.pruefung.laeufe.push({ punkte: e.punkte, max: e.max, datum: new Date().toISOString() });
+      var lauf = { punkte: e.punkte, max: e.max, datum: new Date().toISOString() };
+      if (typeof e.seed === 'number' && e.antworten) { lauf.seed = e.seed; lauf.antworten = e.antworten; }
+      S.data.pruefung.laeufe.push(lauf);
       while (S.data.pruefung.laeufe.length > 20) S.data.pruefung.laeufe.shift();
+      // Antworten nur für die letzten fünf Läufe behalten (Speicherplatz)
+      S.data.pruefung.laeufe.slice(0, -5).forEach(function (x) { delete x.antworten; delete x.seed; });
       S.data.pruefung.best = Math.max(S.data.pruefung.best || 0, q);
       if (q >= 0.8 - 1e-9 && !S.data.pruefung.urkunde) S.data.pruefung.urkunde = W.logic.heuteISO();
       S.data.pruefung.laufend = null;

@@ -58,7 +58,7 @@
 
   function rang() {
     var n = fertigAnzahl();
-    if (W.state.data.pruefung.urkunde) return 'Baumeisterin des Königs';
+    if (W.logic.vollendet(W.state.data, bauplaetze())) return 'Baumeisterin des Königs';
     if (n >= 6) return 'Meisterin';
     if (n >= 3) return 'Gesellin';
     return 'Lehrling';
@@ -69,6 +69,7 @@
   function karte(cls) { var args = Array.prototype.slice.call(arguments, 1); return h.apply(null, ['section', { class: 'karte ' + (cls || '') }].concat(args)); }
   function link(href, text, cls) { return h('a', { href: href, class: cls || '' }, text); }
   function chronist(text) { return h('div', { class: 'chronist' }, h('span', { class: 'chronist__wer' }, 'Der Chronist'), h('span', { html: text })); }
+  function kuerzen(t, n) { if (t.length <= n) return t; var s = t.slice(0, n); var i = s.lastIndexOf(' '); return (i > 40 ? s.slice(0, i) : s) + ' …'; }
   function prozent(x) { return Math.round(100 * x) + ' %'; }
   function datumText(iso) {
     var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || '');
@@ -107,6 +108,8 @@
         h('button', { type: 'button', class: 'lexikon__zu', 'aria-label': 'Schließen', onclick: lexikonZu }, '×')),
       h('p', { html: e.text }));
     document.body.appendChild(box);
+    var zu = box.querySelector('.lexikon__zu');
+    if (zu) zu.focus();
   }
   function dfnAktivieren(root) {
     Array.prototype.forEach.call(root.querySelectorAll('dfn'), function (d) {
@@ -120,21 +123,28 @@
   }
   if (typeof document !== 'undefined' && document.addEventListener) {
     document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') lexikonZu(); });
+    document.addEventListener('click', function (ev) {
+      var t = ev.target;
+      if (!document.querySelector('.lexikon') || !t || !t.closest) return;
+      if (!t.closest('.lexikon') && !t.closest('dfn')) lexikonZu();
+    });
     window.addEventListener('hashchange', lexikonZu);
   }
 
   /* ---------- Richtfest-Wächter ---------- */
 
-  var vorher = {};
+  /** Neu fertige Bauplätze feiern (Toast und Glocke), jeden nur einmal. Läuft nach jeder Änderung des Stands. */
   function richtfestPruefen() {
     bauplaetze().forEach(function (bp) {
-      var f = status(bp).fertig;
-      if (f && vorher[bp.id] === false) {
-        W.toast('Richtfest! ' + bp.titel + ' steht.', 'ok');
-        if (W.ton) W.ton.glocke();
-      }
-      vorher[bp.id] = f;
+      if (W.state.data.gefeiert[bp.id] || !status(bp).fertig) return;
+      if (W.state.feiern(bp.id)) { W.toast('Richtfest! ' + bp.titel + ' steht.', 'ok'); if (W.ton) W.ton.glocke(); }
     });
+  }
+  /** Beim Start: schon fertige Bauplätze still als gefeiert merken (z. B. nach einem Import). */
+  function stillFeiern() {
+    var neu = false;
+    bauplaetze().forEach(function (bp) { if (!W.state.data.gefeiert[bp.id] && status(bp).fertig) { W.state.data.gefeiert[bp.id] = true; neu = true; } });
+    if (neu) W.state.save();
   }
 
   /* ---------- Tal ---------- */
@@ -143,11 +153,14 @@
     var d = W.state.data;
     var liste = statusListe();
     var seite = h('div', { class: 'seite' });
-    var vollendet = !!d.pruefung.urkunde;
+    var vollendet = W.logic.vollendet(d, bauplaetze());
+    seite.appendChild(h('h1', { class: 'sr-only' }, 'Das Tal'));
     seite.appendChild(h('div', { class: 'tal' }, W.tal.zeichne(liste, { vollendet: vollendet })));
     var n = fertigAnzahl();
-    seite.appendChild(chronist(n === 0 ? 'Ein leeres Tal, sieben abgesteckte Bauplätze. Jedes Gebäude steht erst, wenn du sein Thema kannst. Fang bei der Königspfalz an.'
-      : n < 7 ? n + ' von 7 Bauplätzen stehen. ' + (naechster() ? 'Als Nächstes: ' + naechster().titel + '.' : '')
+    var nx = naechster();
+    var angefangen = liste.some(function (s) { return s.stufe > 0; });
+    seite.appendChild(chronist(n === 0 && !angefangen ? 'Ein leeres Tal, sieben abgesteckte Bauplätze. Jedes Gebäude steht erst, wenn du sein Thema kannst. Fang bei der Königspfalz an.'
+      : n < 7 ? (n ? n + ' von 7 Bauplätzen stehen. ' : 'Die ersten Mauern wachsen. ') + (nx ? 'Als Nächstes: ' + nx.titel + ' (' + Math.round(100 * status(nx).p) + ' %).' : '')
         : vollendet ? 'Das Tal ist vollendet. Der König war zufrieden.' : 'Alle sieben Gebäude stehen. Jetzt fehlt nur noch der Hoftag.'));
 
     var t = W.logic.tageBis(W.logic.heuteISO(), d.datum);
@@ -180,7 +193,6 @@
       h('a', { href: '#/schatz', class: 'kachel' }, h('span', { class: 'kachel__titel' }, 'Schatzkammer'), pfennige().stand + ' Pfennige'),
       h('a', { href: '#/wachstafel', class: 'kachel' }, h('span', { class: 'kachel__titel' }, 'Wachstafel'), 'Spickzettel zum Drucken')));
     host.appendChild(seite);
-    liste.forEach(function (s) { vorher[s.id] = s.fertig; });
   }
 
   /* ---------- Bauplatz ---------- */
@@ -201,12 +213,11 @@
     seite.appendChild(h('nav', { class: 'tabs', 'aria-label': 'Bereiche' }, [['verstehen', 'Verstehen'], ['ueben', 'Üben'], ['schreiben', 'Schreiben']].map(function (t) {
       return h('a', { href: '#/bau/' + bp.id + '/' + t[0], class: 'reiter' + (tab === t[0] ? ' reiter--an' : ''), 'aria-current': tab === t[0] ? 'page' : null }, t[1]);
     })));
-    var bereich = h('div');
+    var bereich = h('div', { class: 'bereich' });
     seite.appendChild(bereich);
     var fussnote = h('div');
     seite.appendChild(fussnote);
     host.appendChild(seite);
-    bauplatz.zustand = vorher[bp.id] = status(bp).fertig;
 
     function fuss() {
       fussnote.innerHTML = '';
@@ -253,7 +264,7 @@
           : h('button', { type: 'button', class: 'btn btn--haupt', onclick: function () { i++; zeige(); host.scrollIntoView({ block: 'start' }); } }, 'Weiter →')));
       fuss();
     }
-    if (gesehen != null && gesehen >= bp.karten.length - 1) i = 0;
+    if (gesehen != null && gesehen < bp.karten.length - 1) i = gesehen + 1;
     zeige();
   }
 
@@ -308,7 +319,7 @@
     seite.appendChild(chronist('Ein Riss ist repariert, wenn du die Aufgabe zweimal hintereinander richtig löst. Bei Schreibaufgaben reicht einmal mit mindestens 80 %.'));
     var items = liste.filter(function (x) { return x.item; });
     var erkl = liste.filter(function (x) { return x.erkl; });
-    var bereich = h('div');
+    var bereich = h('div', { class: 'bereich' });
     if (items.length) {
       seite.appendChild(karte('', h('p', null, h('strong', null, items.length + (items.length === 1 ? ' Aufgabe' : ' Aufgaben')), ' mit Rissen: ',
         items.map(function (x) { return x.bp ? x.bp.titel : ''; }).filter(function (v, i, a) { return v && a.indexOf(v) === i; }).join(', ') + '.'),
@@ -324,7 +335,7 @@
         return h('li', null, h('button', { type: 'button', class: 'erkl-zeile', onclick: function () {
           W.schreiben.render(bereich, x.erkl, { ort: x.bp ? x.bp.id : null, onFertig: function () { W.app.zeige(); } });
           bereich.scrollIntoView({ block: 'start' });
-        } }, h('span', { class: 'erkl-zeile__op' }, o ? o.wort : ''), h('span', { class: 'erkl-zeile__frage' }, (x.bp ? x.bp.titel + ': ' : '') + W.aufgaben.ohneTags(x.erkl.frage).slice(0, 120))));
+        } }, h('span', { class: 'erkl-zeile__op' }, o ? o.wort : ''), h('span', { class: 'erkl-zeile__frage' }, (x.bp ? x.bp.titel + ': ' : '') + kuerzen(W.aufgaben.ohneTags(x.erkl.frage), 120))));
       })));
     }
     seite.appendChild(bereich);
@@ -346,7 +357,7 @@
     if (!d.datum) {
       seite.appendChild(h('p', { class: 'hinweis-klein' }, 'Ohne Datum gibt es keinen Plan. Du kannst trotzdem jederzeit im Tal lernen.'));
     } else if (t < 0) {
-      seite.appendChild(karte('', h('p', null, 'Die Arbeit war am ' + datumText(d.datum) + '. Trag ein neues Datum ein, falls noch eine kommt.')));
+      seite.appendChild(karte('', h('p', null, 'Die Arbeit war am ' + datumText(d.datum) + ' Trag ein neues Datum ein, falls noch eine kommt.')));
     } else if (t === 0) {
       seite.appendChild(karte('plan-tag--heute', h('p', { class: 'plan-tag__kopf' }, 'Heute ist die Arbeit. Viel Erfolg!'),
         h('p', null, 'Lies vorher noch einmal die ', link('#/wachstafel', 'Wachstafel'), ' und spiel eine Runde ', link('#/geruechte', 'Markt-Gerüchte'), '.')));
@@ -355,7 +366,7 @@
       bauplaetze().forEach(function (bp) { fertig[bp.id] = status(bp).fertig; });
       var aufgaben = W.logic.planAufgaben(bauplaetze().map(function (b) { return b.id; }), fertig, d.pruefung.urkunde);
       var p = W.logic.lernplan(heute, d.datum, aufgaben);
-      seite.appendChild(h('p', null, 'Noch ' + t + (t === 1 ? ' Tag' : ' Tage') + ' bis zur Arbeit am ' + datumText(d.datum) + '.'));
+      seite.appendChild(h('p', null, 'Noch ' + t + (t === 1 ? ' Tag' : ' Tage') + ' bis zur Arbeit am ' + datumText(d.datum)));
       p.forEach(function (tag, i) {
         seite.appendChild(karte(i === 0 ? 'plan-tag--heute' : '', h('p', { class: 'plan-tag__kopf' }, (i === 0 ? 'Heute, ' : '') + datumText(tag.datum)),
           h('ul', { class: 'plan-ziele' }, tag.aufgaben.map(function (z) { return h('li', null, zielLink(z)); }))));
@@ -378,19 +389,29 @@
     seite.appendChild(karte('', h('label', { class: 'feld' }, h('span', null, 'Dein Vorname fürs Namensschild (bleibt nur auf diesem Gerät)'), name),
       h('label', { class: 'schalter' }, ton, h('span', null, 'Töne (Glocke beim Richtfest)'))));
 
-    var code = h('textarea', { class: 'erkl__text erkl__text--klein', rows: '3', placeholder: 'Hier einen Code einfügen …', 'aria-label': 'Fortschritt-Code' });
+    var raus = h('textarea', { class: 'erkl__text erkl__text--klein', rows: '3', readonly: true, placeholder: 'Hier erscheint dein Code.', 'aria-label': 'Dein Fortschritt-Code' });
+    var code = h('textarea', { class: 'erkl__text erkl__text--klein', rows: '3', placeholder: 'Hier einen Code einfügen …', 'aria-label': 'Fortschritt-Code einfügen' });
+    function kurzStand(x) {
+      var f = bauplaetze().filter(function (bp) { return W.logic.bauplatzStatus(bp, x).fertig; }).length;
+      return f + ' von 7 Bauplätzen fertig, ' + W.logic.pfennige(x, bauplaetze()).stand + ' Pfennige' + (x.name ? ', Name ' + x.name : '');
+    }
     seite.appendChild(karte('', h('h2', null, 'Fortschritt übertragen'),
-      h('p', { class: 'hinweis-klein' }, 'Kopiere den Code und füge ihn auf dem anderen Gerät hier ein, zum Beispiel vom Handy aufs iPad.'),
-      code,
+      h('p', { class: 'hinweis-klein' }, 'Kopiere den Code und füge ihn auf dem anderen Gerät hier ein, zum Beispiel vom Handy aufs iPad. Sichere ihn auch ab und zu, zum Beispiel in einer Nachricht an dich selbst.'),
+      raus, code,
       h('div', { class: 'aktionen aktionen--zwei' },
         h('button', { type: 'button', class: 'btn', onclick: function () {
-          code.value = W.state.exportCode();
-          code.select();
-          try { if (navigator.clipboard) navigator.clipboard.writeText(code.value); } catch (e) { /* egal */ }
-          W.toast('Code erzeugt und markiert');
+          raus.value = W.state.exportCode();
+          var markieren = function () { raus.select(); W.toast('Code erzeugt. Bitte kopieren.'); };
+          try {
+            if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(raus.value).then(function () { W.toast('Code in die Zwischenablage kopiert', 'ok'); }, markieren);
+            else markieren();
+          } catch (e) { markieren(); }
         } }, 'Code erzeugen'),
         h('button', { type: 'button', class: 'btn btn--haupt', onclick: function () {
-          if (W.state.importCode(code.value)) { W.toast('Fortschritt übernommen', 'ok'); W.app.zeige(); } else W.toast('Das ist kein gültiger Code dieser Seite.');
+          var neu = W.state.codeLesen(code.value);
+          if (!neu) { W.toast('Das ist kein gültiger Code dieser Seite.'); return; }
+          if (!window.confirm('Jetzt auf diesem Gerät: ' + kurzStand(W.state.data) + '.\nIm Code: ' + kurzStand(neu) + '.\n\nDer Stand auf diesem Gerät wird ersetzt. Fortfahren?')) return;
+          if (W.state.importCode(code.value)) { W.toast('Fortschritt übernommen', 'ok'); W.app.zeige(); }
         } }, 'Code übernehmen'))));
 
     seite.appendChild(karte('', h('h2', null, 'Neu anfangen'),
@@ -411,6 +432,7 @@
         h('h1', null, 'Stein auf Stein'),
         h('p', null, 'Vor dir liegt ein leeres Tal im Mittelalter. Sieben Bauplätze sind abgesteckt: eine Königspfalz, ein Fronhof, Straßen mit Bannern, eine Dorfkirche, ein Dorf mit Feldern, eine Burg und ein Kloster.'),
         h('p', null, 'Du bist die Baumeisterin. Jedes Gebäude steht erst, wenn du sein Thema für die Geschichtsarbeit kannst. Am Ende kommt der König zum Hoftag und prüft dich.'),
+        h('p', { class: 'hinweis-klein' }, 'Tipp für iPhone und iPad: Leg die Seite zuerst über „Teilen → Zum Home-Bildschirm“ ab und lerne dann nur dort. Safari und der Home-Bildschirm speichern getrennt.'),
         h('label', { class: 'feld' }, h('span', null, 'Wie heißt du? Der Name bleibt nur auf diesem Gerät.'), inp),
         h('div', { class: 'aktionen' }, h('button', { type: 'button', class: 'btn btn--haupt', onclick: function () {
           W.state.setName(inp.value);
@@ -425,7 +447,7 @@
   W.ansichten = {
     bauplaetze: bauplaetze, bpNachId: bpNachId, status: status, statusListe: statusListe, pfennige: pfennige, rang: rang,
     itemNachId: itemNachId, erklNachId: erklNachId, schadenAnzahl: schadenAnzahl, geruechtItem: geruechtItem,
-    karte: karte, chronist: chronist, link: link, datumText: datumText, dfnAktivieren: dfnAktivieren, richtfestPruefen: richtfestPruefen,
+    karte: karte, chronist: chronist, link: link, datumText: datumText, dfnAktivieren: dfnAktivieren, richtfestPruefen: richtfestPruefen, stillFeiern: stillFeiern,
     tal: tal, bauplatz: bauplatz, schaeden: schaedenSeite, plan: plan, einstellungen: einstellungen, begruessung: begruessung
   };
 })();

@@ -204,6 +204,13 @@
     return sel;
   }
 
+  /** Richtig/falsch nicht nur über die Farbe zeigen: Zeichen hinter dem Feld. */
+  function marke(el, ok) {
+    el.classList.add(ok ? 'richtig' : 'falsch');
+    var m = h('span', { class: 'markierung markierung--' + (ok ? 'ok' : 'falsch'), role: 'img', 'aria-label': ok ? 'richtig' : 'falsch' }, ok ? '✓' : '✗');
+    if (el.parentNode) el.parentNode.insertBefore(m, el.nextSibling);
+  }
+
   var R = {};
 
   R.wahl = function (item, ctx, mehr) {
@@ -265,7 +272,7 @@
     return {
       el: el, antwort: function () { return werte.slice(); },
       setze: function (w) { sels.forEach(function (s, i) { if (w[i] != null) { s.sel.value = w[i]; werte[i] = w[i]; } }); },
-      zeige: function () { sels.forEach(function (s, i) { s.sel.disabled = true; s.sel.classList.add(werte[i] === s.soll ? 'richtig' : 'falsch'); }); }
+      zeige: function () { sels.forEach(function (s, i) { s.sel.disabled = true; marke(s.sel, werte[i] === s.soll); }); }
     };
   };
 
@@ -278,7 +285,7 @@
     return {
       el: inp, antwort: function () { return inp.value; },
       setze: function (w) { inp.value = w || ''; },
-      zeige: function () { inp.disabled = true; inp.classList.add(W.text.passt(inp.value, item.akzeptiert, item.nicht) ? 'richtig' : 'falsch'); }
+      zeige: function () { inp.disabled = true; marke(inp, W.text.passt(inp.value, item.akzeptiert, item.nicht)); }
     };
   };
 
@@ -291,7 +298,7 @@
       setze: function (w) { felder.forEach(function (f, i) { f.value = (w && w[i]) || ''; }); },
       zeige: function () {
         var z = W.text.liste(felder.map(function (f) { return f.value; }), item.gruppen, item.anzahl).zuordnung;
-        felder.forEach(function (f, i) { f.disabled = true; f.classList.add(z[i] >= 0 ? 'richtig' : 'falsch'); });
+        felder.forEach(function (f, i) { f.disabled = true; marke(f, z[i] >= 0); });
       }
     };
   };
@@ -308,7 +315,7 @@
     return {
       el: el, antwort: function () { return werte.slice(); },
       setze: function (w) { sels.forEach(function (s, i) { if (w[i] != null) { s.value = String(w[i]); werte[i] = w[i]; } }); },
-      zeige: function () { sels.forEach(function (s, i) { s.disabled = true; s.classList.add(werte[i] === i ? 'richtig' : 'falsch'); }); }
+      zeige: function () { sels.forEach(function (s, i) { s.disabled = true; marke(s, werte[i] === i); }); }
     };
   };
 
@@ -328,7 +335,7 @@
         } })));
       });
       rest.filter(function (i) { return gewaehlt.indexOf(i) < 0; }).forEach(function (i) {
-        pool.appendChild(h('button', { type: 'button', class: 'chip', html: item.schritte[i], onclick: function () { gewaehlt.push(i); zeichnen(); } }));
+        pool.appendChild(h('button', { type: 'button', class: 'chip', html: item.schritte[i], disabled: reihe.classList.contains('fertig'), onclick: function () { if (reihe.classList.contains('fertig')) return; gewaehlt.push(i); zeichnen(); } }));
       });
     }
     zeichnen();
@@ -338,6 +345,7 @@
       setze: function (w) { gewaehlt = (w || []).filter(function (i) { return start.indexOf(i) < 0; }); zeichnen(); },
       zeige: function () {
         reihe.classList.add('fertig');
+        Array.prototype.forEach.call(pool.querySelectorAll('button'), function (b) { b.disabled = true; });
         Array.prototype.forEach.call(reihe.querySelectorAll('button'), function (b, pos) {
           b.disabled = true;
           b.classList.add(start.concat(gewaehlt)[pos] === pos ? 'richtig' : 'falsch');
@@ -371,7 +379,7 @@
       nummern: nummern,
       antwort: function () { return Object.assign({}, werte); },
       setze: function (w) { Object.keys(w || {}).forEach(function (id) { if (sels[id] && w[id] != null) { sels[id].value = w[id]; werte[id] = w[id]; } }); },
-      zeige: function () { Object.keys(sels).forEach(function (id) { sels[id].disabled = true; sels[id].classList.add(werte[id] === id ? 'richtig' : 'falsch'); }); }
+      zeige: function () { Object.keys(sels).forEach(function (id) { sels[id].disabled = true; marke(sels[id], werte[id] === id); }); }
     };
   };
 
@@ -392,7 +400,7 @@
       el: h('div', { class: 'tab-wrap' }, tab),
       antwort: function () { return werte.map(function (z) { return z.slice(); }); },
       setze: function (w) { sels.forEach(function (s) { var v = w && w[s.zi] ? w[s.zi][s.ci] : null; if (v != null) { s.sel.value = String(v); werte[s.zi][s.ci] = v; } }); },
-      zeige: function () { sels.forEach(function (s) { s.sel.disabled = true; s.sel.classList.add(werte[s.zi][s.ci] === s.soll ? 'richtig' : 'falsch'); }); }
+      zeige: function () { sels.forEach(function (s) { s.sel.disabled = true; marke(s.sel, werte[s.zi][s.ci] === s.soll); }); }
     };
   };
 
@@ -480,7 +488,8 @@
     var pool = h('div', { class: 'zeitleiste__pool' });
     var leiste = h('ol', { class: 'zeitleiste' });
     var reihenfolge = W.shuffle(item.ereignisse.map(function (x, i) { return i; }));
-    var hinweis = h('p', { class: 'hinweis-klein' }, 'Tippe ein Ereignis an und dann den Abschnitt, in den es gehört. Antippen in der Zeitleiste nimmt es wieder heraus.');
+    var hinweis = h('p', { class: 'hinweis-klein' }, 'Tippe ein Ereignis an und wähle dann den Zeitabschnitt. Antippen in der Zeitleiste nimmt es wieder heraus.');
+    var wahl = h('div', { class: 'zeitleiste__wahl', 'aria-live': 'polite' });
     function chip(i) {
       var x = item.ereignisse[i];
       var cls = 'chip chip--ereignis' + (aktiv === i ? ' gewaehlt' : '');
@@ -493,6 +502,13 @@
     function zeichne() {
       pool.innerHTML = '';
       leiste.innerHTML = '';
+      wahl.innerHTML = '';
+      if (aktiv != null && !fertigGezeigt) {
+        wahl.appendChild(h('p', { class: 'zeitleiste__wahlfrage' }, 'Wohin gehört das?'));
+        wahl.appendChild(h('div', { class: 'sortieren__wahl' }, item.abschnitte.map(function (ab, ai) {
+          return h('button', { type: 'button', class: 'chip chip--wahl', onclick: function () { werte[aktiv] = ai; aktiv = null; zeichne(); } }, ab);
+        })));
+      }
       reihenfolge.filter(function (i) { return werte[i] == null; }).forEach(function (i) { pool.appendChild(chip(i)); });
       if (!pool.childNodes.length && !fertigGezeigt) pool.appendChild(h('p', { class: 'hinweis-klein' }, 'Alle Ereignisse sind eingeordnet.'));
       item.abschnitte.forEach(function (ab, ai) {
@@ -507,7 +523,7 @@
     }
     zeichne();
     return {
-      el: h('div', { class: 'zeitleiste-aufgabe' }, hinweis, pool, leiste),
+      el: h('div', { class: 'zeitleiste-aufgabe' }, hinweis, pool, wahl, leiste),
       antwort: function () { return werte.slice(); },
       setze: function (w) { (w || []).forEach(function (v, i) { if (i < werte.length) werte[i] = v == null ? null : v; }); zeichne(); },
       zeige: function () { fertigGezeigt = true; aktiv = null; hinweis.textContent = 'In Klammern stehen die Jahre.'; zeichne(); }
@@ -520,7 +536,7 @@
       el: h('label', { class: 'zahl' }, inp, item.einheit ? h('span', null, item.einheit) : null),
       antwort: function () { return inp.value; },
       setze: function (w) { inp.value = w || ''; },
-      zeige: function () { inp.disabled = true; inp.classList.add(zahlPasst(item, inp.value) ? 'richtig' : 'falsch'); }
+      zeige: function () { inp.disabled = true; marke(inp, zahlPasst(item, inp.value)); }
     };
   };
 
@@ -593,11 +609,17 @@
       var r = render(item);
       var fb = h('div', { class: 'feedback', 'aria-live': 'polite' });
       var weiter = h('button', { type: 'button', class: 'btn btn--haupt' }, 'Prüfen');
-      var geprueft = false;
+      var geprueft = false, gewarnt = false;
+      r.el.addEventListener('keydown', function (ev) {
+        if (ev.key === 'Enter' && ev.target && ev.target.tagName === 'INPUT') { ev.preventDefault(); weiter.click(); }
+      });
       weiter.addEventListener('click', function () {
         if (!geprueft) {
           var a = r.antwort();
+          if (item.typ === 'behauptung' && a && a.stimmt != null && a.grund == null) { W.toast('Wähle noch eine Begründung.'); return; }
           if (leer(item, a)) { W.toast('Erst antworten, dann prüfen.'); return; }
+          var offen = offeneFelder(item, a);
+          if (offen && !gewarnt) { gewarnt = true; W.toast(offen === 1 ? 'Ein Feld ist noch leer. Nochmal tippen, um trotzdem zu prüfen.' : offen + ' Felder sind noch leer. Nochmal tippen, um trotzdem zu prüfen.'); return; }
           geprueft = true;
           var sc = score(item, a);
           var ok = sc >= 1 - 1e-9;
@@ -609,6 +631,7 @@
           if (!ok) fb.appendChild(h('p', null, h('strong', null, 'Richtig wäre: '), loesungText(item, r.nummern)));
           if (item.erkl) fb.appendChild(h('p', { html: item.erkl }));
           if (beh.behoben) W.toast('Riss repariert', 'ok');
+          else if (ok && opts.melden !== false && W.state.data.schaeden[item.id] != null) fb.appendChild(h('p', { class: 'hinweis-klein' }, 'Noch einmal richtig, dann ist der Riss repariert.'));
           if (W.ton && ok) W.ton.richtig();
           weiter.textContent = i + 1 < folge.length ? 'Weiter' : 'Auswertung';
           weiter.scrollIntoView({ block: 'nearest', behavior: W.reducedMotion() ? 'auto' : 'smooth' });

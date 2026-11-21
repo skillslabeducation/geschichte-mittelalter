@@ -4,7 +4,7 @@
   var W = (window.W = window.W || {});
   var h = function () { return W.h.apply(null, arguments); };
 
-  var NAV = [['#/', 'Tal', 'tal'], ['#/schaeden', 'Bauschäden', 'schaeden'], ['#/hoftag', 'Hoftag', 'hoftag'], ['#/plan', 'Plan', 'plan']];
+  var NAV = [['#/', 'Tal', 'tal'], ['#/schaeden', 'Schäden', 'schaeden'], ['#/hoftag', 'Hoftag', 'hoftag'], ['#/plan', 'Plan', 'plan']];
 
   function turm() {
     return W.frag('<svg class="marke__bild" viewBox="0 0 32 32" aria-hidden="true"><rect x="9" y="9" width="14" height="20" fill="#b9ad97" stroke="#2b2118" stroke-width="1.5"/>' +
@@ -35,7 +35,7 @@
     el.innerHTML = '';
     NAV.forEach(function (x) {
       el.appendChild(h('a', { href: x[0], class: 'nav__punkt' + (aktiv === x[2] ? ' nav__punkt--an' : ''), 'aria-current': aktiv === x[2] ? 'page' : null },
-        h('span', null, x[1]), x[2] === 'schaeden' && n ? h('span', { class: 'nav__zahl', 'aria-label': n + ' Risse' }, String(n)) : null));
+        h('span', null, x[1]), x[2] === 'schaeden' && n ? h('span', { class: 'nav__zahl' }, h('span', { 'aria-hidden': 'true' }, String(n)), h('span', { class: 'sr-only' }, n === 1 ? ' 1 Riss' : ' ' + n + ' Risse')) : null));
     });
   }
 
@@ -75,10 +75,12 @@
 
   function start() {
     W.state.load();
+    W.ansichten.stillFeiern();
     window.addEventListener('hashchange', zeige);
     // Kopf und Navigation nur neu bauen, wenn sich Name, Pfennige, Rang oder Risse ändern.
     var signatur = '';
     W.state.on(function () {
+      W.ansichten.richtfestPruefen();
       var s = [W.state.data.name, W.ansichten.pfennige().stand, W.ansichten.rang(), W.ansichten.schadenAnzahl()].join('|');
       if (s === signatur) return;
       signatur = s;

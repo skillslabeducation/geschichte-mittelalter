@@ -170,13 +170,13 @@
   var ZIELE = {
     pfalz: { x: 92, y: 60, w: 92, h: 62, rx: 182, ry: 76 },
     fronhof: { x: 118, y: 170, w: 96, h: 46, rx: 196, ry: 182 },
-    lehen: { x: 182, y: 94, w: 52, h: 40, rx: 0, ry: 0 },
+    lehen: { x: 186, y: 62, w: 84, h: 46, rx: 0, ry: 0 },
     kirche: { x: 214, y: 112, w: 50, h: 70, rx: 264, ry: 132 },
     dorf: { x: 240, y: 186, w: 156, h: 70, rx: 392, ry: 196 },
     burg: { x: 272, y: 30, w: 80, h: 72, rx: 350, ry: 44 },
     kloster: { x: 16, y: 120, w: 102, h: 64, rx: 114, ry: 150 }
   };
-  var NAMEN = { pfalz: [138, 124], fronhof: [157, 221], lehen: [208, 120], kirche: [239, 186], dorf: [318, 228], burg: [312, 106], kloster: [66, 188] };
+  var NAMEN = { pfalz: [138, 124], fronhof: [157, 221], lehen: [228, 88], kirche: [239, 186], dorf: [318, 228], burg: [312, 106], kloster: [66, 188] };
 
   /** statusListe: [{id, nr, titel, stufe, risse}]. opts: { vollendet } → SVG-Element */
   function zeichne(statusListe, opts) {
@@ -203,7 +203,7 @@
       svg += '<a href="#/bau/' + id + '" class="tal-bau" aria-label="' + W.esc(label) + '">' +
         '<rect class="tal-fokus" x="' + z.x + '" y="' + z.y + '" width="' + z.w + '" height="' + z.h + '" rx="8" fill="transparent"/>' +
         '<text class="tal-name" x="' + n[0] + '" y="' + n[1] + '" text-anchor="middle">' + W.esc(s.titel) + '</text>' +
-        (id === 'lehen' ? riss(n[0] + 58, n[1] - 4, s.risse, F) : riss(z.rx, z.ry, s.risse, F)) + '</a>';
+        (id === 'lehen' ? riss(n[0], n[1] - 18, s.risse, F) : riss(z.rx, z.ry, s.risse, F)) + '</a>';
     });
     return W.frag(svg + '</svg>');
   }

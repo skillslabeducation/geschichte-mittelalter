@@ -36,6 +36,9 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.2; }
 h1 { font-size: 1.6rem; margin: 8px 0 10px; }
 h2 { font-size: 1.25rem; margin: 6px 0 10px; }
 .mono { font-variant-numeric: tabular-nums; }
+.sr-only { position: absolute; left: 0; top: 0; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.bereich { scroll-margin-top: calc(env(safe-area-inset-top) + 130px); }
+@media (pointer: coarse) { body:has(input:focus, textarea:focus) .nav { display: none; } }
 .hinweis-klein { font-size: .9rem; color: var(--grau); margin: 6px 0; }
 .zwischen { margin: 22px 0 8px; font-family: var(--serif); font-size: 1.05rem; color: var(--zinnober); }
 .zwischen::after { content: ""; display: block; height: 2px; margin-top: 4px; background: linear-gradient(90deg, var(--gold), transparent); }
@@ -114,8 +117,8 @@ h2 { font-size: 1.25rem; margin: 6px 0 10px; }
 .tal-bau { cursor: pointer; }
 .tal-bau:focus-visible { outline: none; }
 .tal-bau:focus-visible .tal-fokus { stroke: var(--lapis); stroke-width: 3; }
-.tal-fokus { fill: none; stroke: transparent; }
-.tal-name { font: 700 11px var(--sans); fill: var(--tinte); paint-order: stroke; stroke: rgba(251, 246, 234, .9); stroke-width: 3px; stroke-linejoin: round; }
+.tal-fokus { fill: transparent; stroke: transparent; pointer-events: all; }
+.tal-name { font: 700 12px var(--sans); fill: var(--tinte); paint-order: stroke; stroke: rgba(251, 246, 234, .9); stroke-width: 3px; stroke-linejoin: round; }
 .tal-riss text { font: 700 11px var(--sans); fill: #fff; }
 .tal-rauch { animation: rauch 4s ease-in-out infinite; transform-origin: center; }
 @keyframes rauch { 0%, 100% { opacity: .5; transform: translateY(0); } 50% { opacity: .85; transform: translateY(-3px); } }
@@ -168,7 +171,7 @@ h2 { font-size: 1.25rem; margin: 6px 0 10px; }
 .achtung { margin: 14px 0; padding: 10px 14px; border-left: 4px solid var(--zinnober); background: var(--zinnober-hell); border-radius: 0 10px 10px 0; }
 .achtung strong:first-child { display: block; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--zinnober); margin-bottom: 4px; }
 dfn { font-style: normal; font-weight: 700; border-bottom: 2px dotted var(--lapis); cursor: help; }
-.lexikon { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(var(--nav-h) + env(safe-area-inset-bottom) + 12px); z-index: 40; width: min(92vw, 520px); background: var(--papier); border: 2px solid var(--lapis); border-radius: 14px; padding: 12px 14px; box-shadow: 0 10px 30px rgba(43, 33, 24, .25); }
+.lexikon { position: fixed; left: 50%; transform: translateX(-50%); top: calc(env(safe-area-inset-top) + 72px); z-index: 40; width: min(92vw, 520px); background: var(--papier); border: 2px solid var(--lapis); border-radius: 14px; padding: 12px 14px; box-shadow: 0 10px 30px rgba(43, 33, 24, .25); }
 .lexikon__kopf { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
 .lexikon__begriff { font-family: var(--serif); font-size: 1.15rem; margin: 0; color: var(--lapis); }
 .lexikon__zu { min-width: 44px; min-height: 44px; border: 0; background: none; font-size: 1.4rem; cursor: pointer; color: var(--grau); }
@@ -214,7 +217,7 @@ dfn { font-style: normal; font-weight: 700; border-bottom: 2px dotted var(--lapi
 .urteil { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
 .aussage { margin: 0 0 12px; padding: 10px 14px; border-left: 4px solid var(--linie2); background: #fffdf6; border-radius: 0 10px 10px 0; font-style: italic; }
 select.auswahl, .eingabe {
-  min-height: 46px; padding: 8px 12px; border-radius: 10px; border: 1px solid var(--linie2);
+  min-height: 46px; padding: 8px 12px; border-radius: 10px; border: 1px solid #8f7b55;
   background: #fffdf6; color: var(--tinte); font-size: 17px; max-width: 100%;
 }
 select.auswahl { -webkit-appearance: none; appearance: none; padding-right: 30px; background-image: linear-gradient(45deg, transparent 50%, var(--grau) 50%), linear-gradient(135deg, var(--grau) 50%, transparent 50%); background-position: calc(100% - 16px) 50%, calc(100% - 11px) 50%; background-size: 5px 5px; background-repeat: no-repeat; }
@@ -224,13 +227,19 @@ select.richtig, .eingabe.richtig { border-color: var(--gruen); box-shadow: 0 0 0
 select.falsch, .eingabe.falsch { border-color: var(--zinnober); box-shadow: 0 0 0 2px var(--zinnober) inset; }
 select:disabled, .eingabe:disabled { opacity: 1; color: var(--tinte); }
 .luecke { line-height: 2.6; font-size: 1.04rem; }
-.luecke select.auswahl { margin: 0 4px; min-height: 40px; padding-top: 4px; padding-bottom: 4px; max-width: 100%; }
+.luecke select.auswahl { margin: 0 4px; min-height: 44px; padding-top: 4px; padding-bottom: 4px; max-width: 100%; }
 .liste { display: grid; gap: 8px; }
 .zuordnen, .beschriften { display: grid; gap: 8px; }
-.zuordnen__zeile, .beschriften__zeile { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 10px; align-items: center; }
+.zuordnen__zeile, .beschriften__zeile { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr) auto; gap: 10px; align-items: center; }
+.zuordnen { grid-template-columns: minmax(0, 1fr); }
+.zuordnen > *, .zuordnen__zeile > *, .beschriften__zeile > * { min-width: 0; }
+select.auswahl { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.markierung { display: inline-block; min-width: 1.2em; font-weight: 700; text-align: center; }
+.markierung--ok { color: var(--gruen); }
+.markierung--falsch { color: var(--zinnober); }
 .zuordnen__zeile select.auswahl, .beschriften__zeile select.auswahl { width: 100%; }
 .beschriften { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
-.beschriften__zeile { grid-template-columns: 34px minmax(0, 1fr); }
+.beschriften__zeile { grid-template-columns: 34px minmax(0, 1fr) auto; }
 .beschriften__zeile .nr { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: var(--tinte); color: var(--papier); font-weight: 700; }
 .reihe { list-style: none; counter-reset: r; margin: 8px 0; display: grid; gap: 6px; min-height: 52px; border: 1px dashed var(--linie2); border-radius: 12px; padding: 8px; }
 .reihe li { counter-increment: r; display: flex; align-items: center; gap: 8px; min-width: 0; }
@@ -256,12 +265,16 @@ table.tab th.ecke { font-size: .76rem; color: var(--grau); font-weight: 400; }
 .sortieren__zeile { padding: 8px 10px; border: 1px solid var(--linie); border-radius: 10px; background: #fffdf6; }
 .sortieren__text { margin: 0 0 6px; }
 .sortieren__wahl { display: flex; flex-wrap: wrap; gap: 6px; }
-.chip--wahl { padding: 6px 12px; min-height: 40px; font-size: .95rem; }
+.chip--wahl { padding: 6px 12px; min-height: 44px; font-size: .95rem; }
+.sortieren__wahl .chip--wahl { flex: 1 1 0; min-width: max-content; text-align: center; }
+.zeitleiste__wahl { margin: 0 0 12px; padding: 8px 10px; border: 2px solid var(--lapis); border-radius: 10px; background: var(--lapis-hell); }
+.zeitleiste__wahl:empty { display: none; }
+.zeitleiste__wahlfrage { margin: 0 0 6px; font-weight: 700; color: var(--lapis); }
 .zeitleiste-aufgabe .zeitleiste__pool { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 12px; min-height: 44px; }
 .zeitleiste { list-style: none; margin: 0; padding: 0 0 0 14px; border-left: 4px solid var(--gold); display: grid; gap: 8px; }
 .zeitleiste__abschnitt { position: relative; display: grid; gap: 6px; }
 .zeitleiste__abschnitt::before { content: ""; position: absolute; left: -23px; top: 14px; width: 14px; height: 14px; border-radius: 50%; background: var(--papier); border: 3px solid var(--gold); }
-.zeitleiste__marke { justify-self: start; min-height: 40px; padding: 6px 12px; border-radius: 8px; border: 1px dashed var(--gold); background: var(--gold-hell); font-weight: 700; color: var(--gold-text); cursor: pointer; }
+.zeitleiste__marke { justify-self: start; min-height: 44px; padding: 6px 12px; border-radius: 8px; border: 1px dashed var(--gold); background: var(--gold-hell); font-weight: 700; color: var(--gold-text); cursor: pointer; }
 .zeitleiste__marke:not(:disabled):hover { background: var(--gold); color: #fff; }
 .zeitleiste__marke:disabled { cursor: default; border-style: solid; }
 .zeitleiste__inhalt { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -311,7 +324,7 @@ table.tab th.ecke { font-size: .76rem; color: var(--grau); font-weight: 400; }
 .plan-tag--heute { border-color: var(--zinnober); box-shadow: 0 0 0 1px var(--zinnober) inset; }
 .plan-tag__kopf { display: flex; gap: 10px; align-items: center; margin: 0; font-family: var(--serif); color: var(--zinnober); }
 .plan-ziele { margin: 6px 0 0; padding-left: 0; list-style: none; display: grid; gap: 4px; }
-.plan-ziele a { display: inline-flex; min-height: 40px; align-items: center; color: var(--tinte); }
+.plan-ziele a { display: inline-flex; min-height: 44px; align-items: center; color: var(--tinte); }
 .feld { display: grid; gap: 6px; margin: 8px 0; }
 .feld span { font-size: .92rem; color: var(--grau); }
 .schalter { display: flex; gap: 12px; align-items: center; min-height: 44px; }
@@ -332,7 +345,8 @@ table.tab th.ecke { font-size: .76rem; color: var(--grau); font-weight: 400; }
 .pruef-uhr--knapp { color: var(--zinnober); }
 .pruef-teil { margin: 22px 0 6px; }
 .pruef-aufgabe { margin: 14px 0 22px; }
-.pruef-aufgabe__kopf { display: flex; justify-content: space-between; gap: 8px; font-weight: 700; color: var(--grau); font-size: .92rem; }
+.pruef-aufgabe__kopf { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 8px; font-weight: 700; color: var(--grau); font-size: .92rem; }
+.pruef-aufgabe__kopf > span { min-width: 0; overflow-wrap: anywhere; }
 .pruef-wahl { width: 100%; text-align: left; display: block; padding: 14px 16px; border-radius: var(--r); border: 1px solid var(--linie); background: var(--papier); cursor: pointer; }
 .auswertung { text-align: center; }
 .note { font-family: var(--serif); font-size: 3rem; color: var(--zinnober); margin: 0; }
@@ -373,8 +387,15 @@ table.tab th.ecke { font-size: .76rem; color: var(--grau); font-weight: 400; }
   .karte, .wissen, .urkunde { box-shadow: none; }
   .wachstafel h1 { font-size: 16pt; margin: 0 0 4pt; }
   .wachstafel h2 { font-size: 12pt; margin: 8pt 0 2pt; }
-  .wachstafel .abb { padding: 2mm; max-width: 85mm; display: inline-block; vertical-align: top; margin: 2mm; }
-  .wachstafel .abb-svg { max-height: 60mm; }
+  body.druck-urkunde .seite > :not(.urkunde) { display: none !important; }
+  .urkunde { break-inside: avoid; margin: 20mm auto 0; max-width: 160mm; }
+  .wachstafel { font-size: 8.5pt; line-height: 1.3; }
+  .wachstafel ul { columns: 2; column-gap: 8mm; margin: 0; }
+  .wachstafel li { break-inside: avoid; }
+  .wachstafel .schaubilder { display: flex; gap: 3mm; break-inside: avoid; }
+  .wachstafel .abb { padding: 1mm; margin: 0; flex: 1 1 0; }
+  .wachstafel .abb-svg { max-height: 55mm; }
+  .wachstafel .zeitliste { columns: 2; }
   .abb-label { stroke: #fff; }
 }
 

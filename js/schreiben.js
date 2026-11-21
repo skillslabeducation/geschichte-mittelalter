@@ -116,7 +116,7 @@
       var gut = prozent >= W.logic.ERKL_OK - 1e-9;
       host.appendChild(h('div', { class: 'erkl erkl--ende' },
         h('p', { class: 'ergebnis mono' }, zahl(s) + ' / ' + zahl(max)),
-        h('p', null, gut ? (prozent >= 0.99 ? 'Vollständig. So sieht eine Antwort für volle Punkte aus.' : 'Das reicht für den Bauplatz. Für volle Punkte schau dir an, was gefehlt hat.')
+        h('p', null, gut && W.state.data.schaeden['e:' + a.id] != null ? 'Für die Reparatur des Risses brauchst du mindestens 80 %. Lies die Musterantwort und versuch es noch einmal.' : gut ? (prozent >= 0.99 ? 'Vollständig. So sieht eine Antwort für volle Punkte aus.' : 'Das reicht für den Bauplatz. Für volle Punkte schau dir an, was gefehlt hat.')
           : 'Noch zu dünn. Die Aufgabe ist jetzt als Riss im Tal markiert. Lies die Musterantwort und schreib sie später noch einmal mit eigenen Worten.'),
         h('div', { class: 'aktionen aktionen--zwei' },
           h('button', { type: 'button', class: 'btn', onclick: start }, 'Nochmal schreiben'),

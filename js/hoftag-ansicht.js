@@ -23,16 +23,31 @@
       '<path d="M47 62 v-6 a3 3 0 0 1 6 0 v6 z" fill="#a3261a"/></svg>');
   }
 
+  var MONATE = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+  function datumLang(iso) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso || '');
+    return m ? (+m[3]) + '. ' + MONATE[+m[2] - 1] + ' ' + m[1] : '';
+  }
+  function vollendet() { return W.logic.vollendet(W.state.data, W.ansichten.bauplaetze()); }
+
   function urkunde(datum, punkte, max) {
     var name = W.state.data.name || 'Die Baumeisterin';
+    var ganz = vollendet();
     return h('div', { class: 'urkunde' },
       h('h2', null, 'Urkunde'),
       h('p', { class: 'urkunde__text' }, 'Wir, der König, tun kund, dass'),
       h('span', { class: 'urkunde__name' }, name),
-      h('p', { class: 'urkunde__text' }, 'das Tal Stein auf Stein erbaut und den Hoftag bestanden hat' + (punkte != null ? ' mit ' + pText(punkte) + ' von ' + max + ' Punkten' : '') + '.'),
-      h('p', { class: 'urkunde__text' }, 'Hiermit ernennen wir sie zur Baumeisterin des Königs.'),
-      h('p', { class: 'hinweis-klein' }, 'Gegeben am ' + W.ansichten.datumText(datum) + ' ' + String(datum).slice(0, 4)),
+      h('p', { class: 'urkunde__text' }, (ganz ? 'das Tal Stein auf Stein erbaut und ' : '') + 'den Hoftag bestanden hat' + (punkte != null ? ' mit ' + pText(punkte) + ' von ' + max + ' Punkten' : '') + '.'),
+      h('p', { class: 'urkunde__text' }, ganz ? 'Hiermit ernennen wir sie zur Baumeisterin des Königs.' : 'Sobald alle sieben Gebäude im Tal stehen, wird sie Baumeisterin des Königs.'),
+      h('p', { class: 'hinweis-klein' }, 'Gegeben am ' + datumLang(datum)),
       siegel());
+  }
+  function urkundeDrucken() {
+    document.body.classList.add('druck-urkunde');
+    var weg = function () { document.body.classList.remove('druck-urkunde'); window.removeEventListener('afterprint', weg); };
+    window.addEventListener('afterprint', weg);
+    window.print();
+    setTimeout(weg, 1000);
   }
 
   /* ---------- Start ---------- */
@@ -56,11 +71,13 @@
         h('p', { class: 'hinweis-klein' }, 'Aufgaben zum Antippen prüft die Seite selbst. Die Schreibteile schreibst du am besten auf Papier und bewertest sie danach mit dem Erwartungshorizont. Ab 80 % bekommst du die Urkunde. Die Note ist ein Richtwert, deine Lehrkraft kann anders werten.'),
         h('div', { class: 'aktionen' }, h('button', { type: 'button', class: 'btn btn--haupt', onclick: starten }, 'Hoftag beginnen'))),
       d.pruefung.urkunde ? urkunde(d.pruefung.urkunde, null, null) : null,
-      d.pruefung.urkunde ? h('div', { class: 'aktionen nicht-drucken' }, h('button', { type: 'button', class: 'btn', onclick: function () { window.print(); } }, 'Urkunde drucken')) : null,
+      d.pruefung.urkunde ? h('div', { class: 'aktionen nicht-drucken' }, h('button', { type: 'button', class: 'btn', onclick: urkundeDrucken }, 'Urkunde drucken')) : null,
       laeufe.length ? h('div', null, h('h2', { class: 'zwischen' }, 'Letzte Hoftage'),
-        h('ul', { class: 'plan-ziele' }, laeufe.map(function (l) {
+        h('ul', { class: 'plan-ziele' }, laeufe.map(function (l, i) {
           var p = l.max ? 100 * l.punkte / l.max : 0;
-          return h('li', { class: 'hinweis-klein' }, pText(l.punkte) + ' / ' + l.max + ' P. · ' + Math.round(p) + ' % · Note ' + W.logic.note(p));
+          var nr = d.pruefung.laeufe.length - 1 - i;
+          return h('li', { class: 'hinweis-klein' }, W.ansichten.datumText(String(l.datum).slice(0, 10)) + ' · ' + pText(l.punkte) + ' / ' + l.max + ' P. · ' + Math.round(p) + ' % · Note ' + W.logic.note(p),
+            l.antworten && l.seed ? [' · ', h('a', { href: '#/hoftag/auswertung/' + nr }, 'Auswertung ansehen')] : null);
         }))) : null));
   }
 
@@ -175,14 +192,14 @@
     // Fehler werden zu Rissen an den Gebäuden
     var orte = {};
     p.teile.forEach(function (t) { t.aufgaben.forEach(function (x) { orte[x.key] = x.bauplatz; }); });
-    e.falsch.forEach(function (key) { W.state.itemErgebnis(key, false, orte[key]); });
+    e.falschBeantwortet.forEach(function (key) { W.state.itemErgebnis(key, false, orte[key]); });
     Object.keys(e.erklProzent).forEach(function (key) {
       if (e.erklProzent[key] < W.logic.ERKL_OK - 1e-9) {
         var erkl = W.hoftag.erklNachId(key);
         W.state.erklSpeichern(key, { text: antworten[key] || '', haken: bewertung[key] || [], prozent: e.erklProzent[key], frage: erkl ? erkl.frage : null }, orte[key]);
       }
     });
-    W.state.pruefungBeenden({ punkte: e.punkte, max: e.max });
+    W.state.pruefungBeenden({ punkte: e.punkte, max: e.max, seed: l.seed, antworten: antworten });
     var prozent = e.max ? 100 * e.punkte / e.max : 0;
     var neuUrkunde = !hatteUrkunde && W.state.data.pruefung.urkunde;
     host.innerHTML = '';
@@ -192,9 +209,9 @@
         h('p', null, Math.round(prozent) + ' % · Note ' + W.logic.note(prozent) + ' (Richtwert)'),
         h('p', { class: 'hinweis-klein' }, 'Schlüssel: ab 87,5 % Note 1, ab 72,5 % Note 2, ab 57,5 % Note 3, ab 45 % Note 4, ab 20 % Note 5. Deine Lehrkraft kann anders werten.')));
     if (neuUrkunde) {
-      seite.appendChild(h('div', { class: 'tal' }, W.tal.zeichne(W.ansichten.statusListe(), { vollendet: true })));
+      seite.appendChild(h('div', { class: 'tal' }, W.tal.zeichne(W.ansichten.statusListe(), { vollendet: vollendet() })));
       seite.appendChild(urkunde(W.state.data.pruefung.urkunde, e.punkte, e.max));
-      seite.appendChild(h('div', { class: 'aktionen nicht-drucken' }, h('button', { type: 'button', class: 'btn', onclick: function () { window.print(); } }, 'Urkunde drucken')));
+      seite.appendChild(h('div', { class: 'aktionen nicht-drucken' }, h('button', { type: 'button', class: 'btn', onclick: urkundeDrucken }, 'Urkunde drucken')));
       if (W.ton) W.ton.glocke();
     } else if (prozent < 80) {
       seite.appendChild(h('p', { class: 'hinweis-klein' }, 'Ab 80 % gibt es die Urkunde. Du schaffst das: erst die Risse reparieren, dann noch ein Hoftag.'));
@@ -207,7 +224,7 @@
     });
     var ids = Object.keys(schwach);
     if (ids.length) seite.appendChild(karte('', h('p', null, h('strong', null, 'Wiederholen: '), ids.map(function (id, i) { return [i ? ' · ' : '', h('a', { href: '#/bau/' + id }, bpTitel(id))]; })),
-      h('p', { class: 'hinweis-klein' }, 'Deine Fehler sind jetzt als Risse an den Gebäuden markiert.')));
+      h('p', { class: 'hinweis-klein' }, e.falschBeantwortet.length ? 'Deine Fehler sind jetzt als Risse an den Gebäuden markiert. Aufgaben, die du leer gelassen hast, zählen nicht als Riss.' : 'Aufgaben, die du leer gelassen hast, zählen nicht als Riss.')));
     // Lösungen
     var loes = h('div');
     var nr = 0;
@@ -229,13 +246,48 @@
     window.scrollTo(0, 0);
   }
 
+  /** Eine frühere Auswertung noch einmal ansehen (nur Anzeige, ändert nichts). */
+  function alteAuswertung(host, nr) {
+    var lauf = W.state.data.pruefung.laeufe[nr];
+    if (!lauf || !lauf.antworten || !lauf.seed) { location.hash = '#/hoftag'; return; }
+    var p = W.hoftag.erzeugen(lauf.seed);
+    var antworten = lauf.antworten;
+    var bewertung = {};
+    Object.keys(antworten).forEach(function (k) { if (k.indexOf('bew:') === 0) bewertung[k.slice(4)] = antworten[k]; });
+    var e = W.hoftag.auswerten(p, antworten, bewertung);
+    var prozent = e.max ? 100 * e.punkte / e.max : 0;
+    var seite = h('div', { class: 'seite' }, W.ansichten.link('#/hoftag', '← Zurück zum Hoftag', 'zurueck'),
+      h('h1', null, 'Hoftag vom ' + datumLang(lauf.datum)),
+      karte('auswertung', h('p', { class: 'ergebnis' }, pText(e.punkte) + ' / ' + e.max), h('p', null, Math.round(prozent) + ' % · Note ' + W.logic.note(prozent) + ' (Richtwert)')));
+    e.teile.forEach(function (t) { seite.appendChild(h('h2', { class: 'zwischen' }, t.name + ' · ' + pText(t.punkte) + ' / ' + t.max)); });
+    var n = 0;
+    p.teile.forEach(function (t, ti) {
+      t.aufgaben.forEach(function (x) {
+        n++;
+        if (x.item) {
+          var r = W.aufgaben.render(ti === 1 ? ohneQuelle(x.item) : x.item, { wert: antworten[x.key] });
+          r.zeige();
+          var ok = W.aufgaben.richtig(x.item, antworten[x.key]);
+          seite.appendChild(h('div', { class: 'pruef-aufgabe' }, h('p', { class: 'pruef-aufgabe__kopf' }, h('span', null, 'Aufgabe ' + n), h('span', null, ok ? '✓' : 'Richtig: ' + W.aufgaben.loesungText(x.item))), r.el));
+        } else {
+          seite.appendChild(h('section', { class: 'erkl pruef-aufgabe' }, h('p', { class: 'pruef-aufgabe__kopf' }, h('span', null, 'Aufgabe ' + n), h('span', null, pText(W.logic.punkteRunden((e.erklProzent[x.key] || 0), x.punkte)) + ' / ' + pText(x.punkte) + ' P.')),
+            h('div', { class: 'frage', html: x.erkl.frage }),
+            antworten[x.key] ? h('blockquote', { class: 'erkl__eigen' }, antworten[x.key]) : null,
+            h('details', { class: 'muster' }, h('summary', null, 'Musterantwort'), h('div', { html: x.erkl.muster }))));
+        }
+      });
+    });
+    host.appendChild(seite);
+  }
+
   W.hoftagAnsicht = function (host, args) {
     stoppeTimer();
     var l = W.state.pruefungLaufend();
     var modus = args && args[0];
+    if (modus === 'auswertung') { alteAuswertung(host, +args[1]); return; }
     if (!l) { if (modus) { location.hash = '#/hoftag'; return; } startseite(host); return; }
     if (l.abgegeben) { bewerten(host, l); return; }
-    if (restSekunden(l) <= 0) { W.state.pruefungAbgeben(); bewerten(host, W.state.pruefungLaufend()); return; }
+    if (restSekunden(l) <= 0) { W.state.pruefungAbgeben(); W.toast('Die Zeit ist um. Deine Antworten wurden abgegeben.'); bewerten(host, W.state.pruefungLaufend()); return; }
     if (modus === 'laeuft') pruefung(host, l); else fortsetzenFrage(host, l);
   };
   W.hoftagAnsicht.restSekunden = restSekunden;
