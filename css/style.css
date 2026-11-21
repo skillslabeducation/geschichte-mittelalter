@@ -1,0 +1,21 @@
+/* Stein auf Stein – Gestaltung: Buchmalerei bei Tageslicht. */
+:root {
+  --pergament: #f4ecd8; --papier: #fbf6ea; --tinte: #2b2118; --linie: #5a4a3a; --grau: #6f6252; --hell: #e8dcc0;
+  --zinnober: #b8321f; --lapis: #1f4e8c; --gruen: #3d6b35; --gold: #b8892b;
+}
+
+/* ---------- Abbildungen ---------- */
+.abb { margin: 12px 0; padding: 8px; background: var(--papier); border: 1px solid var(--hell); border-radius: 10px; }
+.abb-svg { display: block; width: 100%; height: auto; max-height: 70vh; font-family: 'Alegreya Sans', 'Segoe UI', sans-serif; }
+.abb-text { fill: var(--tinte); font-size: 12px; }
+.abb-klein { fill: var(--linie); font-size: 10.5px; }
+.abb-titel { fill: var(--tinte); font-size: 14px; font-weight: 700; }
+.abb-fett { font-weight: 700; }
+.abb-nr circle { fill: var(--tinte); stroke: var(--papier); stroke-width: 2; }
+.abb-nr text { fill: var(--papier); font-size: 14px; font-weight: 700; }
+.abb-label { fill: var(--tinte); font-size: 13px; font-weight: 700; paint-order: stroke; stroke: var(--papier); stroke-width: 4px; stroke-linejoin: round; }
+.abb-label--kurz { font-size: 11.5px; }
+.abb-leiter { stroke: var(--tinte); stroke-width: 1.2; }
+.abb-ziel { fill: var(--tinte); }
+.abb-marke--hv.abb-label, .abb-marke--hv text { fill: var(--zinnober); }
+.abb-marke--hv circle { fill: var(--zinnober); }
