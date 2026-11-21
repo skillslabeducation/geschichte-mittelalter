@@ -42,7 +42,7 @@
       text: '<p>Karl sprach reich und sicher und konnte leicht und klar ausdrücken, was er wollte. Mit großem Fleiß lernte er auch fremde Sprachen: ' +
         'Latein sprach er so gut wie seine Muttersprache, Griechisch konnte er besser verstehen als selbst sprechen. ' +
         'Die Wissenschaften pflegte er mit großer Liebe, und die Gelehrten ehrte er sehr. Bei dem Gelehrten Alkuin lernte er vor allem die Sternkunde. Er lernte auch rechnen.</p>' +
-        '<p>Auch zu schreiben versuchte er. Deshalb hatte er im Bett unter dem Kopfkissen Tafeln und Papier, um in freien Stunden seine Hand an das Schreiben von Buchstaben zu gewöhnen. ' +
+        '<p>Auch zu schreiben versuchte er. Deshalb hatte er im Bett unter dem Kopfkissen Tafeln und kleine Hefte, um in freien Stunden seine Hand an das Schreiben von Buchstaben zu gewöhnen. ' +
         'Doch er brachte es damit nicht weit, weil er zu spät damit angefangen hatte.</p>',
       buch: false,
       vereinfacht: true,

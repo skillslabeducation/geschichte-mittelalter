@@ -36,7 +36,7 @@
           '<p>Die Freiheit hatte ihren Preis: Bei Missernten, Krankheit oder Verletzung konnten freie Bauern ihre Familien oft nicht mehr ernähren. Dann begaben sie sich freiwillig in die Grundherrschaft und wurden Hörige.</p>' +
           '<p>Als Hörige waren sie unfrei. Aber der Grundherr bot ihnen Schutz und befreite sie vom Kriegsdienst.</p>',
         merk: 'Freie Bauern hatten eigenes Land und durften wegziehen, mussten aber Kriegsdienst leisten. In Not begaben sich viele freiwillig in die Grundherrschaft.',
-        achtung: '<strong>Aufgepasst:</strong> Den Kriegsdienst leisteten die freien Bauern, nicht die Hörigen. Gerade die Befreiung vom Kriegsdienst machte die Grundherrschaft für manche freie Bauern attraktiv.'
+        achtung: '<strong>Aufgepasst:</strong> Den Kriegsdienst leisteten die freien Bauern, nicht die Hörigen. Auch die Befreiung vom Kriegsdienst machte die Grundherrschaft für manche freie Bauern attraktiv.'
       },
       {
         titel: 'Abgaben und Dienste',
@@ -65,7 +65,7 @@
           '<li>Ein <dfn>Werturteil</dfn> urteilt mit den Augen der Menschen heute. Du nennst deine eigene Meinung und den Maßstab, nach dem du urteilst, zum Beispiel Freiheit oder gleiche Rechte für alle.</li></ul>' +
           '<p>Im Arbeitsauftrag erkennst du, was verlangt ist: <strong>Beurteile</strong> verlangt ein Sachurteil, <strong>bewerte</strong> ein Werturteil, <strong>beurteile und bewerte</strong> beides nacheinander.</p>',
         merk: 'Sachurteil: mit den Augen der Menschen damals, ohne eigene Meinung. Werturteil: mit den Augen von heute, mit eigener, begründeter Meinung.',
-        achtung: '<strong>Aufgepasst:</strong> „Ich finde …“ gehört nur ins Werturteil. Im Sachurteil zählt, was den Menschen damals wichtig war, zum Beispiel das Überleben der Familie.'
+        achtung: '<strong>Aufgepasst:</strong> „Ich finde …“ gehört nur ins Werturteil. Im Sachurteil zählt, was den Menschen damals wichtig war, zum Beispiel das Überleben der Familie. Im Buch heißt M4 „Ein Problem der Geschichte beurteilen“ und meint dort beide Urteile. Hat dein Buch hinten eine Operatorenliste oder erklärt deine Lehrkraft „beurteilen“ anders, gilt das.'
       },
       {
         titel: 'Eine Bildquelle: Fronarbeit',
@@ -94,7 +94,7 @@
           ['lebten und arbeiteten auf dem Herrenhof', 0],
           ['gehörten zum persönlichen Besitz des Grundherrn', 0],
           ['lebten und wirtschafteten auf Hufen in Dörfern', 1],
-          ['durften das Land ohne Zustimmung des Grundherrn nicht verlassen und mussten nicht in den Krieg ziehen', 1],
+          ['lebten auf einer Hufe im Dorf und durften sie ohne Zustimmung des Grundherrn nicht verlassen', 1],
           ['besaßen eigenes Land', 2],
           ['mussten Kriegsdienst leisten', 2],
           ['durften sich frei bewegen und den Wohnort wechseln', 2]
@@ -137,7 +137,7 @@
       {
         id: 'fronhof-u7', typ: 'luecke',
         frage: 'Sachurteil nach Buch S. 23, M4: So hätten die Menschen damals die Frage „Warum begaben sich freie Bauern in die Abhängigkeit?“ beantwortet. Fülle die Lücken.',
-        text: 'Im Falle, dass ein {freier|höriger|leibeigener} Bauer krank oder im Krieg verletzt wird, kann er nicht mehr {arbeiten|kämpfen|beten}. Dann ist er zwar frei, kann aber sich und seine {Familie|Nachbarn|Grundherren} nicht mehr versorgen. Begibt er sich in einem solchen Fall in die {Grundherrschaft|Freiheit|Stadt}, können er und seine Familie überleben, denn der {Grundherr|Meier|Nachbar} bietet dem Bauern Schutz und befreit ihn vom Kriegsdienst. Dafür verlangt er aber {Abgaben|Kriegsdienste|Gebete} und {Dienste|Kriegsdienste|Gebete}.',
+        text: 'Im Falle, dass ein {freier|höriger|leibeigener} Bauer krank oder im Krieg verletzt wird, kann er nicht mehr {arbeiten|feiern|beten}. Dann ist er zwar frei, kann aber sich und seine {Familie|Nachbarn|Grundherren} nicht mehr versorgen. Begibt er sich in einem solchen Fall in die {Grundherrschaft|Freiheit|Stadt}, können er und seine Familie überleben, denn der {Grundherr|Meier|Nachbar} bietet dem Bauern Schutz und befreit ihn vom Kriegsdienst. Dafür verlangt er aber {Abgaben|Kriegsdienste|Gebete} und {Dienste|Kriegsdienste|Gebete}.',
         erkl: 'Das Sachurteil denkt wie die Menschen damals: Für einen kranken oder verletzten Bauern ging es ums Überleben der Familie.'
       },
       {
@@ -154,7 +154,7 @@
           ['Für einen kranken Bauern war die Grundherrschaft damals oft die einzige Möglichkeit, seine Familie zu ernähren.', 0],
           ['Aus Sicht der Menschen damals war der Schutz bei Missernten wichtiger als die Freiheit.', 0],
           ['Viele Bauern hielten es damals für vernünftig, Abgaben zu leisten, wenn sie dafür nicht in den Krieg ziehen mussten.', 0],
-          ['Ein Bauer konnte damals nicht auf Hilfe von Versicherungen oder vom Staat hoffen. Deshalb war der Schutz des Grundherrn für ihn wertvoll.', 0],
+          ['Ein kranker Bauer ohne Grundherrn musste damals fürchten, dass seine Familie hungert. Deshalb war der Schutz des Grundherrn für ihn wertvoll.', 0],
           ['Ich finde es ungerecht, dass die Hörigen nicht selbst entscheiden durften, wo sie wohnen.', 1],
           ['Nach heutigen Maßstäben verletzt die Unfreiheit der Hörigen das Recht jedes Menschen auf Freiheit.', 1],
           ['Für mich ist entscheidend, dass alle vor dem Gesetz gleich sind. Deshalb lehne ich es ab, dass der Grundherr zugleich Richter über seine Bauern war.', 1],
@@ -461,10 +461,10 @@
             punkte: [
               { text: 'Einordnung: Vorschriften aus der Zeit um 800, erlassen im Namen Karls des Großen für die Verwalter seiner Königsgüter. Karl ist hier selbst Grundherr.', p: 1 },
               { text: 'Pflichten der Bauern: Abgaben wie Hühner und Eier, Dienste wie das Pflügen; der König will genau wissen, was seine Güter einbringen.', p: 1 },
-              { text: 'Schutz: Die Leute sollen versorgt werden und nicht verarmen; die Verwalter dürfen sie nicht für sich arbeiten lassen oder Geschenke nehmen.', p: 1 },
+              { text: 'Schutz: Die Leute sollen versorgt werden und nicht verarmen; die Verwalter dürfen sie nicht für sich arbeiten lassen oder größere Geschenke wie Pferde, Ochsen oder Schweine von ihnen annehmen.', p: 1 },
               { text: 'Sichtweise: Die Quelle zeigt die Sicht des Grundherrn und wie es sein sollte, nicht sicher, wie es wirklich war.', p: 1 }
             ],
-            muster: '<p>Die Quelle enthält Vorschriften, die um 800 im Namen Karls des Großen für die Verwalter seiner Königsgüter erlassen wurden. Karl ist hier also selbst Grundherr. Die Quelle zeigt, dass die Bauern auf den Hufen Abgaben leisten mussten, zum Beispiel jedes Jahr Hühner und Eier, und Dienste wie das Pflügen. Der König wollte jedes Jahr zu Weihnachten genau wissen, was seine Güter eingebracht hatten. Gleichzeitig verlangt er, dass seine Leute gut versorgt werden und nicht verarmen, und er verbietet den Verwaltern, sie für sich selbst arbeiten zu lassen oder Geschenke von ihnen zu nehmen. Die Quelle zeigt aber nur die Sicht des Grundherrn und wie es sein sollte. Ob sich alle Verwalter daran hielten, erfahren wir aus ihr nicht.</p>'
+            muster: '<p>Die Quelle enthält Vorschriften, die um 800 im Namen Karls des Großen für die Verwalter seiner Königsgüter erlassen wurden. Karl ist hier also selbst Grundherr. Die Quelle zeigt, dass die Bauern auf den Hufen Abgaben leisten mussten, zum Beispiel jedes Jahr Hühner und Eier, und Dienste wie das Pflügen. Der König wollte jedes Jahr zu Weihnachten genau wissen, was seine Güter eingebracht hatten. Gleichzeitig verlangt er, dass seine Leute gut versorgt werden und nicht verarmen, und er verbietet den Verwaltern, sie für sich arbeiten zu lassen oder größere Geschenke wie Pferde, Ochsen oder Schweine von ihnen anzunehmen. Die Quelle zeigt aber nur die Sicht des Grundherrn und wie es sein sollte. Ob sich alle Verwalter daran hielten, erfahren wir aus ihr nicht.</p>'
           }
         },
         {
@@ -544,17 +544,17 @@
           ],
           punkte: [
             { text: 'Der Grundherr besaß das Land. Grundherren waren Adlige, Geistliche oder der König.', p: 1 },
-            { text: 'Zum Herrenland gehörten Herrenhof, Mühle, Wald und Fronhöfe.', p: 1 },
-            { text: 'Auf dem Herrenhof lebten und arbeiteten die Leibeigenen, die zum persönlichen Besitz des Grundherrn gehörten.', p: 1 },
+            { text: 'Zum Herrenland gehörten Herrenhof, Mühle, Wald und Fronhöfe. Auf dem Herrenhof lebten und arbeiteten die Leibeigenen, die zum persönlichen Besitz des Grundherrn gehörten.', p: 1 },
             { text: 'Im Hufenland lebten die Hörigen auf Hufen in Dörfern und waren an das Land gebunden.', p: 1 },
             { text: 'Die Abgaben wurden auf einem Fronhof abgeliefert, wo der Meier wohnte, der Verwalter mehrerer Hufen.', p: 1 },
             { text: 'Der Zehnt war ein festgelegter Anteil vom Ertrag, oft mehr als ein Zehntel.', p: 1 },
             { text: 'Frondienste waren vor allem landwirtschaftliche Arbeiten auf dem Herrenhof oder einem Fronhof; später wurden sie oft durch Geld ersetzt.', p: 1 },
-            { text: 'Gegenleistung des Grundherrn: Land zum Wohnen und Bewirtschaften, Schutz, Lebensmittel bei Missernten; er war auch Richter.', p: 1 }
+            { text: 'Gegenleistung des Grundherrn: Land zum Wohnen und Bewirtschaften, Schutz, Lebensmittel bei Missernten; er war auch Richter.', p: 1 },
+            { text: 'Zusammenhänge sind erklärt (weil, deshalb): Abgaben und Dienste als Gegenleistung für Land und Schutz.', p: 1 }
           ],
           muster: '<p>In der Grundherrschaft besaß ein Grundherr das Land, auf dem die Bauern lebten und arbeiteten. Grundherr konnte ein Adliger wie ein Graf, ein Geistlicher wie ein Bischof oder Abt oder auch der König sein. Zum Herrenland gehörten der Herrenhof, die Mühle, der Wald und die Fronhöfe. Auf dem Herrenhof lebten und arbeiteten die Leibeigenen, die zum persönlichen Besitz des Grundherrn gehörten.</p>' +
             '<p>Abseits davon lag das Hufenland mit den Dörfern. Dort lebten die Hörigen auf Hufen, kleinen Bauernhöfen mit etwas Land, die dem Grundherrn gehörten. Sie waren an das Land gebunden. Ihre Abgaben lieferten sie auf einem Fronhof ab. Dort wohnte der Meier, der Verwalter, dem mehrere Hufen unterstellt waren. Jedes Jahr mussten sie den Zehnt abgeben, einen festgelegten Anteil ihres Ertrags, der oft mehr als ein Zehntel war. Außerdem leisteten sie Frondienste, also vor allem landwirtschaftliche Arbeit auf dem Herrenhof oder einem Fronhof. Später wurden diese Dienste zunehmend durch Geld ersetzt.</p>' +
-            '<p>Der Grundherr gab den Bauern dafür Land zum Wohnen und Bewirtschaften und Schutz. Bei Missernten versorgte er sie mit Lebensmitteln, und er war auch ihr Richter.</p>'
+            '<p>Die Abgaben und Dienste waren eine Gegenleistung: Weil der Grundherr den Bauern Land zum Wohnen und Bewirtschaften und Schutz gab, mussten sie ihm einen Teil ihrer Erträge abgeben und für ihn arbeiten. Bei Missernten versorgte er sie mit Lebensmitteln, und er war auch ihr Richter. Deshalb waren die Bauern eng an ihren Grundherrn gebunden.</p>'
         },
         {
           id: 'fronhof-hs2', operator: 'beurteilen',

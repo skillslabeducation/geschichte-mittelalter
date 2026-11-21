@@ -16,7 +16,7 @@
           '<ul><li>Er hatte <strong>kein eigenes Heer</strong>. Im Krieg war er auf die Unterstützung der Fürsten angewiesen.</li>' +
           '<li>Als <dfn>Reisekönig</dfn> war er nie lange an einem Ort. Er musste sich darauf verlassen, dass die Fürsten im ganzen Reich in seinem Interesse handelten.</li></ul>',
         merk: 'Der König verdankte seine Macht den Fürsten: Sie wählten ihn, und ohne Behörden und ohne eigenes Heer war er auf sie angewiesen.',
-        achtung: '<strong>Aufgepasst</strong>: Der König im Mittelalter war nicht allmächtig. Ohne die Fürsten konnte er seine Herrschaft im Reich nicht durchsetzen.'
+        achtung: '<strong>Aufgepasst</strong>: Der König im Mittelalter war nicht allmächtig. Ohne die Fürsten konnte er seine Herrschaft im Reich nicht durchsetzen. Dass die Fürsten den König wählten, sagt das Buch für das Mittelalter allgemein. Karl der Große trat 768 das Erbe seines Vaters Pippin an.'
       },
       {
         titel: 'Land gegen Treue: So entstand das Lehnswesen',
@@ -214,7 +214,7 @@
       },
       {
         id: 'lehen-u14', typ: 'behauptung',
-        frage: 'Überprüfe die Aussage mithilfe des Schaubilds (vgl. Buch S. 24, A5).',
+        frage: 'Überprüfe die Aussage mithilfe des Schaubilds.',
         abb: 'lehnswesen', abbOpts: { beschriftet: true },
         aussage: 'Ein Kronvasall war zugleich Vasall und Lehnsherr.',
         stimmt: true,
@@ -283,6 +283,20 @@
         ],
         richtig: 0,
         erkl: 'Beurteilen heißt: ein Sachurteil mit Kriterien der damaligen Zeit. Die eigene Meinung nach heutigen Werten gehört zum Bewerten (Werturteil).'
+      },
+      {
+        id: 'lehen-u20', typ: 'behauptung',
+        frage: 'Überprüfe die Aussage mithilfe des Schaubilds M3.',
+        abb: 'lehnswesen', abbOpts: { beschriftet: true },
+        aussage: 'Jeder Lehnsherr und Vasall war zugleich Gefolgsmann des Königs.',
+        stimmt: false,
+        gruende: [
+          'Untervasallen waren nur ihrem unmittelbaren Lehnsherrn zur Treue verpflichtet, nicht mehr dem König.',
+          'Es war umgekehrt: Nur die Untervasallen waren dem König verpflichtet, die Kronvasallen nicht.',
+          'Ein Lehnsherr schuldete niemandem Treue. Treue mussten nur die Vasallen leisten.'
+        ],
+        richtig: 0,
+        erkl: 'Die Treue lief Stufe für Stufe. Gefolgsleute des Königs waren nur die Kronvasallen. Ritter, Ministerialen, Äbte und Äbtissinnen waren nur ihrem eigenen Lehnsherrn verpflichtet.'
       }
     ],
 
@@ -314,7 +328,7 @@
       },
       {
         id: 'lehen-e2', operator: 'erlaeutern',
-        frage: 'Erläutere mithilfe der Begriffsinformation „Die Vergabe von Lehen“ die drei Teile der Lehnsvergabe: Mannschaft, Treueid und Lehnsübergabe. Belege sie, wo es geht, mit M2. (vgl. Buch S. 24, A2 und A3)',
+        frage: 'Erläutere mithilfe der Begriffsinformation „Die Vergabe von Lehen“ die drei Teile der Lehnsvergabe: Mannschaft, Treueid und Lehnsübergabe. Belege sie, wo es geht, mit M2. (vgl. Buch S. 24, A2)',
         quelle: 'lehen-galbert',
         tipp: 'Denk auch an das Bild aus dem Sachsenspiegel (M1): Oben siehst du die Mannschaft. Sag ausdrücklich, welcher Teil in M2 fehlt.',
         begriffe: [
@@ -354,11 +368,37 @@
           { text: 'Dafür: Als Reisekönig konnte er nicht überall sein; die Kronvasallen übten für ihn Ämter in der Reichsverwaltung aus.', p: 1 },
           { text: 'Dagegen oder Schwäche: Alles hing von der Treue einzelner Personen ab; Untervasallen waren dem König nicht zur Treue verpflichtet.', p: 1 },
           { text: 'Dagegen oder Schwäche: Der König verdankte seine Macht den Fürsten, die ihn wählten, und war von ihnen abhängig.', p: 1 },
+          { text: 'Dagegen: Es gab auch andere Mittel. Karl der Große regierte zum Beispiel auch mit Grafen und Boten.', p: 1 },
           { text: 'Begründetes Fazit aus Sicht der damaligen Zeit (z. B. unter den Bedingungen damals unentbehrlich, aber mit Schwächen), ohne heutige Wertmaßstäbe.', p: 1 }
         ],
         muster: 'Aus Sicht der Menschen damals war das Lehnswesen für die Herrschaft unentbehrlich. Die Könige hatten keine Behörden mit Beamten, Polizisten und Richtern, und es gab keine schriftliche Verfassung. Durch das Lehnswesen konnten sie trotzdem im ganzen Reich herrschen, denn die Kronvasallen übten für sie Ämter in der Reichsverwaltung aus. Da der König kein eigenes Heer hatte, bekam er nur über seine Vasallen militärische Hilfe im Krieg. Als Reisekönig war er außerdem darauf angewiesen, dass die Fürsten in seinem Interesse handelten, wenn er nicht da war. ' +
-          'Andererseits machte das Lehnswesen den König abhängig. Er verdankte seine Macht den Fürsten, die ihn wählten, und alles hing von ihrer Treue ab. Die Untervasallen waren dem König nicht einmal zur Treue verpflichtet. ' +
-          'Insgesamt war das Lehnswesen damals trotzdem unentbehrlich, weil es kein anderes Mittel gab, ein so großes Reich zusammenzuhalten. Es hatte aber Schwächen, weil es auf persönlicher Bindung beruhte.'
+          'Andererseits machte das Lehnswesen den König abhängig. Er verdankte seine Macht den Fürsten, die ihn wählten, und alles hing von ihrer Treue ab. Die Untervasallen waren dem König nicht einmal zur Treue verpflichtet. Außerdem gab es auch andere Mittel: Karl der Große regierte zum Beispiel auch mit Grafen und Boten. ' +
+          'Insgesamt war das Lehnswesen damals trotzdem unentbehrlich, weil es unter den Bedingungen damals kaum ein anderes Mittel gab, ein so großes Reich zusammenzuhalten. Es hatte aber Schwächen, weil es auf persönlicher Bindung beruhte.'
+      },
+      {
+        id: 'lehen-e4', operator: 'vergleichen',
+        frage: 'Vergleiche den Bericht über die Huldigung (M2) mit der Beschreibung der Vergabe von Lehen im Buch (S. 25). (vgl. Buch S. 24, A3)',
+        quelle: 'lehen-galbert',
+        material: '<p><strong>Die Vergabe von Lehen (Buch S. 25):</strong> Die Übergabe des Lehens bestand aus drei Teilen: 1. Mannschaft: Der Vasall gab seine zusammengelegten Hände in die Hände des Herrn; der umschloss sie als Zeichen von Schutz und gegenseitiger Treue. 2. Treueid des Vasallen: Der Vasall versprach Rat und Hilfe. 3. Lehnsübergabe an den Vasallen: Je nach Art des Lehens wird ein Symbol übergeben.</p>',
+        tipp: 'Geh M2 Satz für Satz durch und ordne jede Stelle einem der drei Teile zu. Sammle dann Gemeinsamkeiten und Unterschiede und schreib zum Schluss ein Ergebnis.',
+        begriffe: [
+          { name: 'Mannschaft', muster: ['mannschaft'] },
+          { name: 'Treueid', muster: ['treueid', 'eid'] },
+          { name: 'Lehnsübergabe', muster: ['lehnsuebergabe', 'uebergabe', 'symbol'] },
+          { name: 'Reliquien', muster: ['reliquie'] },
+          { name: 'Gemeinsamkeit / Unterschied', muster: ['gemeinsam', 'unterschied', 'anders'] }
+        ],
+        punkte: [
+          { text: 'Gemeinsamkeit Mannschaft: In M2 liegen die Hände des Vasallen in denen des Grafen. Im Buch gibt der Vasall seine zusammengelegten Hände in die Hände des Herrn.', p: 1 },
+          { text: 'Gemeinsamkeit Treueid: In M2 verspricht der Vasall, dem Grafen treu zu sein und seinen Eid zu halten. Im Buch verspricht er mit dem Treueid Rat und Hilfe.', p: 1 },
+          { text: 'Unterschied: In M2 fragt der Graf zuerst, ob der Vasall ohne Vorbehalte sein Gefolgsmann werden will, und der Vasall antwortet „Ich will es“.', p: 1 },
+          { text: 'Unterschied: In M2 verbünden sich beide mit einem Kuss, und der Vasall schwört zusätzlich auf die Reliquien.', p: 1 },
+          { text: 'Im Auszug von M2 fehlt die Lehnsübergabe mit einem Symbol.', p: 1 },
+          { text: 'Ergebnis: Der Ablauf ist im Kern gleich (Mannschaft und Treueid). M2 schildert ihn ausführlicher, das Buch fasst ihn in drei Teilen zusammen.', p: 1 }
+        ],
+        muster: 'M2 und die Beschreibung im Buch haben viel gemeinsam. Im Buch gibt der Vasall bei der Mannschaft seine zusammengelegten Hände in die Hände des Herrn. Genau das beschreibt auch Galbert: Die Hände des Vasallen lagen in denen des Grafen. Auch den Treueid gibt es in beiden Texten. Im Buch verspricht der Vasall Rat und Hilfe, in M2 verspricht er, dem Grafen treu zu sein und seinen Eid zu halten. ' +
+          'Es gibt aber auch Unterschiede. In M2 fragt der Graf zuerst, ob der Vasall ohne Vorbehalte sein Gefolgsmann werden will, und der Vasall antwortet: „Ich will es.“ Außerdem verbünden sich beide mit einem Kuss, und zum Dritten schwört der Vasall seine Treue noch einmal auf die Reliquien. Das alles steht nicht in der Beschreibung im Buch. Dafür fehlt im Auszug von M2 die Lehnsübergabe mit einem Symbol. ' +
+          'Insgesamt ist der Ablauf im Kern gleich: Mannschaft und Treueid kommen in beiden Texten vor. M2 schildert die Huldigung aber viel ausführlicher, während das Buch sie in drei Teilen zusammenfasst.'
       }
     ],
 
@@ -572,13 +612,13 @@
             { text: 'Der König steht oben; er ist der Lehnsherr der Kronvasallen.', p: 1 },
             { text: 'Kronvasallen sind Herzöge, Grafen und Bischöfe; sie übten Ämter in der Reichsverwaltung aus.', p: 1 },
             { text: 'Der König gibt ihnen Schutz und ein Lehen (rote Pfeile nach unten), zum Beispiel Land, eine Burg, ein Amt oder ein Recht.', p: 1 },
-            { text: 'Die Kronvasallen leisten Kriegs- und Amtsdienste (grüne Pfeile nach oben): im Frieden Rat, im Krieg militärische Hilfe.', p: 1 },
+            { text: 'Die Kronvasallen leisten Kriegsdienste (militärische Hilfe im Krieg) und Amtsdienste (Ämter in der Reichsverwaltung), grüne Pfeile nach oben; im Frieden schulden sie Rat.', p: 1 },
             { text: 'Treueid (orange Doppelpfeile): Beide schulden einander Treue, das Verhältnis ist gegenseitig.', p: 1 },
             { text: 'Kronvasallen verleihen Teile ihres Lehens an Untervasallen weiter: Ritter, Ministerialen, Äbte und Äbtissinnen.', p: 1 },
             { text: 'Ein Kronvasall ist damit zugleich Vasall (des Königs) und Lehnsherr (seiner Untervasallen).', p: 1 },
             { text: 'Untervasallen sind nur ihrem unmittelbaren Lehnsherrn zur Treue verpflichtet, nicht mehr dem König.', p: 1 }
           ],
-          muster: 'Das Schaubild M3 zeigt das Lehnswesen in drei Ebenen. Oben steht der König. Er ist der Lehnsherr der Kronvasallen. Das sind Herzöge, Grafen und Bischöfe, die Ämter in der Reichsverwaltung ausübten. Der König gibt ihnen Schutz und ein Lehen, zum Beispiel Land, eine Burg, ein Amt oder ein Recht. Das zeigen die roten Pfeile nach unten. Dafür leisten die Kronvasallen dem König Kriegs- und Amtsdienste, also im Frieden Rat und im Krieg militärische Hilfe. Das zeigen die grünen Pfeile nach oben. ' +
+          muster: 'Das Schaubild M3 zeigt das Lehnswesen in drei Ebenen. Oben steht der König. Er ist der Lehnsherr der Kronvasallen. Das sind Herzöge, Grafen und Bischöfe, die Ämter in der Reichsverwaltung ausübten. Der König gibt ihnen Schutz und ein Lehen, zum Beispiel Land, eine Burg, ein Amt oder ein Recht. Das zeigen die roten Pfeile nach unten. Dafür leisten die Kronvasallen dem König Kriegsdienste, also militärische Hilfe im Krieg, und Amtsdienste, also Ämter in der Reichsverwaltung. Das zeigen die grünen Pfeile nach oben. Im Frieden schulden sie ihm außerdem Rat. ' +
             'Die orangen Doppelpfeile stehen für den Treueid: Beide Seiten schuldeten einander Treue, das Verhältnis war also gegenseitig. ' +
             'Die Kronvasallen konnten Teile ihres Lehens an Untervasallen weiterverleihen, zum Beispiel an Ritter, Ministerialen, Äbte und Äbtissinnen. Deshalb war ein Kronvasall zugleich Vasall des Königs und Lehnsherr seiner Untervasallen. Die Untervasallen waren aber nur ihrem unmittelbaren Lehnsherrn zur Treue verpflichtet, nicht mehr dem König.'
         },
@@ -594,15 +634,15 @@
             { name: 'Verfassung', muster: ['verfassung'] }
           ],
           punkte: [
-            { text: 'Damals: Ohne Behörden, eigenes Heer und Verfassung sicherte die persönliche Bindung dem König Dienste und Unterstützung im ganzen Reich.', p: 1, art: 'sach' },
-            { text: 'Damals: Das Verhältnis war gegenseitig; der Vasall erhielt Schutz und ein Lehen, der Herr Rat und militärische Hilfe.', p: 1, art: 'sach' },
+            { text: 'Damals: Ohne Behörden, eigenes Heer und Verfassung sicherte die persönliche Bindung dem König Rat und militärische Hilfe im ganzen Reich; der Vasall erhielt dafür Schutz und ein Lehen.', p: 1, art: 'sach' },
+            { text: 'Herrschaft beruhte auf Beziehungen zwischen Personen (Treue, Gegenseitigkeit), nicht auf Ämtern, Gesetzen oder einer Verfassung.', p: 1, art: 'sach' },
             { text: 'Damals: Schwäche. Alles hing von der Treue einzelner Personen ab; Untervasallen waren dem König nicht zur Treue verpflichtet.', p: 1, art: 'sach' },
             { text: 'Ein begründetes Sachurteil als Fazit aus Sicht der damaligen Zeit.', p: 1, art: 'sach' },
             { text: 'Ein heutiger Maßstab wird offen genannt (z. B. Herrschaft nach Gesetzen und Verfassung, Gleichheit, Mitbestimmung).', p: 1, art: 'wert' },
             { text: 'Das Lehnswesen wird an diesem Maßstab gemessen und begründet beurteilt (z. B. Macht hing an Personen statt an Gesetzen; nur Adlige und hohe Geistliche bekamen Lehen).', p: 2, art: 'wert' },
             { text: 'Die eigene Meinung wird klar formuliert („Ich finde …, weil …“).', p: 1, art: 'wert' }
           ],
-          muster: 'Sachurteil: Aus Sicht der Menschen damals war die Herrschaft durch persönliche Bindung eine sinnvolle Grundlage. Der König hatte keine Behörden, kein eigenes Heer und keine schriftliche Verfassung. Durch Lehen und Treueid bekam er trotzdem Rat, Kriegsdienste und Amtsdienste im ganzen Reich. Auch die Vasallen hatten etwas davon, denn sie erhielten Schutz und ein Lehen. Andererseits hing alles von der Treue einzelner Menschen ab, und die Untervasallen waren dem König nicht einmal zur Treue verpflichtet. Insgesamt war die persönliche Bindung damals eine brauchbare, aber unsichere Grundlage. ' +
+          muster: 'Sachurteil: Aus Sicht der Menschen damals war die Herrschaft durch persönliche Bindung eine sinnvolle Grundlage. Der König hatte keine Behörden, kein eigenes Heer und keine schriftliche Verfassung. Durch Lehen und Treueid bekam er trotzdem Rat, Kriegsdienste und Amtsdienste im ganzen Reich. Auch die Vasallen hatten etwas davon, denn sie erhielten Schutz und ein Lehen. Die Herrschaft beruhte also auf Beziehungen zwischen Personen, auf Treue und Gegenseitigkeit, und nicht auf Ämtern, Gesetzen oder einer Verfassung. Andererseits hing alles von der Treue einzelner Menschen ab, und die Untervasallen waren dem König nicht einmal zur Treue verpflichtet. Insgesamt war die persönliche Bindung damals eine brauchbare, aber unsichere Grundlage. ' +
             'Werturteil: Für mich ist entscheidend, dass Herrschaft an Gesetze gebunden ist, die für alle gleich gelten. Aus heutiger Sicht finde ich die Herrschaft durch persönliche Bindung deshalb keine gute Grundlage, weil die Macht davon abhing, wer wem treu war, und nicht von einer Verfassung. Außerdem bekamen nur Adlige und hohe Geistliche Lehen, die meisten Menschen hatten keinen Einfluss.'
         }
       ]
@@ -617,14 +657,14 @@
       { id: 'lehen-g6', aussage: 'Als Lehen konnte nur Land vergeben werden.', stimmt: false, erkl: 'Erfunden: Auch Burgen, Ämter und Rechte wie das Münzrecht wurden als Lehen vergeben.' },
       { id: 'lehen-g7', aussage: 'Das Lehnswesen entwickelte sich seit dem 8. Jahrhundert.', stimmt: true, erkl: 'Stimmt: So steht es im Buch auf S. 24.' },
       { id: 'lehen-g8', aussage: 'Im Schaubild des Lehnswesens stehen die Bauern ganz unten.', stimmt: false, erkl: 'Erfunden: Im Schaubild kommen keine Bauern vor. Unten stehen die Untervasallen.' },
-      { id: 'lehen-g9', aussage: 'Die Fürsten wählten den König.', stimmt: true, erkl: 'Stimmt: Der König verdankte seine Macht den geistlichen und adligen Fürsten, die ihn wählten.' },
+      { id: 'lehen-g9', aussage: 'Im Mittelalter verdankte ein König seine Macht oft den Fürsten, die ihn zum König wählten.', stimmt: true, erkl: 'Stimmt: So steht es im Buch auf S. 24. Auch nach der Krönung brauchte der König die Fürsten.' },
       { id: 'lehen-g10', aussage: 'Eine schriftliche Verfassung regelte im Mittelalter die Ordnung im Reich.', stimmt: false, erkl: 'Erfunden: Eine schriftliche Verfassung gab es noch nicht. Deshalb waren persönliche Bindungen so wichtig.' }
     ],
 
     schatz: [
       {
         id: 'lehen-s1', titel: 'Ein Stäbchen als Symbol',
-        text: 'Der Auszug in deinem Buch endet mit dem Eid auf die Reliquien. Galberts Bericht geht aber noch weiter: Der Graf hielt ein kleines Stäbchen in der Hand und übergab damit allen, die ihm gehuldigt hatten, ihr Lehen. Das Stäbchen war das Symbol der Lehnsübergabe, also der dritte Teil, der im Auszug fehlt. Die Huldigung fand im Jahr 1127 in Brügge in Flandern statt.',
+        text: 'Der Auszug in deinem Buch endet mit dem Eid auf die Reliquien. Galberts Bericht geht aber noch weiter: Der Graf hielt ein kleines Stäbchen in der Hand und übergab damit allen, die ihm gehuldigt hatten, ihr Lehen. Das Stäbchen war das Symbol der Lehnsübergabe, also der dritte Teil, der im Auszug fehlt. Die Huldigung fand im Jahr 1127 in Brügge in Flandern statt. Der Graf ist Wilhelm aus dem Haus der Normandie, der 1127 Graf von Flandern wurde, nicht Wilhelm der Eroberer.',
         nachweis: 'Galbert von Brügge, Bericht über die Ermordung Karls des Guten, Grafen von Flandern, Kap. 56 (Ausgabe H. Pirenne, 1891, S. 89); englische Übersetzung: Medieval Sourcebook, Fordham University, „Fief Ceremonies, 12th Century“.'
       },
       {

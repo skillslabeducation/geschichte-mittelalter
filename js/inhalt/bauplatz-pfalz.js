@@ -7,10 +7,10 @@
     '<table><thead><tr><th></th><th>Fleisch</th><th>Getreide</th><th>Wein</th></tr></thead><tbody>' +
     '<tr><th>je Mann und Tag</th><td>2 kg</td><td>2 kg</td><td>3 l</td></tr>' +
     '<tr><th>1000 Mann in 10 Tagen</th><td>20 000 kg</td><td>20 000 kg</td><td>30 000 l</td></tr></tbody></table>' +
-    '<p>Um 800 wurden aus den Schlachttieren (Schweine und Schafe) nur je 10 kg Fleisch gewonnen. Eine große Pfalz wie Ingelheim hatte wohl nicht mehr als 2000 Schlachttiere.</p>';
+    '<p>Um 800 wurden aus den Schlachttieren (Schweine und Schafe) nur je 10 kg Fleisch gewonnen. Eine große Pfalz wie Ingelheim hatte wohl nicht mehr als 2000 Schlachttiere. … Maximal dürften 30 Fässer zu je 1000 l Wein und Bier zur Verfügung gestanden haben.</p>';
 
   var TABELLE_M5 = '<p><strong>Aufenthalte Karls während seiner ganzen Regierungszeit</strong> (Auswahl, Buch S. 21, M5)</p>' +
-    '<table><thead><tr><th>Ort</th><th>Aufenthalte</th><th>Lage</th></tr></thead><tbody>' +
+    '<table><thead><tr><th>Ort</th><th>Aufenthalte</th><th>Lage (ergänzt, nicht im Buch)</th></tr></thead><tbody>' +
     '<tr><td>Aachen</td><td>27</td><td>zwischen Maas und Rhein</td></tr>' +
     '<tr><td>Worms</td><td>16</td><td>am Rhein</td></tr>' +
     '<tr><td>Herstal</td><td>12</td><td>an der Maas</td></tr>' +
@@ -62,9 +62,10 @@
           '<li><strong>Wann?</strong> Um 800, also zu Karls Lebzeiten.</li>' +
           '<li><strong>Was wird behauptet?</strong> Karl übertrifft alle Könige der Welt. Er ist „der beste Vater“, „der <dfn>Augustus</dfn>“ und die „Spitze Europas“. Aachen wächst als „zweites Rom“.</li>' +
           '<li><strong>Ist die Quelle neutral?</strong> Nein. Der Verfasser will den König loben. Was Karl schlecht aussehen lässt, fehlt ganz, zum Beispiel die Härte gegen die Sachsen.</li></ul>' +
-          '<p>Trotzdem ist M3 wertvoll: Sie zeigt, wie man Karl am Hof sehen wollte. Schon seine Zeitgenossen nannten ihn „<dfn>pater europae</dfn>“, Vater Europas.</p>',
+          '<p>Trotzdem ist M3 wertvoll: Sie zeigt, wie man Karl am Hof sehen wollte. Schon seine Zeitgenossen nannten ihn „<dfn>pater europae</dfn>“, Vater Europas.</p>' +
+          '<p><strong>Zwei Abbildungen, zwei Arten von Material:</strong> M1 im Buch ist eine kleine Reiterstatue aus dem Mittelalter. Sie ist eine Quelle. M2 zeigt einen karolingischen Panzerreiter. Das Bild ist eine Rekonstruktion für eine Ausstellung über Karl den Großen in Aachen aus dem Jahr 2014. Es wurde also heute gemacht und ist keine Quelle. Die Panzerreiter hatte Karl Martell im Frankenreich eingeführt, in der Auseinandersetzung mit islamischen Heeren.</p>',
         merk: 'Bei jeder Quelle fragen: Wer spricht? Wann? Was wird behauptet? Ist der Verfasser neutral?',
-        achtung: '<strong>Aufgepasst:</strong> Der Darstellungstext im Buch ist keine Quelle. Er wurde heute geschrieben. M3 ist eine Quelle, denn sie stammt aus Karls Zeit.'
+        achtung: '<strong>Aufgepasst:</strong> Der Darstellungstext im Buch ist keine Quelle. Er wurde heute geschrieben. M3 ist eine Quelle, denn sie stammt aus Karls Zeit. Auch eine heutige Rekonstruktion wie M2 ist keine Quelle, selbst wenn sie echt aussieht.'
       },
       {
         titel: 'Regieren vom Sattel aus',
@@ -80,7 +81,7 @@
       {
         titel: 'Pfalzen: Herbergen für den König',
         text: '<p>Das große <dfn>Gefolge</dfn> des Königs war schwer unterzubringen und zu ernähren. Deshalb entstanden mit der Zeit Pfalzen. Eine <dfn>Pfalz</dfn> (von lat. <em>palatium</em> = Palast) war eine große Gebäudeanlage, in der viele Hundert Menschen unterkommen konnten. Dort konnte sich der König mehrere Wochen aufhalten. Wichtige Pfalzen lagen zum Beispiel in Aachen, Ingelheim und Paderborn. Auf seinen Reisen hielt sich der König auch oft in großen Klöstern auf.</p>' +
-          '<p><strong>Wie lange reichten die Vorräte?</strong> Ein Beispiel aus der Pfalz Ingelheim um 800 (geschätzte Werte, M4): Jeder Mann brauchte am Tag 2 kg Fleisch, 2 kg Getreide und 3 l Wein. Das Gefolge hatte etwa 1000 Mann. Ein Schlachttier brachte nur 10 kg Fleisch, und eine große Pfalz hatte wohl nicht mehr als 2000 Schlachttiere. Rechne nach: Das Fleisch reichte nur wenige Tage. Dann musste der Hof weiterziehen.</p>',
+          '<p><strong>Wie lange reichten die Vorräte?</strong> Ein Beispiel aus der Pfalz Ingelheim um 800 (geschätzte Werte, M4): Jeder Mann brauchte am Tag 2 kg Fleisch, 2 kg Getreide und 3 l Wein. Das Gefolge hatte etwa 1000 Mann. Ein Schlachttier brachte nur 10 kg Fleisch, und eine große Pfalz hatte wohl nicht mehr als 2000 Schlachttiere. Für Wein und Bier standen höchstens 30 Fässer zu je 1000 l bereit. Rechne nach: Fleisch und Wein reichten nur etwa 10 Tage (M4). Dann musste der Hof weiterziehen.</p>',
         merk: 'Eine Pfalz (lat. palatium = Palast) war eine Herberge für den König und sein Gefolge. Weil die Vorräte nur kurz reichten, zog der Hof weiter.',
         achtung: '<strong>Aufgepasst:</strong> Eine Pfalz ist keine Burg. Sie war eine große Herberge für den reisenden König und sein Gefolge und ein Ort, an dem er regierte.'
       },
@@ -125,7 +126,7 @@
       {
         id: 'pfalz-u4', typ: 'zeitleiste',
         frage: 'Ordne die Ereignisse in die Zeitleiste ein.',
-        abschnitte: ['5. Jahrhundert', 'Karl ist König (768–799)', 'Karl ist Kaiser (800–814)', 'nach Karls Tod'],
+        abschnitte: ['5. Jahrhundert', 'Karl ist König, noch nicht Kaiser (768–799)', 'Karl ist Kaiser (800–814)', 'nach Karls Tod'],
         ereignisse: [
           ['Der letzte weströmische Kaiser wird abgesetzt.', 0, '476'],
           ['Karl tritt das Erbe seines Vaters Pippin an.', 1, '768'],
@@ -294,6 +295,18 @@
         ],
         richtig: 0,
         erkl: 'Pfalz kommt von palatium = Palast. Sie war Herberge und Regierungsort, keine Verteidigungsanlage wie eine Burg.'
+      },
+      {
+        id: 'pfalz-u20', typ: 'wahl',
+        frage: 'Im Buch auf S. 18/19 zeigen M1 und M2 jeweils einen Reiter. Welche Abbildung ist eine Quelle aus dem Mittelalter?',
+        optionen: [
+          'M1, die kleine Reiterstatue, denn sie wurde im Mittelalter angefertigt.',
+          'M2, der Panzerreiter, denn er zeigt die Rüstung so genau, wie sie damals war.',
+          'beide, denn beide zeigen Reiter aus der Zeit der Franken.',
+          'keine, denn beide wurden erst heute für ein Museum angefertigt.'
+        ],
+        richtig: 0,
+        erkl: 'M1 stammt aus dem Mittelalter und ist eine Quelle. M2 ist eine Rekonstruktion für eine Ausstellung im Jahr 2014. Sie wurde heute gemacht und ist deshalb keine Quelle, auch wenn sie echt aussieht.'
       }
     ],
 
@@ -337,16 +350,16 @@
           { text: 'Es gab keine feste Hauptstadt. Karl regierte als Reisekönig.', p: 1 },
           { text: 'Regieren bedeutete, politische und rechtliche Entscheidungen vor Ort zu treffen. Deshalb musste Karl selbst hinreisen.', p: 1 },
           { text: 'Karl setzte zwar Grafen ein und schickte Boten, vor allem aber reiste er selbst.', p: 1 },
-          { text: 'Das Gefolge (fast tausend Menschen) war schwer zu ernähren: Die Vorräte einer Pfalz reichten nur etwa 10 Tage (M4), dann musste der Hof weiterziehen.', p: 1 },
+          { text: 'Das Gefolge (fast tausend Menschen) war schwer zu ernähren: Fleisch und Wein reichten nur etwa 10 Tage (M4), dann musste der Hof weiterziehen.', p: 1 },
           { text: 'Die Gründe sind mit „weil“ oder „deshalb“ verknüpft, also erklärt und nicht nur beschrieben.', p: 1 }
         ],
         muster: '<p>Karl reiste so viel, weil er ein riesiges Reich regierte. Es umfasste weite Teile des heutigen Frankreichs, Deutschlands und Italiens, und so ein großes Gebiet war schwer zu verwalten. Eine feste Hauptstadt gab es nicht. Man spricht deshalb vom Reisekönigtum: Regieren bedeutete damals, politische und rechtliche Entscheidungen vor Ort zu treffen.</p>' +
-          '<p>Karl setzte zwar Grafen ein, die seine Befehle ausführten, und er schickte Boten. Vor allem aber musste er selbst in die Teile seines Reichs reisen. Dazu kam die Versorgung: Das Gefolge bestand aus fast tausend Menschen. In einer Pfalz wie Ingelheim reichte das Fleisch nur etwa zehn Tage. Deshalb musste der Hof immer wieder weiterziehen.</p>'
+          '<p>Karl setzte zwar Grafen ein, die seine Befehle ausführten, und er schickte Boten. Vor allem aber musste er selbst in die Teile seines Reichs reisen. Dazu kam die Versorgung: Das Gefolge bestand aus fast tausend Menschen. In einer Pfalz wie Ingelheim reichten Fleisch und Wein nur etwa zehn Tage (M4). Deshalb musste der Hof immer wieder weiterziehen.</p>'
       },
       {
         id: 'pfalz-e3', operator: 'beurteilen',
         quelle: 'pfalz-hofgedicht',
-        frage: 'Beurteile, ob Karl der Große den Beinamen „Vater Europas“ verdient. Beziehe die Quelle M3 ein und beachte, wer sie verfasst hat. (vgl. Buch S. 18 und S. 19, A5)',
+        frage: 'Beurteile, ob Karl der Große den Beinamen „Vater Europas“ verdient. Beziehe die Quelle M3 ein und beachte, wer sie verfasst hat. (vgl. Buch S. 18, Leitfrage, und S. 19, A5)',
         tipp: 'Sachurteil: Prüfe mit Fakten aus dem Buch, was für und was gegen den Beinamen spricht, und beachte, wer M3 geschrieben hat. Keine eigene Meinung wie „ich finde“.',
         begriffe: [
           { name: 'Kaiser', muster: ['kaiser'] },
@@ -357,18 +370,44 @@
         ],
         punkte: [
           { text: 'Dafür: Karl verdoppelte das Reich und schuf eine politische Einheit der christlichen Völker im Westen und in der Mitte Europas.', p: 1 },
-          { text: 'Dafür: Sein Reich umfasste große Teile des heutigen Frankreichs, Deutschlands und Italiens. Daraus entwickelten sich später Deutschland und Frankreich.', p: 1 },
+          { text: 'Dafür: Sein Reich umfasste große Teile des heutigen Frankreichs, Deutschlands und Italiens.', p: 1 },
           { text: 'Dafür: Mit der Kaiserkrönung 800 gab es erstmals seit 476 wieder einen Kaiser im Westen. Die römische Reichsidee lebte wieder auf.', p: 1 },
-          { text: 'Dagegen: Das Reich entstand durch Eroberungskriege. Die Sachsen wurden mit aller Härte unterdrückt und zum Christentum gezwungen.', p: 1 },
+          { text: 'Dagegen: Das Reich entstand durch Eroberungskriege. Aus Sicht der Sachsen war Karl kein „Vater“, sondern ein Eroberer, der sie mit Gewalt zum Christentum zwang.', p: 1 },
           { text: 'Einschränkung: Nicht ganz Europa gehörte dazu, zum Beispiel nicht Britannien und nicht das Oströmische Reich (Karte).', p: 1 },
           { text: 'M3: Der Verfasser gehört zum Königshof. Er lobt Karl („der beste Vater“, „Spitze Europas“) und ist nicht neutral.', p: 1 },
           { text: 'Deshalb zeigt M3 vor allem, wie man Karl am Hof sehen wollte, und ist kein Beweis, dass der Beiname stimmt.', p: 1 },
           { text: 'Abwägendes Ergebnis mit Begründung, aus Sicht der Zeit und ohne „ich finde“.', p: 1 }
         ],
-        muster: '<p>Aus Sicht der Menschen damals war der Beiname „Vater Europas“ gut nachvollziehbar. Karl hatte das Reich seines Vaters bis 800 verdoppelt und eine politische Einheit der christlichen Völker im Westen und in der Mitte Europas geschaffen. Sein Reich umfasste große Teile des heutigen Frankreichs, Deutschlands und Italiens, und später entwickelten sich daraus Deutschland und Frankreich. Mit der Kaiserkrönung im Jahr 800 gab es außerdem zum ersten Mal seit 476 wieder einen Kaiser im Westen.</p>' +
-          '<p>Andererseits entstand dieses Reich durch Kriege. Den Widerstand der Sachsen ließ Karl mit aller Härte unterdrücken und zwang sie zum Christentum. Außerdem gehörte nicht ganz Europa dazu, zum Beispiel nicht Britannien und nicht das Oströmische Reich.</p>' +
+        muster: '<p>Aus Sicht der Menschen damals war der Beiname „Vater Europas“ gut nachvollziehbar. Karl hatte das Reich seines Vaters bis 800 verdoppelt und eine politische Einheit der christlichen Völker im Westen und in der Mitte Europas geschaffen. Sein Reich umfasste große Teile des heutigen Frankreichs, Deutschlands und Italiens. Mit der Kaiserkrönung im Jahr 800 gab es außerdem zum ersten Mal seit 476 wieder einen Kaiser im Westen.</p>' +
+          '<p>Andererseits entstand dieses Reich durch Kriege. Den Widerstand der Sachsen ließ Karl mit aller Härte unterdrücken und zwang sie zum Christentum. Aus Sicht der Sachsen war Karl also kein „Vater“, sondern ein Eroberer. Außerdem gehörte nicht ganz Europa dazu, zum Beispiel nicht Britannien und nicht das Oströmische Reich.</p>' +
           '<p>Die Quelle M3 nennt Karl „den besten Vater“ und die „Spitze Europas“. Sie stammt aber von einem Mitglied des Königshofs und ist nicht neutral. Sie zeigt vor allem, wie man Karl am Hof sehen wollte.</p>' +
           '<p>Insgesamt passt der Beiname, weil Karl große Teile Europas in einem Reich verband. Er ist aber auch ein Lob von Hofleuten, das die Gewalt der Eroberungen verschweigt.</p>'
+      },
+      {
+        id: 'pfalz-e4', operator: 'herausarbeiten',
+        frage: 'Arbeite die besondere Rolle Karls des Großen für das mittelalterliche Kaisertum und die europäische Geschichte heraus.',
+        tipp: 'Sammle zuerst, was sich mit der Kaiserkrönung 800 änderte (Begriffskasten „Kaiser“). Sammle dann, was Karls Reich für Europa bedeutete (Darstellungstext). Vergiss die Schattenseite nicht.',
+        begriffe: [
+          { name: 'Kaiserkrönung', muster: ['kaiserkr', 'gekroent', 'kroenung'] },
+          { name: 'Papst', muster: ['papst'] },
+          { name: 'Reichsidee', muster: ['reichsidee'] },
+          { name: 'von Gottes Gnaden', muster: ['gottes gnaden'] },
+          { name: 'Europa', muster: ['europ'] },
+          { name: 'Sachsen', muster: ['sachsen'] }
+        ],
+        punkte: [
+          { text: 'Am Weihnachtstag 800 krönte Papst Leo III. Karl in Rom zum Kaiser. Damit gab es erstmals seit 476 wieder einen Kaiser im Westen.', p: 1 },
+          { text: 'Mit Karls Kaiserkrönung lebte die römische Reichsidee wieder auf: die Schaffung eines großen, geeinten Reichs.', p: 1 },
+          { text: 'Karl sah sein Kaisertum als Amt „von Gottes Gnaden“. Als Kaiser war er das weltliche Oberhaupt aller katholischen Christen; die Kaiser sahen sich als Beschützer der Christen.', p: 1 },
+          { text: 'Das Krönungsrecht lag beim Papst. Kaisertum und Papst waren dadurch eng verbunden. Die mittelalterlichen Kaiser verbanden mit der Krone den Herrschaftsanspruch über Italien.', p: 1 },
+          { text: 'Karl verdoppelte das Reich seines Vaters und schuf eine politische Einheit der christlichen Völker im Westen und in der Mitte Europas.', p: 1 },
+          { text: 'Sein Reich umfasste große Gebiete der heutigen Staaten Frankreich, Deutschland und Italien.', p: 1 },
+          { text: 'Nach seinem Tod entwickelten sich aus den Gebieten des Frankenreichs die Länder Deutschland und Frankreich.', p: 1 },
+          { text: 'Schon zu Lebzeiten hieß er „der Große“ und „pater europae“. Aber: Die Sachsen zwang er mit Gewalt zum Christentum.', p: 1 }
+        ],
+        muster: '<p>Karl der Große spielte eine besondere Rolle für das Kaisertum im Mittelalter. Am Weihnachtstag 800 krönte ihn Papst Leo III. in Rom zum Kaiser. Damit gab es zum ersten Mal seit 476 wieder einen Kaiser im Westen Europas, und die römische Reichsidee, also die Schaffung eines großen, geeinten Reichs, lebte wieder auf. Karl sah sein Amt als „von Gottes Gnaden“ übertragen. Als Kaiser war er das weltliche Oberhaupt aller katholischen Christen, und die Kaiser sahen sich als Beschützer der Christen. Weil das Krönungsrecht beim Papst lag, waren Kaisertum und Papst von nun an eng verbunden. Die mittelalterlichen Kaiser verbanden mit der Krone außerdem den Herrschaftsanspruch über Italien.</p>' +
+          '<p>Auch für die Geschichte Europas war Karl wichtig. Er verdoppelte das Reich seines Vaters und schuf eine politische Einheit der christlichen Völker im Westen und in der Mitte Europas. Sein Reich umfasste große Gebiete der heutigen Staaten Frankreich, Deutschland und Italien. Nach seinem Tod entwickelten sich daraus die Länder Deutschland und Frankreich.</p>' +
+          '<p>Schon zu Lebzeiten nannte man ihn „den Großen“ und „pater europae“, Vater Europas. Dabei darf man aber nicht vergessen, dass er die Sachsen mit Gewalt zum Christentum zwang.</p>'
       }
     ],
 
@@ -518,33 +557,33 @@
       ],
       schreiben: [
         {
-          id: 'pfalz-hs1', operator: 'erklaeren',
+          id: 'pfalz-hs1', operator: 'herausarbeiten',
           abb: 'karte-frankenreich', abbOpts: { beschriftet: true },
-          frage: 'Erkläre mithilfe der Karte und deines Wissens, wie Karl der Große seinen Machtbereich erweiterte. (vgl. Buch S. 19, A4a)',
+          frage: 'Arbeite mithilfe der Karte und deines Wissens heraus, welche Bedeutung Karl der Große für die Geschichte Europas hatte. (vgl. Buch S. 18, Leitfrage, und S. 19, A4a)',
           begriffe: [
             { name: 'Langobarden', muster: ['langobard'] },
             { name: 'Sachsen', muster: ['sachsen'] },
             { name: 'Grenzmarken', muster: ['grenzmark', 'spanische mark'] },
-            { name: 'Papst', muster: ['papst'] },
-            { name: 'Kaiser', muster: ['kaiser'] }
+            { name: 'Europa', muster: ['europ'] },
+            { name: 'Christentum', muster: ['christ'] }
           ],
           punkte: [
             { text: 'Ausgangspunkt: 768 übernahm Karl das Frankenreich seines Vaters Pippin (dunkle Fläche auf der Karte).', p: 1 },
-            { text: 'Langobarden: Auf einen Hilferuf des Papstes zog Karl 773 nach Norditalien und eroberte 774 die Hauptstadt Pavia.', p: 1 },
-            { text: 'Er setzte sich die Königskrone der Langobarden auf und nannte sich „König der Franken und Langobarden“.', p: 1 },
-            { text: 'Sachsen: Über 30 Jahre Krieg. Karl unterdrückte den Widerstand mit Härte und zwang die Sachsen zum Christentum.', p: 1 },
-            { text: 'Die Karte zeigt weitere Gebietserweiterungen, zum Beispiel Bayern.', p: 1 },
+            { text: 'Durch Kriege gegen die Langobarden (774 Pavia) und die Sachsen (über 30 Jahre) und mit weiteren Gebieten wie Bayern verdoppelte er das Reich bis 800 (helle Flächen).', p: 1 },
             { text: 'An den Grenzen sicherten Grenzmarken (zum Beispiel die Spanische Mark) das Reich. Sie wurden von Grafen verwaltet.', p: 1 },
-            { text: 'Ergebnis: Um 800 war das Reich doppelt so groß wie das Reich Pippins, eine politische Einheit der christlichen Völker im Westen und in der Mitte Europas.', p: 1 },
-            { text: 'Die Kaiserkrönung 800 durch Papst Leo III. machte Karl zum weltlichen Oberhaupt aller katholischen Christen.', p: 1 }
+            { text: 'Das Reich umfasste große Gebiete der heutigen Staaten Frankreich, Deutschland und Italien.', p: 1 },
+            { text: 'Karl schuf eine politische Einheit der christlichen Völker im Westen und in der Mitte Europas.', p: 1 },
+            { text: 'Er breitete den christlichen Glauben aus, zwang aber die Sachsen mit Gewalt zum Christentum.', p: 1 },
+            { text: 'Nach Karls Tod entwickelten sich aus den Gebieten des Frankenreichs die Länder Deutschland und Frankreich.', p: 1 },
+            { text: 'Schon seine Zeitgenossen nannten ihn „pater europae“. Aber: Nicht ganz Europa gehörte zu seinem Reich, zum Beispiel nicht Britannien und nicht das Oströmische Reich (Karte).', p: 1 }
           ],
-          muster: '<p>Karl übernahm 768 das Frankenreich seines Vaters Pippin. Auf der Karte ist es dunkel gefärbt. Er erweiterte seinen Machtbereich vor allem durch Kriege. Auf einen Hilferuf des Papstes zog er 773 gegen die Langobarden in Norditalien. 774 eroberte er ihre Hauptstadt Pavia, setzte sich ihre Königskrone auf und nannte sich „König der Franken und Langobarden“.</p>' +
-            '<p>Den längsten Krieg führte er über 30 Jahre gegen die Sachsen im heutigen Niedersachsen. Er unterdrückte ihren Widerstand mit aller Härte und zwang sie zum Christentum. Die Karte zeigt außerdem, dass auch Bayern hinzukam. An den Grenzen ließ Karl Grenzmarken wie die Spanische Mark einrichten, die von Grafen verwaltet wurden und das Reich sicherten.</p>' +
-            '<p>Dadurch war das Reich um 800 doppelt so groß wie das Reich seines Vaters. Es bildete eine politische Einheit der christlichen Völker im Westen und in der Mitte Europas. Mit der Kaiserkrönung durch Papst Leo III. im Jahr 800 wurde Karl außerdem das weltliche Oberhaupt aller katholischen Christen.</p>'
+          muster: '<p>Karl übernahm 768 das Frankenreich seines Vaters Pippin. Auf der Karte ist es dunkel gefärbt. Durch Kriege erweiterte er es stark: 774 eroberte er Pavia, die Hauptstadt der Langobarden in Norditalien, und über 30 Jahre kämpfte er gegen die Sachsen. Auch Bayern kam hinzu. Um 800 war das Reich doppelt so groß wie das seines Vaters. An den Grenzen sicherten Grenzmarken wie die Spanische Mark das Reich. Sie wurden von Grafen verwaltet.</p>' +
+            '<p>Damit umfasste Karls Reich große Gebiete der heutigen Staaten Frankreich, Deutschland und Italien. Es war eine politische Einheit der christlichen Völker im Westen und in der Mitte Europas. Karl breitete auch den christlichen Glauben aus, allerdings zwang er die Sachsen mit Gewalt zum Christentum. Nach seinem Tod entwickelten sich aus den Gebieten des Frankenreichs die Länder Deutschland und Frankreich.</p>' +
+            '<p>Schon seine Zeitgenossen nannten ihn deshalb „pater europae“, Vater Europas. Die Karte zeigt aber auch, dass nicht ganz Europa zu Karls Reich gehörte, zum Beispiel nicht Britannien und nicht das Oströmische Reich.</p>'
         },
         {
-          id: 'pfalz-hs2', operator: 'ueberpruefen',
-          frage: 'Überprüfe die Aussage: „Seit der Kaiserkrönung im Jahr 800 war Karl mächtiger als der Papst.“',
+          id: 'pfalz-hs2', operator: 'beurteilen',
+          frage: 'Beurteile, ob Karl seit der Kaiserkrönung mächtiger war als der Papst.',
           begriffe: [
             { name: 'Krönungsrecht', muster: ['kroenungsrecht'] },
             { name: 'weltlich', muster: ['weltlich'] },
@@ -558,12 +597,12 @@
             { text: 'Dagegen: Das Krönungsrecht lag beim Papst. Ohne ihn konnte Karl nicht Kaiser werden.', p: 1 },
             { text: 'Dagegen: Durch das Krönungsrecht nahm der Papst Einfluss auf den weltlichen Bereich.', p: 1 },
             { text: 'Dagegen: Der Papst besaß mit dem Kirchenstaat ein eigenes Gebiet in Italien.', p: 1 },
-            { text: 'Begründetes Ergebnis: Die Aussage stimmt nur teilweise. Kaiser und Papst waren aufeinander angewiesen.', p: 1 },
+            { text: 'Begründetes Ergebnis, das aus den Argumenten folgt (z. B.: stimmt nur teilweise, weil Kaiser und Papst aufeinander angewiesen waren).', p: 1 },
             { text: 'Sachlich mit Belegen aus dem Buch, ohne eigene Meinung („ich finde“).', p: 1 }
           ],
-          muster: '<p>Für die Aussage spricht, dass Karl als Kaiser das weltliche Oberhaupt aller katholischen Christen war. Er beherrschte ein riesiges Reich, und die Kaiser verbanden mit der Krone den Herrschaftsanspruch über Italien. Außerdem war der Papst auf Karl angewiesen: Schon 773 hatte er Karl um Hilfe gegen die Langobarden gebeten, und die Kaiser sahen sich als Beschützer der Christen.</p>' +
-            '<p>Gegen die Aussage spricht, dass das Krönungsrecht beim Papst lag. Ohne den Papst konnte Karl nicht Kaiser werden. Dadurch nahm der Papst Einfluss auf den weltlichen Bereich. Außerdem besaß der Papst mit dem Kirchenstaat ein eigenes Gebiet in Italien.</p>' +
-            '<p>Die Aussage stimmt also nur teilweise. Karl hatte mehr Land und Soldaten, aber Kaiser und Papst waren aufeinander angewiesen: Der Papst brauchte Karls Schutz, und Karl brauchte den Papst für die Kaiserkrone.</p>'
+          muster: '<p>Dafür, dass Karl mächtiger war, spricht, dass er als Kaiser das weltliche Oberhaupt aller katholischen Christen war. Er beherrschte ein riesiges Reich, und die Kaiser verbanden mit der Krone den Herrschaftsanspruch über Italien. Außerdem war der Papst auf Karl angewiesen: Schon 773 hatte er Karl um Hilfe gegen die Langobarden gebeten, und die Kaiser sahen sich als Beschützer der Christen.</p>' +
+            '<p>Dagegen spricht, dass das Krönungsrecht beim Papst lag. Ohne den Papst konnte Karl nicht Kaiser werden. Dadurch nahm der Papst Einfluss auf den weltlichen Bereich. Außerdem besaß der Papst mit dem Kirchenstaat ein eigenes Gebiet in Italien.</p>' +
+            '<p>Karl war also nur teilweise mächtiger als der Papst. Er hatte mehr Land und Soldaten, aber Kaiser und Papst waren aufeinander angewiesen: Der Papst brauchte Karls Schutz, und Karl brauchte den Papst für die Kaiserkrone.</p>'
         }
       ]
     },
@@ -584,7 +623,7 @@
     schatz: [
       {
         id: 'pfalz-s1', titel: 'Ein Elefant für den Kaiser',
-        text: 'Der Kalif Harun ar-Raschid aus Bagdad schickte Karl einen Elefanten. Er hieß Abul Abaz. Ein Gesandter namens Isaak brachte ihn übers Mittelmeer nach Italien. Weil Schnee auf den Alpen lag, überwinterte er in Vercelli. Im Juli 802 kam der Elefant in Aachen an. Er starb 810 plötzlich, als Karl mit seinem Heer an der Lippe lagerte.',
+        text: 'Der Kalif Harun ar-Raschid aus Bagdad schickte Karl einen Elefanten. Er hieß Abul Abaz. Karls Gesandter Isaak brachte ihn übers Mittelmeer nach Italien. Weil Schnee auf den Alpen lag, überwinterte er in Vercelli. Im Juli 802 kam der Elefant in Aachen an. Er starb 810 plötzlich, als Karl mit seinem Heer an der Lippe lagerte.',
         nachweis: 'Reichsannalen (Annales regni Francorum) zu den Jahren 801, 802 und 810; Einhard, Vita Karoli Magni, Kap. 16'
       },
       {

@@ -18,7 +18,7 @@
     'Fronhof': 'Hof, auf dem die Bauern ihre Abgaben abliefern mussten (althochdeutsch fro = Herr). Hier wohnte auch der Meier.',
     'Meier': 'Der Verwalter auf einem Fronhof. Ihm waren mehrere Hufen und die Bauern darauf unterstellt.',
     'Abgaben': 'Was die Bauern dem Grundherrn von ihren Erträgen abliefern mussten, zum Beispiel den Zehnt.',
-    'Zehnt': 'Festgelegter Anteil vom Ertrag, den die hörigen Bauern jedes Jahr abliefern mussten. Oft war es mehr als ein Zehntel, weil immer das erste von zehn Hühnern abzugeben war.',
+    'Zehnt': 'Festgelegter Anteil vom Ertrag, den die hörigen Bauern jedes Jahr abliefern mussten. Oft war es mehr als ein Zehntel, weil immer das erste von zehn Hühnern abzugeben war. Ursprünglich war der Zehnt eine Abgabe an die Kirche; oft zogen ihn aber auch weltliche Grundherren ein.',
     'Frondienste': 'Arbeiten für den Grundherrn, vor allem in der Landwirtschaft auf dem Herrenhof oder einem Fronhof. Im Laufe des Mittelalters wurden sie zunehmend durch Geldzahlungen ersetzt.',
     'Sachurteil': 'Ein Urteil mit den Augen der Menschen damals: Wie hätten sie eine Frage beantwortet? Ohne eigene Meinung, mit Gründen aus der Zeit.',
     'Werturteil': 'Ein Urteil mit den Augen der Menschen heute: Wie beantwortest du die Frage nach heutigen Werten? Mit eigener, begründeter Meinung.'
