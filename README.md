@@ -53,6 +53,15 @@ node tests/extras.test.js      # Gerüchte, Schatzkammer, Zeitleiste
 
 ## Bildnachweise und Schriften
 
-BILDNACHWEISE
+Gemeinfreie Bildquellen (verkleinert):
+
+- **Bauern bei der Fronarbeit**, unbekannter englischer Buchmaler (Psalter der Königin Maria), um 1310–1320. gemeinfrei (Public domain), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Reeve_and_Serfs.jpg), Datei `bilder/fronhof-fronarbeit.jpg`
+- **Mannschaft und Eid auf Reliquien**, unbekannter Buchmaler, Heidelberger Bilderhandschrift des Sachsenspiegels, um 1300. gemeinfrei (Public domain), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Heerschildordnung.jpg), Datei `bilder/lehen-sachsenspiegel.jpg`
+- **Christus und die drei Stände**, Holzschnitt aus Johannes Lichtenbergers Buch „Prognosticatio“, gedruckt von Jacob Meydenbach, 1488. gemeinfrei (Public domain), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:St%C3%A4ndeordnung.jpg), Datei `bilder/kirche-lichtenberger.jpg`
+- **Monatsbild März: Pflügen, Säen und Arbeit im Weinberg**, Brüder von Limburg, Buchmaler des Herzogs Johann von Berry; die Figuren wohl von einem späteren Maler ergänzt, um 1412–1416, vollendet um 1440. gemeinfrei (Public domain), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Les_Tr%C3%A8s_Riches_Heures_du_duc_de_Berry_mars.jpg), Datei `bilder/dorf-maerz.jpg`
+- **Turnier**, Maler der Manessischen Liederhandschrift, um 1300. gemeinfrei (Public domain), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Codex_Manesse_052r_Walther_von_Klingen.jpg), Datei `bilder/burg-turnier.jpg`
+- **Der Klosterplan von St. Gallen (Original)**, unbekannter Mönch (wohl im Kloster Reichenau), um 820. gemeinfrei (Public domain), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Codex_Sangallensis_1092_recto.jpg), Datei `bilder/kloster-plan.jpg`
+
+Alle anderen Abbildungen sind selbst gezeichnet. Es werden keine Bilder aus dem Schulbuch verwendet.
 
 Schriften: Alegreya und Alegreya Sans von Juan Pablo del Peral (Huerta Tipográfica), SIL Open Font License 1.1 (siehe `fonts/`).
