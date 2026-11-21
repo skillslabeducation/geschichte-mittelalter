@@ -49,17 +49,17 @@
       kapelle: { label: 'Kapelle', x: 171, y: 107 },
       plumpsklo: { label: 'Plumpsklo', x: 16, y: 150, tx: 24, ty: 134, a: 'start' },
       brunnen: { label: 'Brunnen', x: 66, y: 176, tx: 85, ty: 174, a: 'end' },
-      burggarten: { label: 'Burggarten', x: 137, y: 174 },
-      kernburg: { label: 'Kernburg', x: 206, y: 168 },
-      vorburg: { label: 'Vorburg', x: 276, y: 224 },
-      stall: { label: 'Stall', x: 250, y: 202 },
-      schmiede: { label: 'Schmiede', x: 305, y: 190 },
-      wachturm: { label: 'Wachturm', x: 345, y: 176, a: 'end' },
+      burggarten: { label: 'Burggarten', x: 293, y: 216 },
+      kernburg: { label: 'Kernburg', x: 148, y: 172 },
+      vorburg: { label: 'Vorburg', x: 263, y: 194 },
+      stall: { label: 'Stall', x: 253, y: 168 },
+      schmiede: { label: 'Schmiede', x: 302, y: 166 },
+      wachturm: { label: 'Wachturm', x: 296, y: 94, tx: 334, ty: 140 },
       torturm: { label: 'Torturm', x: 201, y: 224 },
       wehrgang: { label: 'Wehrgang', x: 110, y: 229 },
       wehrmauer: { label: 'Wehrmauer', x: 110, y: 268 },
       schiessscharte: { label: 'Schießscharte', x: 290, y: 282, tx: 290, ty: 260 },
-      verlies: { label: 'Verlies', x: 25, y: 240, tx: 25, ty: 266 },
+      verlies: { label: 'Verlies', x: 25, y: 233, tx: 21, ty: 276 },
       tor: { label: 'Tor mit Zugbrücke', kurz: 'Tor mit|Zugbrücke', x: 201, y: 310 },
       burggraben: { label: 'Burggraben', x: 100, y: 307 }
     },
@@ -110,38 +110,39 @@
       s += rect(84, 172, 16, 10, F.stein) + rect(85, 159, 2, 13, F.holz, true) + rect(97, 159, 2, 13, F.holz, true);
       s += poly('81,161 92,152 103,161', F.dach) + linie(86, 163, 98, 163, F.holz, 1.5) + linie(92, 163, 92, 168, F.tinte, 0.8) + rect(90, 167, 4, 4, F.holz, true);
 
-      /* Burggarten */
-      s += rect(104, 160, 64, 24, F.hellgruen) ;
-      for (var gi = 0; gi < 6; gi++) {
-        s += '<circle cx="' + (110 + gi * 10.5) + '" cy="166" r="2.6" fill="' + F.gruen + '"/>';
-        s += '<circle cx="' + (110 + gi * 10.5) + '" cy="172" r="2.2" fill="' + (gi % 2 ? F.zinnober : F.gruen) + '"/>';
-        s += '<circle cx="' + (110 + gi * 10.5) + '" cy="178" r="2.6" fill="' + F.gruen + '"/>';
-      }
-
       /* Mauer der Kernburg (Vorderseite) und Seitenwand */
       s += rect(16, 188, 214, 52, F.stein) + fugen(16, 188, 230, 240);
       s += poly('230,150 238,156 238,240 230,240', SEITE);
 
-      /* Vorburg: Boden, Stall, Schmiede */
-      s += rect(238, 186, 84, 54, SAND, true);
-      s += rect(242, 186, 44, 30, WAND) + poly('238,188 264,168 290,188', F.dach);
-      s += rect(256, 196, 16, 20, DUNKEL) + rect(256, 206, 16, 10, F.holz) + linie(256, 206, 272, 216, DUNKEL, 1) + linie(272, 206, 256, 216, DUNKEL, 1);
-      s += rect(275, 209, 9, 7, F.ocker) + linie(275, 212.5, 284, 212.5, F.holz, 0.8);
-      s += rect(311, 174, 6, 14, F.stein) + rauch(314, 172);
-      s += rect(292, 194, 26, 22, WAND) + poly('289,196 305,182 321,196', F.dach);
-      s += rect(296, 202, 12, 14, DUNKEL) + '<circle cx="302" cy="212" r="3" fill="' + FEUER + '"/>';
-      s += '<path d="M309,210 h9 l-2,3 h-2 v3 h-2 v-3 h-2 z" fill="' + F.tinte + '"/>';
+      /* Vorburg: Boden, Stall, Schmiede, Burggarten */
+      s += rect(238, 146, 84, 94, SAND, true);
+      s += rect(242, 156, 40, 24, WAND) + poly('238,158 262,140 286,158', F.dach);
+      s += rect(254, 163, 16, 17, DUNKEL) + rect(254, 171, 16, 9, F.holz) + linie(254, 171, 270, 180, DUNKEL, 1) + linie(270, 171, 254, 180, DUNKEL, 1);
+      s += rect(273, 173, 8, 7, F.ocker) + linie(273, 176.5, 281, 176.5, F.holz, 0.8);
+      s += rect(309, 140, 6, 14, F.stein) + rauch(312, 138);
+      s += rect(290, 160, 28, 20, WAND) + poly('287,162 304,148 321,162', F.dach);
+      s += rect(294, 166, 12, 14, DUNKEL) + '<circle cx="300" cy="176" r="3" fill="' + FEUER + '"/>';
+      s += '<path d="M308,174 h9 l-2,3 h-2 v3 h-2 v-3 h-2 z" fill="' + F.tinte + '"/>';
+      s += rect(262, 204, 58, 24, F.hellgruen);
+      for (var gi = 0; gi < 6; gi++) {
+        s += '<circle cx="' + (267 + gi * 9.6) + '" cy="210" r="2.6" fill="' + F.gruen + '"/>';
+        s += '<circle cx="' + (267 + gi * 9.6) + '" cy="216" r="2.2" fill="' + (gi % 2 ? F.zinnober : F.gruen) + '"/>';
+        s += '<circle cx="' + (267 + gi * 9.6) + '" cy="222" r="2.6" fill="' + F.gruen + '"/>';
+      }
 
       /* Wachturm */
       s += rect(324, 150, 26, 142, F.stein) + fugen(324, 150, 350, 292);
       s += rect(320, 128, 34, 22, F.holz) + rect(326, 134, 6, 8, DUNKEL, true) + rect(342, 134, 6, 8, DUNKEL, true);
       s += poly('316,130 337,106 358,130', F.dach);
 
-      /* Eckturm links mit Verlies (aufgeschnitten) */
+      /* Eckturm links, unten aufgeschnitten: Verlies als dunkler Raum ohne Öffnung nach außen */
       s += rect(6, 216, 38, 76, F.stein) + fugen(6, 216, 44, 292) + zinnen(6, 44, 216, F.stein);
       s += rect(24, 226, 3, 10, DUNKEL, true);
-      s += rect(12, 256, 26, 30, DUNKEL) + rect(21, 256, 8, 3, F.grau, true);
-      for (var vi = 0; vi < 4; vi++) s += linie(16 + vi * 6, 259, 16 + vi * 6, 286, F.grau, 1, ' opacity="0.7"');
+      s += poly('9,252 14,248 19,251 25,247 31,251 36,248 41,252 41,289 9,289', F.hell);
+      s += rect(13, 255, 24, 31, DUNKEL);
+      s += rect(13, 282, 24, 4, F.ocker, true);
+      s += '<path d="M16,283 v-8 q0,-4 4,-4 q4,0 4,4 v8 z" fill="' + F.grau + '"/><circle cx="20" cy="267" r="3.2" fill="' + F.grau + '"/>' + rect(22, 280, 9, 3, F.grau, true);
+      s += linie(36, 262, 25, 274, F.grau, 1, ' stroke-dasharray="1.5 1"');
 
       /* Wehrmauer vorne: links mit hölzernem Wehrgang, rechts mit Zinnen */
       s += rect(44, 240, 278, 52, F.stein) + fugen(44, 240, 322, 292);

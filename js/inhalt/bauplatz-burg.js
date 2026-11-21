@@ -15,7 +15,7 @@
           '<p><dfn>Ritter</dfn> waren Adlige und von Beruf Krieger. Ihre Ausbildung für den Kampf begann früh:</p>' +
           '<ul><li>Mit sieben Jahren kam ein Junge als <dfn>Page</dfn> auf eine fremde Burg. Dort lernte er, mit Lanze und Schwert zu kämpfen. Man brachte ihm die Regeln für das <dfn>Turnier</dfn> bei, das ritterliche Kampfspiel. Auch gutes Benehmen gehörte dazu.</li>' +
           '<li>Mit 14 Jahren wurde er <dfn>Knappe</dfn>. Nun begleitete er seinen Herrn zu Turnieren und zog mit ihm in den Kampf.</li>' +
-          '<li>Wenn er sich bewährte, wurde er mit etwa 20 Jahren in den Kreis der Ritter aufgenommen. Beim <dfn>Ritterschlag</dfn> wurde ihm feierlich ein Schwert umgelegt.</li></ul>' +
+          '<li>Wenn er sich bewährte, wurde er mit etwa 20 Jahren in den Kreis der Ritter aufgenommen. Dazu erhielt er den <dfn>Ritterschlag</dfn>, und es wurde ihm feierlich ein Schwert umgelegt.</li></ul>' +
           '<p>Adlige Mädchen lernten Lesen und Schreiben.</p>',
         merk: 'Ritter waren Adlige und von Beruf Krieger: mit 7 Jahren Page, mit 14 Knappe, mit etwa 20 Jahren Ritterschlag.',
         achtung: '<strong>Aufgepasst</strong>: Erst Page, dann Knappe, nicht umgekehrt. Und den Ritterschlag bekam nur, wer sich als Knappe bewährt hatte.',
@@ -54,8 +54,8 @@
         text: '<p>Die Zeichnung zeigt eine erdachte Burg. Wie die Rekonstruktionszeichnung im Buch (S. 38/39) gab es sie so nie. Sie fasst typische Teile zusammen.</p>' +
           '<ul><li><strong>Verteidigung:</strong> Vor der Burg liegt der Burggraben. Hinein kommt man nur durch das Tor mit Zugbrücke, das ein Torturm schützt. Die <dfn>Wehrmauer</dfn> umgibt die Burg. Oben läuft der <dfn>Wehrgang</dfn>. Durch eine schmale <dfn>Schießscharte</dfn> konnte man auf Angreifer schießen. Vom Wachturm und vom Bergfried hielt man Ausschau.</li>' +
           '<li><strong>Vorburg:</strong> In der <dfn>Vorburg</dfn> lagen Werkstätten, der Stall und die Schmiede.</li>' +
-          '<li><strong>Kernburg:</strong> Zur <dfn>Kernburg</dfn> gehörten der Palas mit dem großen Saal, die Kemenate, die Kapelle, der Brunnen und der Bergfried.</li>' +
-          '<li>Außerdem gab es ein <dfn>Verlies</dfn> für Gefangene, einen Burggarten und ein Plumpsklo, das als kleiner Vorbau an der Außenwand hing.</li></ul>',
+          '<li><strong>Kernburg:</strong> Zur <dfn>Kernburg</dfn> gehörten der Palas mit dem großen Saal, die Kemenate, die Kapelle, der Brunnen und der Bergfried. Unter dem großen Saal lagen die Küche und die Unterkünfte für Knechte und Mägde.</li>' +
+          '<li>Außerdem gab es ein <dfn>Verlies</dfn> für Gefangene, einen Burggarten und ein Plumpsklo, das als kleiner Vorbau an der Außenwand hing. In der Amtsstube gab es ein Lager und die Waffenkammer.</li></ul>',
         merk: 'Außen schützen Burggraben, Tor mit Zugbrücke, Wehrmauer und Türme. Innen liegen die Vorburg mit Stall und Werkstätten und die Kernburg mit Palas, Kemenate, Kapelle und Bergfried.',
         achtung: '<strong>Aufgepasst</strong>: Bergfried und Wachturm sind nicht dasselbe. Der Bergfried ist der hohe Turm der Kernburg, in den man sich bei einer Belagerung als Letztes flüchtete.',
         abb: 'burg', abbOpts: { beschriftet: true }
@@ -95,7 +95,7 @@
           'Er lernt den Kampf mit Lanze und Schwert, die Regeln der Turniere und gutes Benehmen.',
           'Mit 14 Jahren wird er Knappe.',
           'Er begleitet seinen Herrn zu Turnieren und in den Kampf und bewährt sich.',
-          'Mit etwa 20 Jahren erhält er den Ritterschlag: Ein Schwert wird ihm feierlich umgelegt.'
+          'Mit etwa 20 Jahren erhält er den Ritterschlag, und es wird ihm feierlich ein Schwert umgelegt.'
         ],
         erkl: 'Page (ab 7) → Knappe (ab 14) → Ritterschlag (mit etwa 20). Ritter wurde nur, wer sich als Knappe bewährte.'
       },
@@ -153,7 +153,7 @@
       },
       {
         id: 'burg-u7', typ: 'beschriften', abb: 'burg',
-        frage: 'Die Burg als Verteidigungsanlage: Welches Bauteil gehört zu welcher Nummer?',
+        frage: 'Verteidigung und Sicherheit auf der Burg: Welches Bauteil gehört zu welcher Nummer?',
         strukturen: ['burggraben', 'tor', 'torturm', 'wehrmauer', 'wehrgang', 'schiessscharte', 'wachturm', 'bergfried', 'verlies']
       },
       {
@@ -219,13 +219,13 @@
       {
         id: 'burg-u14', typ: 'zeitleiste',
         frage: 'Ordne die Ereignisse rund um Burg und Ritter auf der Zeitleiste ein.',
-        abschnitte: ['11. Jh.', '12. Jh.', 'um 1200', 'um 1300', 'um 1500'],
+        abschnitte: ['1000–1099', '1100–1199', 'um 1200', 'um 1300', 'um 1500'],
         ereignisse: [
           ['Die Burg Bentheim wird zum ersten Mal in schriftlichen Quellen erwähnt.', 0, '1020'],
           ['Die Burg Bentheim wird zerstört und danach wieder aufgebaut.', 1, '12. Jh.'],
           ['Wolfram von Eschenbach dichtet den „Parzival“.', 2, 'um 1200'],
           ['Die Manessische Liederhandschrift mit dem Turnierbild entsteht.', 3, 'um 1300'],
-          ['Ritter Ulrich von Hutten beschreibt den Alltag auf seiner Burg.', 4, '1488–1523']
+          ['Ritter Ulrich von Hutten beschreibt in einem Brief den Alltag auf seiner Burg.', 4, '1518']
         ]
       },
       {
@@ -249,7 +249,7 @@
           ['Oben schauen fünf Frauen über eine Mauer mit Zinnen zu.', 0],
           ['Das Bild stammt aus der Manessischen Liederhandschrift von etwa 1300.', 1],
           ['Das Bild wurde von Hand in ein Buch gemalt, es ist eine Buchmalerei.', 1],
-          ['Der Maler zeigt den Sieger prächtig vor Zuschauerinnen: Ein Turnier brachte Ansehen.', 2],
+          ['Das Bild soll zeigen: Wer im Turnier siegte, gewann Ruhm und Ansehen.', 2],
           ['Das Bild zeigt eher das Ideal des Ritters als seinen engen Alltag auf der Burg.', 2]
         ],
         erkl: 'Beschreiben: nur, was man sieht. Untersuchen: Wer hat das Bild wann und wie gemacht? Deuten: Was will das Bild zeigen?'
@@ -312,10 +312,10 @@
           { text: 'Der Page lernte, mit Lanze und Schwert zu kämpfen.', p: 1 },
           { text: 'Er lernte die Regeln der Turniere (ritterliche Kampfspiele) und gutes Benehmen.', p: 1 },
           { text: 'Mit 14 Jahren wurde er Knappe: Er begleitete seinen Herrn zu Turnieren und zog mit ihm in den Kampf.', p: 1 },
-          { text: 'Wenn er sich bewährte, erhielt er mit etwa 20 Jahren den Ritterschlag, ein Schwert wurde ihm feierlich umgelegt.', p: 1 },
+          { text: 'Wenn er sich bewährte, erhielt er mit etwa 20 Jahren den Ritterschlag, und es wurde ihm feierlich ein Schwert umgelegt.', p: 1 },
           { text: 'Richtige Reihenfolge, ganze Sätze, Fachbegriffe Page, Knappe und Ritterschlag benutzt.', p: 1 }
         ],
-        muster: 'Adlige Jungen wurden schon früh auf ihren Beruf als Krieger vorbereitet. Mit sieben Jahren kam ein Junge als Page auf eine fremde Burg. Dort lernte er, mit Lanze und Schwert zu kämpfen. Man brachte ihm auch die Regeln für die Turniere bei, also für die ritterlichen Kampfspiele, und er lernte gutes Benehmen. Mit 14 Jahren wurde der Page zum Knappen. Nun begleitete er seinen Herrn zu Turnieren und zog mit ihm in den Kampf. Wenn er sich dort bewährte, wurde er mit etwa 20 Jahren in den Kreis der Ritter aufgenommen. Beim Ritterschlag wurde ihm feierlich ein Schwert umgelegt.'
+        muster: 'Adlige Jungen wurden schon früh auf ihren Beruf als Krieger vorbereitet. Mit sieben Jahren kam ein Junge als Page auf eine fremde Burg. Dort lernte er, mit Lanze und Schwert zu kämpfen. Man brachte ihm auch die Regeln für die Turniere bei, also für die ritterlichen Kampfspiele, und er lernte gutes Benehmen. Mit 14 Jahren wurde der Page zum Knappen. Nun begleitete er seinen Herrn zu Turnieren und zog mit ihm in den Kampf. Wenn er sich dort bewährte, wurde er mit etwa 20 Jahren in den Kreis der Ritter aufgenommen. Dazu erhielt er den Ritterschlag, und es wurde ihm feierlich ein Schwert umgelegt.'
       },
       {
         id: 'burg-e2', operator: 'erklaeren',
@@ -342,12 +342,14 @@
       },
       {
         id: 'burg-e3', operator: 'erlaeutern',
-        frage: 'Erläutere die Lebensverhältnisse auf einer Burg. Nutze den Darstellungstext, M4 (S. 37) und M3 (S. 39) (vgl. Buch S. 37, A3).',
+        frage: 'Erläutere die Lebensverhältnisse auf einer Burg. Nutze den Darstellungstext, M1 (S. 36) und M4 (S. 37), gern auch M3 (S. 39) (vgl. Buch S. 37, A3).',
         quelle: 'burg-hutten',
-        material: '<p><strong>Aus M3, S. 39 (Darstellung von heute):</strong> „Mit dem Morgengrauen standen die Burgbewohner auf und arbeiteten bis zur Dunkelheit. … Der große Festsaal wurde nur an besonderen Tagen beheizt. Gegen Abend zogen sich die Burgbewohner in die kleineren Räume zurück, die sogenannten Kemenaten, da diese schneller aufheizten.“</p>',
+        material: '<p><strong>Aus M1, S. 36 (Foto der Burg Bentheim, Bildunterschrift):</strong> „1 = Bergfried, 2 = Batterieturm (= ein Verteidigungsturm), 3 = äußeres Tor, 4 = inneres Tor, 5 = Katharinenkirche, 6 = Kronenburg (= Wohngebäude der Burgherren), 7 Marstall (= diente zur Unterbringung der Pferde), 8 = Burgbrunnen, 9 = Wehrgang, 10 = Garten“</p>' +
+          '<p><strong>Aus M3, S. 39 (Darstellung von heute):</strong> „Mit dem Morgengrauen standen die Burgbewohner auf und arbeiteten bis zur Dunkelheit. … Der große Festsaal wurde nur an besonderen Tagen beheizt. Gegen Abend zogen sich die Burgbewohner in die kleineren Räume zurück, die sogenannten Kemenaten, da diese schneller aufheizten.“</p>',
         tipp: 'Erläutern heißt: erklären und mit Beispielen aus dem Material belegen. Schreib zum Beispiel: „In M4 heißt es …“',
         begriffe: [
           { name: 'Verteidigung / Wehr', muster: ['wehr', 'verteidig'] },
+          { name: 'Bergfried', muster: ['bergfried'] },
           { name: 'Enge', muster: ['eng'] },
           { name: 'Kemenate', muster: ['kemenat'] },
           { name: 'Fenster', muster: ['fenster'] },
@@ -356,6 +358,7 @@
         ],
         punkte: [
           { text: 'Die Burg war vor allem zur Verteidigung gebaut, nicht für die Behaglichkeit (M4).', p: 1 },
+          { text: 'Beleg aus M1 (Burg Bentheim): viele Verteidigungsbauten wie Bergfried, Batterieturm, äußeres und inneres Tor und Wehrgang neben dem Wohngebäude der Burgherren, der Kronenburg.', p: 1 },
           { text: 'Enge: Ställe für Vieh und Pferde, Dunkelkammern und Waffen lagen dicht beieinander (M4).', p: 1 },
           { text: 'Gestank von Schießpulver, Hunden und ihrem Unrat (M4).', p: 1 },
           { text: 'Kälte und Dunkelheit: kleine Fenster, im Winter mit Holzläden verschlossen, Glas nur für sehr reiche Adlige (Darstellungstext).', p: 1 },
@@ -363,7 +366,7 @@
           { text: 'Langer Arbeitstag vom Morgengrauen bis zur Dunkelheit (M3).', p: 1 },
           { text: 'Aussagen mit Belegen aus dem Material verknüpft und ein Fazit gezogen.', p: 1 }
         ],
-        muster: 'Das Leben auf einer Burg war viel unbequemer, als man oft denkt. Das lag vor allem daran, dass Burgen Verteidigungsanlagen waren. Ulrich von Hutten schreibt in M4, die Burg sei „nicht für die Behaglichkeit, sondern zur Wehr erbaut“. Innen war es sehr eng, denn Vieh- und Pferdeställe, Dunkelkammern und Waffen lagen dicht beieinander. Außerdem stank es überall nach Schießpulver und nach den Hunden und ihrem Unrat. Kalt und dunkel war es auch: Die Fenster waren klein und wurden im Winter mit Holzläden verschlossen. Glasfenster konnten sich nur sehr reiche Adlige leisten. Der große Festsaal wurde nur an besonderen Tagen beheizt. Deshalb zogen sich die Bewohner abends in die Kemenaten zurück, weil diese schneller warm wurden (M3). Dazu kam viel Arbeit: Man stand mit dem Morgengrauen auf und arbeitete bis zur Dunkelheit. Insgesamt bot die Burg vor allem Schutz, aber wenig Bequemlichkeit.'
+        muster: 'Das Leben auf einer Burg war viel unbequemer, als man oft denkt. Das lag vor allem daran, dass Burgen Verteidigungsanlagen waren. Das sieht man am Foto der Burg Bentheim (M1): Neben dem Wohngebäude der Burgherren, der Kronenburg, gibt es viele Bauten für die Verteidigung, zum Beispiel den Bergfried, einen Batterieturm, ein äußeres und ein inneres Tor und einen Wehrgang. Ulrich von Hutten schreibt in M4, die Burg sei „nicht für die Behaglichkeit, sondern zur Wehr erbaut“. Innen war es sehr eng, denn Vieh- und Pferdeställe, Dunkelkammern und Waffen lagen dicht beieinander. Außerdem stank es überall nach Schießpulver und nach den Hunden und ihrem Unrat. Kalt und dunkel war es auch: Die Fenster waren klein und wurden im Winter mit Holzläden verschlossen. Glasfenster konnten sich nur sehr reiche Adlige leisten. Der große Festsaal wurde nur an besonderen Tagen beheizt. Deshalb zogen sich die Bewohner abends in die Kemenaten zurück, weil diese schneller warm wurden (M3). Dazu kam viel Arbeit: Man stand mit dem Morgengrauen auf und arbeitete bis zur Dunkelheit. Insgesamt bot die Burg vor allem Schutz, aber wenig Bequemlichkeit.'
       }
     ],
 
@@ -413,7 +416,7 @@
       material: [
         {
           id: 'burg-hm1', quelle: 'burg-hutten-brief',
-          text: 'Ulrich von Hutten (1488–1523) war Ritter. 1518 schrieb er einen Brief an seinen Freund Willibald Pirckheimer, der in der Stadt Nürnberg lebte. Darin erklärt er, warum er auf seiner Burg keine Ruhe findet. Diese Stelle steht nicht in deinem Buch.',
+          text: 'Ulrich von Hutten (1488–1523) war Ritter. 1518 schrieb er einen Brief an seinen Freund Willibald Pirckheimer, der in der Stadt Nürnberg lebte. Darin erklärt er, warum er auf seiner Burg keine Ruhe findet. Der Brief ist derselbe, aus dem M4 (S. 37) stammt. Die folgenden Stellen stehen aber nicht in deinem Buch.',
           items: [
             {
               id: 'burg-hm1-1', typ: 'wahl', p: 1,
@@ -456,7 +459,7 @@
           ],
           erkl: {
             id: 'burg-hm1-e', operator: 'einordnen',
-            frage: 'Ordne den Brief ein: Wer schrieb ihn, wann und an wen? Erkläre, was er über das Leben eines niederen Adligen zeigt und wie glaubwürdig er ist.',
+            frage: 'Ordne den Brief ein: Wer schrieb ihn, wann, an wen und wozu? Nenne Beispiele aus dem Text, die zu dieser Absicht passen. Begründe kurz, wie glaubwürdig der Brief ist.',
             begriffe: [
               { name: 'Brief', muster: ['brief'] },
               { name: 'Ritter', muster: ['ritter'] },
@@ -466,8 +469,8 @@
             punkte: [
               { text: 'Verfasser und Zeit: der Ritter Ulrich von Hutten, 1518, also am Ende des Mittelalters.', p: 1 },
               { text: 'Empfänger und Absicht: Brief an seinen Freund Pirckheimer in der Stadt Nürnberg; Hutten will zeigen, dass das Leben auf der Burg weder ruhig noch bequem ist.', p: 1 },
-              { text: 'Inhalt mit Beleg: Gefahr (nur bewaffnet unterwegs, Lösegeld), Lärm, viel Arbeit, Not nach schlechter Ernte.', p: 1 },
-              { text: 'Glaubwürdigkeit: Hutten kennt das Leben aus eigener Erfahrung, er klagt aber und übertreibt vielleicht.', p: 1 }
+              { text: 'Beispiele aus dem Text zur Absicht: Gefahr (nur bewaffnet unterwegs, Lösegeld), Lärm, viel Arbeit, Not nach schlechter Ernte.', p: 1 },
+              { text: 'Begründung der Glaubwürdigkeit: Hutten kennt das Leben aus eigener Erfahrung, er klagt aber und übertreibt vielleicht.', p: 1 }
             ],
             muster: 'Der Text ist ein Brief des Ritters Ulrich von Hutten aus dem Jahr 1518, also vom Ende des Mittelalters. Er schrieb ihn an seinen Freund Willibald Pirckheimer, der in der Stadt Nürnberg lebte. Hutten will ihm zeigen, dass das Leben auf einer Burg nicht ruhig ist. Er geht nur bewaffnet aus dem Haus, weil Feinde seines Fürsten ihn überfallen könnten, und dann müsste er ein hohes Lösegeld zahlen. Außerdem ist es laut, die Arbeit hört nie auf, und nach einer schlechten Ernte herrscht Not. Die Quelle ist glaubwürdig, weil Hutten aus eigener Erfahrung berichtet. Weil er sich bei seinem Freund beklagt, übertreibt er vielleicht ein wenig.'
           }
@@ -563,14 +566,14 @@
           punkte: [
             { text: 'Dafür: Ritter waren Adlige; sie lebten von armen Bauern, denen sie ihr Land verpachteten (M4).', p: 1 },
             { text: 'Dafür: großer Saal für Feste, Küchenpersonal, Knechte und Mägde; sehr reiche Adlige hatten sogar Glasfenster.', p: 1 },
-            { text: 'Dagegen: Die Burg war zur Wehr gebaut, nicht für die Behaglichkeit; innen eng, mit Ställen, Dunkelkammern und Waffen (M4).', p: 1 },
-            { text: 'Dagegen: Gestank von Schießpulver, Hunden und ihrem Unrat (M4).', p: 1 },
+            { text: 'Dagegen: Die Burg war zur Wehr gebaut, nicht für die Behaglichkeit; innen eng, mit Ställen, Dunkelkammern und Waffen, dazu Gestank von Schießpulver, Hunden und ihrem Unrat (M4).', p: 1 },
+            { text: 'Einschränkung beachtet: Hutten schreibt 1518 über die Burg eines niederen Adligen; Schießpulver gab es auf Burgen um 1200 noch nicht.', p: 1 },
             { text: 'Dagegen: kalt und dunkel, kleine Fenster mit Holzläden, Festsaal nur an besonderen Tagen beheizt (Darstellungstext, M3).', p: 1 },
             { text: 'Dagegen: Ein niederer Adliger wie Hutten hatte nur geringen Ertrag und brauchte den Schutz eines Fürsten (M4).', p: 1 },
             { text: 'Maßstab der damaligen Zeit: Vergleich mit den Bauern (einfache Hütten, Schlafen auf Stroh) und Unterschied zwischen sehr reichen und niederen Adligen.', p: 1 },
             { text: 'Begründetes Sachurteil ohne heutige Wertung, z. B.: Adlige lebten besser als Bauern, von Luxus kann man aber höchstens bei sehr reichen Adligen sprechen.', p: 1 }
           ],
-          muster: 'Die Aussage stimmt nur zum Teil. Für sie spricht, dass Ritter Adlige waren. Sie lebten von armen Bauern, denen sie ihre Äcker, Weinberge und Wiesen verpachteten (M4). Auf einer großen Burg gab es einen Festsaal, Küchenpersonal sowie Knechte und Mägde, und sehr reiche Adlige konnten sich sogar Fenster aus Glas leisten. Gegen die Aussage spricht aber vieles. Hutten schreibt, die Burg sei „nicht für die Behaglichkeit, sondern zur Wehr erbaut“. Innen war es eng, Ställe, Dunkelkammern und Waffen lagen dicht beieinander, und es stank nach Schießpulver und Hunden. Außerdem war es kalt und dunkel: Die Fenster waren klein und wurden im Winter mit Holzläden verschlossen, der Festsaal wurde nur an besonderen Tagen beheizt (M3). Ein niederer Adliger wie Hutten hatte zudem nur einen geringen Ertrag und brauchte den Schutz eines Fürsten. Aus Sicht der Menschen damals lebten die Adligen zwar besser als die Bauern, die in einfachen Hütten auf Stroh schliefen. Von Luxus kann man aber höchstens bei sehr reichen Adligen sprechen. Für die meisten Ritter war die Burg vor allem ein enger, kalter und unbequemer Schutzbau.'
+          muster: 'Die Aussage stimmt nur zum Teil. Für sie spricht, dass Ritter Adlige waren. Sie lebten von armen Bauern, denen sie ihre Äcker, Weinberge und Wiesen verpachteten (M4). Auf einer großen Burg gab es einen Festsaal, Küchenpersonal sowie Knechte und Mägde, und sehr reiche Adlige konnten sich sogar Fenster aus Glas leisten. Gegen die Aussage spricht aber vieles. Hutten schreibt, die Burg sei „nicht für die Behaglichkeit, sondern zur Wehr erbaut“. Innen war es eng, Ställe, Dunkelkammern und Waffen lagen dicht beieinander, und es stank nach Schießpulver und Hunden. Außerdem war es kalt und dunkel: Die Fenster waren klein und wurden im Winter mit Holzläden verschlossen, der Festsaal wurde nur an besonderen Tagen beheizt (M3). Ein niederer Adliger wie Hutten hatte zudem nur einen geringen Ertrag und brauchte den Schutz eines Fürsten. Allerdings muss man beachten: Hutten schreibt erst 1518, und zwar über die Burg eines niederen Adligen. Schießpulver gab es auf den Burgen um 1200 noch nicht. Aus Sicht der Menschen damals lebten die Adligen zwar besser als die Bauern, die in einfachen Hütten auf Stroh schliefen. Von Luxus kann man aber höchstens bei sehr reichen Adligen sprechen. Für die meisten Ritter war die Burg vor allem ein enger, kalter und unbequemer Schutzbau.'
         }
       ]
     },

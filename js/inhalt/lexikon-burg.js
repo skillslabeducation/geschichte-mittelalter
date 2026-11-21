@@ -7,7 +7,7 @@
     'Ritter': 'Adlige, die von Beruf Krieger waren. Ihre Ausbildung für den Kampf begann mit sieben Jahren und endete mit dem Ritterschlag.',
     'Page': 'Ein adliger Junge ab sieben Jahren, der auf einer fremden Burg den Kampf mit Lanze und Schwert, die Regeln der Turniere und gutes Benehmen lernte.',
     'Knappe': 'Mit 14 Jahren wurde der Page zum Knappen. Er begleitete seinen Herrn zu Turnieren und zog mit ihm in den Kampf.',
-    'Ritterschlag': 'Die feierliche Aufnahme in den Kreis der Ritter mit etwa 20 Jahren, wenn sich der Knappe bewährt hatte. Dabei wurde ihm feierlich ein Schwert umgelegt.',
+    'Ritterschlag': 'Die feierliche Aufnahme in den Kreis der Ritter mit etwa 20 Jahren, wenn sich der Knappe bewährt hatte. Er erhielt den Ritterschlag, und es wurde ihm feierlich ein Schwert umgelegt.',
     'Turnier': 'Ein ritterliches Kampfspiel mit festen Regeln, bei dem Ritter gegeneinander kämpften.',
     'Kettenhemd': 'Schutzkleidung des Ritters aus vielen miteinander verbundenen Eisenringen.',
     'Topfhelm': 'Ein Helm des Ritters, der wie ein Topf aussah.',

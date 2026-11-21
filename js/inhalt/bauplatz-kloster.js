@@ -88,8 +88,9 @@
           '<li><strong>Wer spricht?</strong> Benedikt von Nursia, der Gründer des Ordens. Er legt fest, wie seine Mönche und Nonnen leben sollen.</li>' +
           '<li><strong>Was verlangt er?</strong> Gott und den Nächsten lieben, Verzicht (Fasten, sich Genüssen nicht hingeben) und Hilfe für andere: ' +
           'Arme bewirten, Kranke besuchen, Tote begraben. Außerdem sollen sie sich dem Treiben der Welt entziehen.</li>' +
-          '<li><strong>Was passiert bei Verstößen?</strong> Zweimal im Geheimen ermahnen, dann öffentlich zurechtweisen, dann Ausschließung, ' +
-          'zuletzt eine körperliche Strafe.</li>' +
+          '<li><strong>Was passiert bei Verstößen?</strong> Zweimal im Geheimen ermahnen, dann öffentlich zurechtweisen, dann Ausschließung. ' +
+          'Wer nicht versteht, was die Ausschließung bedeutet, erhält stattdessen eine körperliche Strafe. ' +
+          '(Zusatz: Mit der Ausschließung ist der Ausschluss vom gemeinsamen Essen und Beten gemeint, kein sofortiger Rauswurf aus dem Kloster.)</li>' +
           '<li><strong>Was verrät die Quelle nicht?</strong> Eine Regel zeigt, wie das Leben sein <em>sollte</em>. Ob sich alle daran hielten, ' +
           'steht nicht darin. Die Strafen zeigen aber: Es gab Brüder, die gegen die Regel verstießen.</li>' +
           '</ul>',
@@ -184,8 +185,8 @@
       {
         id: 'kloster-u10', typ: 'beschriften', abb: 'klosterplan',
         frage: 'Beschrifte den vereinfachten Klosterplan von St. Gallen (vgl. Buch S. 40, M1).',
-        strukturen: ['kirche', 'bibliothek', 'schule', 'abt', 'noviziat', 'hospital', 'aerzte', 'gaeste', 'herberge', 'kueche', 'brauerei', 'friedhof'],
-        erkl: 'Die Kirche liegt in der Mitte. Rechts am Rand liegen Hospital, Noviziat und Friedhof, oben Gästehaus, Schule und das Haus des Abtes.'
+        strukturen: ['kirche', 'bibliothek', 'schule', 'abt', 'noviziat', 'hospital', 'aerzte', 'gaeste', 'herberge', 'kueche', 'brauerei'],
+        erkl: 'Die Kirche liegt in der Mitte. Rechts am Rand liegen Hospital und Noviziat, oben Gästehaus, Schule und das Haus des Abtes.'
       },
       {
         id: 'kloster-u11', typ: 'sortieren', abb: 'klosterplan', abbOpts: { beschriftet: true },
@@ -213,7 +214,7 @@
         id: 'kloster-u13', typ: 'reihenfolge',
         frage: 'Bringe die sieben Gebetszeiten des Tages in die richtige Reihenfolge, von der Nacht bis zum Abend.',
         schritte: ['Matutin', 'Prim', 'Terz', 'Sext', 'Non', 'Vesper', 'Komplet'],
-        erkl: 'Eselsbrücke: Prim, Terz, Sext und Non bedeuten auf Lateinisch die erste, dritte, sechste und neunte Stunde des Tages.'
+        erkl: 'Eselsbrücke: Prim, Terz, Sext und Non bedeuten auf Lateinisch die erste, dritte, sechste und neunte Stunde des Tages. Gezählt wurde ab etwa 6 Uhr morgens: Prim 6, Terz 9, Sext 12, Non 15 Uhr (Zusatz).'
       },
       {
         id: 'kloster-u14', typ: 'zuordnen', abb: 'tagesablauf', abbOpts: { beschriftet: true },
@@ -243,8 +244,8 @@
       {
         id: 'kloster-u17', typ: 'reihenfolge', quelle: 'kloster-regel',
         frage: 'Ein Bruder handelt gegen die Regel. Was passiert laut M2 nacheinander, wenn er sich nicht bessert?',
-        schritte: ['zweimal im Geheimen ermahnen', 'öffentlich vor allen zurechtweisen', 'Ausschließung', 'körperliche Strafe'],
-        erkl: 'Die Strafen werden Schritt für Schritt härter. Die körperliche Strafe trifft den, der nicht versteht, was die Ausschließung bedeutet.'
+        schritte: ['zweimal im Geheimen ermahnen', 'öffentlich vor allen zurechtweisen', 'Ausschließung'],
+        erkl: 'Die Strafen werden Schritt für Schritt härter. Die körperliche Strafe ist keine vierte Stufe: Wer nicht versteht, was die Ausschließung bedeutet, erhält statt ihrer eine körperliche Strafe.'
       },
       {
         id: 'kloster-u18', typ: 'wahl', operatorTraining: true,
@@ -311,7 +312,7 @@
       },
       {
         id: 'kloster-e2', operator: 'erlaeutern', abb: 'klosterplan', abbOpts: { beschriftet: true },
-        frage: 'Erläutere die Aufgaben der Klöster im Mittelalter. Nutze den Darstellungstext und nenne Beispiele aus dem Klosterplan. (vgl. Buch S. 41, A1)',
+        frage: 'Erläutere die Aufgaben der Klöster im Mittelalter. Nutze den Darstellungstext und nenne Beispiele aus dem Klosterplan. (vgl. Buch S. 40/41, Darstellungstext „Welche Aufgaben erfüllten die Klöster?“ und A1)',
         tipp: 'Ordne die Gebäude im Plan Bereichen zu: Gebet, Wirtschaft, Bildung, Kranke und Gäste. Vergiss die Ländereien nicht, die man im Plan nicht sieht.',
         begriffe: [
           { name: 'religiöses Zentrum', muster: ['religioes', 'gebet', 'gottesdienst'] },
@@ -355,7 +356,7 @@
           { text: 'Feste Ordnung von Gebet und Arbeit („ora et labora“), damit Gottesdienst und Selbstversorgung funktionierten', p: 1 },
           { text: 'Beleg aus M2: Regeln für ein Leben nah bei Gott, z. B. Gott und den Nächsten lieben, fasten, sich Genüssen nicht hingeben', p: 1 },
           { text: 'Beleg aus M2: Aufgaben gegenüber anderen, z. B. Arme bewirten, Kranke besuchen, Tote begraben', p: 1 },
-          { text: 'Strafen in Stufen (geheim ermahnen, öffentlich zurechtweisen, Ausschließung, körperliche Strafe): Es gab Verstöße, die Regel musste durchgesetzt werden.', p: 1 },
+          { text: 'Strafen in Stufen (zweimal geheim ermahnen, öffentlich zurechtweisen, dann Ausschließung; wer nicht versteht, was die Ausschließung bedeutet, erhält stattdessen eine körperliche Strafe): Es gab Verstöße, die Regel musste durchgesetzt werden.', p: 1 },
           { text: 'Urteil mit den Augen der Menschen damals, ohne eigene Meinung („Aus Sicht der Menschen damals …“)', p: 1 },
           { text: 'Begründetes Fazit, z. B.: Die Regeln waren damals notwendig, weil die Gemeinschaft sonst nicht funktioniert hätte.', p: 1 }
         ],
@@ -391,6 +392,32 @@
           'Etwa alle drei Stunden gab es eine weitere Gebetszeit: Prim um 6 Uhr, Terz um 9 Uhr, Sext um 12 Uhr, Non um 15 Uhr, Vesper um 18 Uhr und Komplet um 21 Uhr. ' +
           'Zwischen den Gebeten lagen Studium und Arbeit. Gegessen wurde zu festen Zeiten, meist kurz vor einem Gebet. Freizeit hatten die Mönche und Nonnen erst am Abend nach der Vesper. ' +
           'Nach der Komplet wurde geschlafen oder Nachtwache gehalten. Mir fällt auf, dass der Tag sehr früh beginnt und dass die Gebete den ganzen Tag einteilen.'
+      },
+      {
+        id: 'kloster-e5', operator: 'bewerten', quelle: 'kloster-regel',
+        frage: 'Bewerte, ob die Regeln des Benedikt (M2) aus heutiger Sicht noch sinnvoll sind. (vgl. Buch S. 41, A4a)',
+        tipp: 'Sag zuerst kurz, wozu die Regeln damals dienten. Nenne dann deinen Maßstab von heute und prüfe daran einzelne Regeln aus M2. Punkte gibt es für die Begründung, nicht für eine bestimmte Meinung.',
+        begriffe: [
+          { name: 'Ordensregel', muster: ['regel'] },
+          { name: 'Nächstenliebe', muster: ['naechst'] },
+          { name: 'Arme und Kranke', muster: ['arme', 'kranke'] },
+          { name: 'körperliche Strafe', muster: ['koerperlich'] },
+          { name: 'Menschenwürde', muster: ['wuerde'] },
+          { name: 'Maßstab', muster: ['massstab'] }
+        ],
+        punkte: [
+          { text: 'Kurzes Sachurteil: Damals ordneten die Regeln das enge Zusammenleben vieler Menschen im Kloster.', p: 1, art: 'sach' },
+          { text: 'Heute noch sinnvoll, z. B. Nächstenliebe, Hilfe für Arme und Kranke, „keinem anderen antun, was man selbst nicht erleiden möchte“ (M2).', p: 1, art: 'wert' },
+          { text: 'Heute nicht vertretbar, z. B. körperliche Strafe, öffentliches Zurechtweisen (Maßstab Menschenwürde, Gewaltverbot).', p: 1, art: 'wert' },
+          { text: 'Der eigene Maßstab wird offen genannt, z. B. Menschenwürde, Gewaltverbot, Hilfsbereitschaft.', p: 1, art: 'wert' },
+          { text: 'Eigenes, begründetes Urteil („Ich finde …, weil …“), das zum genannten Maßstab passt. Punkte für die Begründung, nicht für eine bestimmte Meinung.', p: 1, art: 'wert' }
+        ],
+        muster: 'Aus Sicht der Menschen damals waren die Regeln des Benedikt sinnvoll, weil im Kloster viele Mönche ein Leben lang eng zusammenlebten und dieses Zusammenleben geordnet werden musste. ' +
+          'Heute messe ich die Regeln an der Menschenwürde und daran, dass Gewalt als Strafe verboten ist. Vieles finde ich auch heute noch sinnvoll: ' +
+          'Man soll den Nächsten lieben wie sich selbst, Arme bewirten, Kranke besuchen und keinem anderen antun, was man selbst nicht erleiden möchte. ' +
+          'Solche Regeln könnten auch in unserer Klasse gelten. Andere Regeln sind heute nicht mehr vertretbar. Eine körperliche Strafe verletzt die Würde des Menschen ' +
+          'und ist bei uns verboten. Auch jemanden öffentlich vor allen zurechtzuweisen, finde ich falsch, weil man ihn damit bloßstellt. ' +
+          'Insgesamt finde ich, dass viele Regeln des Benedikt heute noch sinnvoll sind, die Strafen aber nicht mehr, weil sie gegen die Menschenwürde verstoßen.'
       }
     ],
 
@@ -425,7 +452,7 @@
           kategorien: ['erste Mönche im Orient', 'Mönche aus Irland und Schottland', 'Benediktiner'],
           items: [
             ['zogen sich in die Wüsten Ägyptens und Syriens zurück', 0],
-            ['wollten durch Askese Christus nahekommen', 0],
+            ['lebten als Einsiedler in der Einsamkeit', 0],
             ['gingen als Missionare in die Welt', 1],
             ['gründeten auf ihrem Weg zahlreiche Klöster', 1],
             ['folgten der Regel aus Montecassino', 2],
@@ -500,13 +527,13 @@
             },
             {
               id: 'kloster-hm1-5', typ: 'luecke', p: 1,
-              text: 'Die Stelle passt zum Motto {ora et labora|tu protege|pater europae}: Handarbeit und {Lesung|Krieg|Handel} wechseln sich zu festen Zeiten ab, ' +
-                'damit niemand {müßig|arm|krank} ist.'
+              text: 'Die Stelle passt vor allem zum „{labora|ora}“ im Motto „ora et labora“: Es gibt feste Zeiten für {Handarbeit|Handel|Kriegsdienst}, ' +
+                'wenn nötig auch Erntearbeit, dazu feste {Lesezeiten|Marktzeiten|Festmahle}. {Nichtstun|Arbeit|Fasten} soll es nicht geben.'
             }
           ],
           erkl: {
             id: 'kloster-hm1-e', operator: 'einordnen',
-            frage: 'Ordne die Quelle ein: Wer hat sie wann und für wen geschrieben? Erkläre dann, wie die Stelle zum Motto „ora et labora“ und zur Selbstversorgung der Klöster passt.',
+            frage: 'Ordne die Quelle ein: Wer hat sie wann geschrieben, an wen richtet sie sich und wozu? Begründe kurz, wie die Stelle zum Motto „ora et labora“ und zur Selbstversorgung der Klöster passt.',
             begriffe: [
               { name: 'Ordensregel', muster: ['regel'] },
               { name: 'Benedikt', muster: ['benedikt'] },
@@ -515,13 +542,14 @@
             ],
             punkte: [
               { text: 'Verfasser: Benedikt von Nursia, Gründer von Montecassino und des Benediktinerordens', p: 1 },
-              { text: 'Art und Zeit: Ordensregel, um 540, für die Mönche (und Nonnen) seines Ordens', p: 1 },
-              { text: '„ora et labora“: Handarbeit und Lesung heiliger Schriften wechseln sich zu festen Zeiten ab, Nichtstun soll es nicht geben', p: 1 },
-              { text: 'Selbstversorgung: Die Brüder bringen wenn nötig die Ernte selbst ein und leben von der Arbeit ihrer Hände', p: 1 }
+              { text: 'Art, Zeit, Adressaten und Zweck: Ordensregel, um 540, für die Mönche (und Nonnen) seines Ordens; sie legt fest, wie sie leben und arbeiten sollen', p: 1 },
+              { text: 'Begründung „ora et labora“: Die Stelle passt vor allem zum „labora“ im Motto: feste Zeiten für Handarbeit, wenn nötig auch Erntearbeit, dazu feste Lesezeiten; Nichtstun soll es nicht geben', p: 1 },
+              { text: 'Begründung Selbstversorgung: Die Brüder bringen wenn nötig die Ernte selbst ein und leben von der Arbeit ihrer Hände', p: 1 }
             ],
             muster: 'Die Quelle ist ein Ausschnitt aus der Ordensregel des Benedikt von Nursia. Benedikt gründete das Kloster Montecassino und schrieb um 540 Regeln ' +
-              'für die Mönche und Nonnen seines Ordens, die Benediktiner. Die Stelle passt zum Motto „ora et labora“, denn die Brüder sollen sich zu festen Zeiten ' +
-              'mit Handarbeit und mit dem Lesen heiliger Schriften beschäftigen. Nichtstun gilt als Feind der Seele. Die Stelle passt auch zur Selbstversorgung: ' +
+              'für die Mönche und Nonnen seines Ordens, die Benediktiner. Die Regel legt fest, wie sie leben und arbeiten sollen. ' +
+              'Die Stelle passt vor allem zum „labora“ im Motto „ora et labora“, denn die Brüder sollen sich zu festen Zeiten mit Handarbeit beschäftigen, ' +
+              'wenn nötig auch mit der Ernte, und zu festen Lesezeiten heilige Schriften lesen. Nichtstun gilt als Feind der Seele. Die Stelle passt auch zur Selbstversorgung: ' +
               'Wenn es nötig ist, holen die Brüder die Ernte selbst ein, und sie sind wirkliche Mönche, wenn sie von der Arbeit ihrer Hände leben.'
           }
         },
@@ -633,7 +661,7 @@
             { text: 'Dafür: eigene Regeln, eigener fester Tagesablauf und eigene Strafen', p: 1 },
             { text: 'Dafür: eigene Schule, Bibliothek und Hospital, fast alles innerhalb der Mauer (Klosterplan)', p: 1 },
             { text: 'Dagegen: Klöster verwalteten große Ländereien und hielten Kontakt zur weltlichen Macht.', p: 1 },
-            { text: 'Dagegen: Gäste und Arme in Gästehaus und Herberge, Kranke besuchen (M2), Mönche als Missionare in der Welt', p: 1 },
+            { text: 'Dagegen: Gäste, Pilger und Arme wurden in Gästehaus und Herberge aufgenommen; laut Regel sollten die Mönche Arme bewirten und Kranke besuchen (M2).', p: 1 },
             { text: 'Abwägung mit den Augen der Menschen damals (einerseits … andererseits …), ohne eigene Meinung', p: 1 },
             { text: 'Begründetes Sachurteil, z. B.: in vielem eine eigene Welt, aber keine abgeschlossene, weil …', p: 1 }
           ],
@@ -641,7 +669,7 @@
             'Das Kloster versorgte sich selbst mit Feldern, Garten, Tieren, Mühlen und Werkstätten. Auf dem Klosterplan von St. Gallen liegen sogar Schule, Bibliothek ' +
             'und Hospital innerhalb der Mauer. Außerdem hatte das Kloster eigene Regeln, einen eigenen Tagesablauf und eigene Strafen. ' +
             'Andererseits war das Kloster nicht von der Welt abgeschlossen. Klöster verwalteten große Ländereien in ihrer Umgebung und hielten Kontakt zur weltlichen Macht. ' +
-            'Sie nahmen Gäste auf, sollten laut Regel Arme bewirten und Kranke besuchen, und Mönche zogen als Missionare in die Welt. ' +
+            'Sie nahmen Gäste und Pilger auf, und laut Regel sollten die Mönche Arme bewirten und Kranke besuchen. ' +
             'Insgesamt war das Kloster damals in vielem eine eigene Welt, weil es nach eigenen Regeln lebte und sich selbst versorgte. ' +
             'Es war aber keine abgeschlossene Welt, weil es eng mit seiner Umgebung verbunden war.'
         }
@@ -659,7 +687,7 @@
       { id: 'kloster-g7', aussage: '„Ora et labora“ heißt „bete und arbeite“.', stimmt: true, erkl: 'Das Motto stand für den Alltag der Mönche und Nonnen.' },
       { id: 'kloster-g8', aussage: 'Ein Frauenkloster leitete ein Abt.', stimmt: false, erkl: 'Ein Frauenkloster leitete eine Äbtissin.' },
       { id: 'kloster-g9', aussage: 'Klöster hatten Schulen und waren Bildungszentren.', stimmt: true, erkl: 'Sie gaben Wissen in Schulen weiter und forschten selbst.' },
-      { id: 'kloster-g10', aussage: 'Wer gegen die Regel des Benedikt verstieß, flog sofort aus dem Kloster.', stimmt: false, erkl: 'Zuerst wurde er zweimal im Geheimen ermahnt, dann öffentlich zurechtgewiesen.' }
+      { id: 'kloster-g10', aussage: 'Wer gegen die Regel des Benedikt verstieß, flog sofort aus dem Kloster.', stimmt: false, erkl: 'Zuerst wurde er zweimal im Geheimen ermahnt, dann öffentlich zurechtgewiesen, und auch die Ausschließung danach war kein Rauswurf, sondern der Ausschluss vom gemeinsamen Essen und Beten.' }
     ],
 
     /* ---------- Schatzkammer ---------- */

@@ -20,6 +20,6 @@
     'Reliquien': 'Überreste von Heiligen, zum Beispiel Knochen, oder Dinge, die ihnen gehört hatten. Man bewahrte sie in kostbaren Behältern auf und verehrte sie.',
     'Kronvasallen': 'Die Vasallen des Königs: Herzöge, Grafen und Bischöfe. Sie übten Ämter in der Reichsverwaltung aus.',
     'Untervasallen': 'Vasallen, die ihr Lehen von einem Kronvasallen erhielten, zum Beispiel Ritter, Ministerialen, Äbte und Äbtissinnen. Sie waren ihrem unmittelbaren Lehnsherrn, aber nicht mehr dem König zur Treue verpflichtet.',
-    'Ministerialen': 'Dienstmannen: ursprünglich Unfreie, die für ihren Herrn Verwaltungsaufgaben oder Kriegsdienst übernahmen.'
+    'Ministerialen': 'Dienstmannen: ursprünglich Unfreie, die für ihren Herrn Verwaltungsaufgaben oder Kriegsdienst übernahmen. Seit dem 12. Jahrhundert verbanden sie sich mit dem Adel zum Ritterstand.'
   });
 })();
