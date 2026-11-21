@@ -30,4 +30,22 @@ test('große Zeitleiste: Abschnitte chronologisch, jeder belegt', () => {
   z.abschnitte.forEach((a, i) => ok(z.ereignisse.some((e) => e[1] === i), 'Abschnitt leer: ' + a));
 });
 
+test('große Zeitleiste: jedes Jahr liegt in seinem Abschnitt, „um“-Jahre nicht auf einer Grenze', () => {
+  const z = W.zeitleisteGesamt;
+  function bereich(a) {
+    let m;
+    if ((m = /^vor (\d+)$/.exec(a))) return [0, +m[1] - 1];
+    if ((m = /^nach (\d+)$/.exec(a))) return [+m[1] + 1, 3000];
+    if ((m = /^(\d+)–(\d+)$/.exec(a))) return [+m[1], +m[2]];
+    return null;
+  }
+  z.ereignisse.forEach((e) => {
+    const m = /(um )?(\d{3,4})/.exec(e[2]);
+    if (!m) return;
+    const j = +m[2], b = bereich(z.abschnitte[e[1]]);
+    ok(b && j >= b[0] && j <= b[1], e[2] + ' liegt nicht in ' + z.abschnitte[e[1]]);
+    if (m[1]) ok(j - b[0] >= 20 && b[1] - j >= 20, e[2] + ' liegt zu nah an der Grenze von ' + z.abschnitte[e[1]]);
+  });
+});
+
 fertig('extras');

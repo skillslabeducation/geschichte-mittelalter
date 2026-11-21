@@ -27,4 +27,7 @@ test('Anforderungsbereiche: nennen I, erklären II, bewerten III', () => eq([O.n
 test('summe zählt halbe Punkte', () => eq(W.schreiben.summe([{ p: 1 }, { p: 0.5 }]), 1.5));
 test('render ist eine Funktion', () => ok(typeof W.schreiben.render === 'function'));
 
+test('Sachurteil: eigenes Urteil, aber ohne heutige Wertmaßstäbe', () => ok(/heutige Wertmaßstäbe/.test(O.beurteilen.bedeutet) && !/ohne deine eigene Meinung/.test(O.beurteilen.bedeutet)));
+test('Werturteil: Maßstab offenlegen', () => ok(/Maßstab/.test(O.bewerten.bedeutet)));
+
 fertig('schreiben');

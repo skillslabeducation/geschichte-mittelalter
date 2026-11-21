@@ -57,12 +57,12 @@
     },
     beurteilen: {
       wort: 'Beurteile', bereich: 'III',
-      bedeutet: 'Sachurteil: einen Sachverhalt begründet einschätzen, mit den Augen der Menschen damals und mit Kriterien, ohne deine eigene Meinung.',
+      bedeutet: 'Sachurteil: einen Sachverhalt mit Kriterien begründet einschätzen, mit den Augen der Menschen damals. Du urteilst selbst, aber ohne heutige Wertmaßstäbe und ohne „Ich finde …“.',
       bausteine: ['Aus Sicht der Menschen damals …', 'Einerseits … andererseits …', 'Insgesamt war es damals …, weil …']
     },
     bewerten: {
       wort: 'Bewerte', bereich: 'III',
-      bedeutet: 'Werturteil: wie beurteilen, aber zusätzlich nach heutigen Wertmaßstäben. Du nennst deine eigene Meinung und begründest sie.',
+      bedeutet: 'Werturteil: wie beurteilen, aber zusätzlich nach heutigen Wertmaßstäben. Du nennst deinen Maßstab (z. B. Freiheit, Gleichheit vor dem Gesetz) und begründest deine eigene Meinung.',
       bausteine: ['Aus heutiger Sicht …', 'Für mich ist entscheidend, dass …', 'Ich finde …, weil …']
     },
     beurteilenBewerten: {

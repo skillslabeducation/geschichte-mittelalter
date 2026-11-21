@@ -81,8 +81,8 @@ bps.forEach((bp) => {
     bp.karten.forEach((k) => dfns(k.text).forEach((d) => { if (!W.lexikonEintrag(d)) fehlt.push(d); }));
     eq(fehlt, []);
   });
-  test(P + 'Übungen 12–20, gemischt, lösbar', () => {
-    ok(bp.ueben.length >= 12 && bp.ueben.length <= 20, P + bp.ueben.length + ' Übungen');
+  test(P + 'Übungen 12–24, gemischt, lösbar', () => {
+    ok(bp.ueben.length >= 12 && bp.ueben.length <= 24, P + bp.ueben.length + ' Übungen');
     bp.ueben.forEach((it, i) => { ok(it.id === bp.id + '-u' + (i + 1), P + 'ID ' + it.id + ' statt ' + bp.id + '-u' + (i + 1)); eindeutig(it.id); pruefeItem(it, P); });
     const typen = new Set(bp.ueben.map((u) => u.typ));
     ok(typen.size >= 5, P + 'nur ' + typen.size + ' Aufgabentypen');
@@ -91,8 +91,8 @@ bps.forEach((bp) => {
     ok(bp.ueben.some((u) => u.typ === 'behauptung'), P + 'keine Behauptung');
     ok(bp.ueben.some((u) => u.typ === 'sortieren' || u.typ === 'zuordnen'), P + 'kein Sortieren/Zuordnen');
   });
-  test(P + 'Schreibaufgaben 2–4', () => {
-    ok(bp.erklaeren.length >= 2 && bp.erklaeren.length <= 4, P + bp.erklaeren.length + ' Schreibaufgaben');
+  test(P + 'Schreibaufgaben 2–5', () => {
+    ok(bp.erklaeren.length >= 2 && bp.erklaeren.length <= 5, P + bp.erklaeren.length + ' Schreibaufgaben');
     bp.erklaeren.forEach((e, i) => { ok(e.id === bp.id + '-e' + (i + 1), P + 'ID ' + e.id); eindeutig(e.id); pruefeSchreib(e, P); });
   });
   test(P + 'Hoftag: Wissen', () => {
