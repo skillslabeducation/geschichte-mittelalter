@@ -1,0 +1,16 @@
+{
+  "name": "Stein auf Stein – Europa im Mittelalter",
+  "short_name": "Stein auf Stein",
+  "description": "Lern- und Übungsseite Geschichte Klasse 7: Europa im Mittelalter.",
+  "lang": "de",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4ecd8",
+  "theme_color": "#f4ecd8",
+  "icons": [
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
