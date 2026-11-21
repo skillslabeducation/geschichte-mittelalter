@@ -101,4 +101,12 @@ test('Review Focus 4: Restzeit einer vor 50 Minuten gestarteten Probearbeit ist 
   ok(W.hoftagAnsicht.restSekunden(l) > 44 * 60);
 });
 
+test('Risse nur für beantwortete falsche Aufgaben', () => {
+  const p = H.erzeugen(4);
+  const erste = p.teile[0].aufgaben[0];
+  const e = H.auswerten(p, { [erste.key]: 0 }, {});
+  eq(e.falschBeantwortet, [erste.key]);
+  ok(e.falsch.length > 1);
+});
+
 fertig('hoftag');

@@ -104,9 +104,25 @@
       return nichts(x);
     }
     if (item.typ === 'wahl') return a === null;
-    if (item.typ === 'behauptung') return a.stimmt == null;
+    if (item.typ === 'behauptung') return a.stimmt == null || a.grund == null;
     if (item.typ === 'reihenfolge' && item.startFest) return !a || a.length <= 1;
     return tief(a);
+  }
+
+  /** Wie viele Felder einer Aufgabe mit mehreren Feldern sind noch offen? */
+  function offeneFelder(item, a) {
+    function nichts(x) { return x == null || (typeof x === 'string' && !x.trim()); }
+    try {
+      switch (item.typ) {
+        case 'luecke': return luecken(item).filter(function (s, i) { return nichts(a && a[i]); }).length;
+        case 'zuordnen': return item.paare.filter(function (p, i) { return nichts(a && a[i]); }).length;
+        case 'liste': return Array.apply(null, Array(item.anzahl)).filter(function (x, i) { return nichts(a && a[i]); }).length;
+        case 'beschriften': return item.strukturen.filter(function (id) { return nichts(a && a[id]); }).length;
+        case 'tabelle': return offeneZellen(item).filter(function (z) { return nichts(a && a[z.zi] && a[z.zi][z.ci]); }).length;
+        case 'sortieren': case 'zeitleiste': return eintraege(item).filter(function (x, i) { return nichts(a && a[i]); }).length;
+      }
+    } catch (e) { return 0; }
+    return 0;
   }
 
   /** Die Musterlösung im Antwortformat des Typs. */
@@ -624,6 +640,6 @@
 
   W.aufgaben = {
     score: score, richtig: richtig, leer: leer, loesung: loesung, loesungText: loesungText,
-    render: render, spiele: spiele, nummernFuer: nummernFuer, parseLuecke: parseLuecke, ohneTags: ohneTags, TYPEN: Object.keys(R)
+    render: render, spiele: spiele, offeneFelder: offeneFelder, nummernFuer: nummernFuer, parseLuecke: parseLuecke, ohneTags: ohneTags, TYPEN: Object.keys(R)
   };
 })();

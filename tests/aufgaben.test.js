@@ -50,4 +50,7 @@ test('eingabe: Hörigen ist richtig', () => eq(A.score(BEISPIELE.eingabe, 'Höri
 test('behauptung: richtig erkannt, falscher Grund gibt halbe Punkte', () => eq(A.score(BEISPIELE.behauptung, { stimmt: false, grund: 1 }), 0.5));
 test('kaputte Antwort ergibt 0 statt Absturz', () => eq(A.score(BEISPIELE.sortieren, 'quatsch'), 0));
 
+test('behauptung ohne Begründung gilt als leer', () => ok(A.leer(BEISPIELE.behauptung, { stimmt: true, grund: null })));
+test('offeneFelder zählt leere Felder', () => { eq(A.offeneFelder(BEISPIELE.sortieren, [0, null, null]), 2); eq(A.offeneFelder(BEISPIELE.luecke, ['Meier', null]), 1); eq(A.offeneFelder(BEISPIELE.wahl, 1), 0); });
+
 fertig('aufgaben');

@@ -90,11 +90,17 @@
     Object.keys(items).forEach(function (k) { if (items[k] && items[k].ok) verdient += 1; });
     Object.keys(erkl).forEach(function (k) { if (erkl[k] && erkl[k].best >= ERKL_OK - 1e-9) verdient += 3; });
     (bauplaetze || []).forEach(function (bp) { if (bauplatzStatus(bp, data).fertig) verdient += 10; });
-    verdient += 2 * (data.repariert || 0);
+    verdient += 2 * Object.keys(data.repariertIds || {}).length;
     if (data.pruefung && data.pruefung.urkunde) verdient += 20;
     var ausgegeben = 0;
     (W.schatz || []).forEach(function (s) { if (data.schatz && data.schatz[s.id]) ausgegeben += s.kosten; });
     return { verdient: verdient, ausgegeben: ausgegeben, stand: verdient - ausgegeben };
+  }
+
+  /** Das Tal ist vollendet: Urkunde vom Hoftag und alle Bauplätze fertig. */
+  function vollendet(data, bauplaetze) {
+    return !!(data.pruefung && data.pruefung.urkunde) && (bauplaetze || []).length > 0 &&
+      bauplaetze.every(function (bp) { return bauplatzStatus(bp, data).fertig; });
   }
 
   /** Richtwert-Note aus Prozent (Schlüssel wie bei der Physik-Probearbeit). */
@@ -113,6 +119,6 @@
   W.logic = {
     QUOTE: QUOTE, ERKL_OK: ERKL_OK, WIEDERHOLUNG: WIEDERHOLUNG,
     heuteISO: heuteISO, tageBis: tageBis, lernplan: lernplan, planAufgaben: planAufgaben,
-    bauplatzStatus: bauplatzStatus, pfennige: pfennige, note: note, punkteRunden: punkteRunden
+    bauplatzStatus: bauplatzStatus, pfennige: pfennige, vollendet: vollendet, note: note, punkteRunden: punkteRunden
   };
 })();

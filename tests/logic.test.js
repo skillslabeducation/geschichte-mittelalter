@@ -228,4 +228,52 @@ test('Datum setzen nimmt nur gültige ISO-Daten', () => {
   eq(W.state.data.datum, '');
 });
 
+/* ---------- Review Technik ---------- */
+
+test('Reparatur bringt je Aufgabe nur einmal Pfennige', () => {
+  const W = neu();
+  for (let r = 0; r < 3; r++) { W.state.itemErgebnis('pfalz-u1', false); W.state.itemErgebnis('pfalz-u1', true); W.state.itemErgebnis('pfalz-u1', true); }
+  eq(W.logic.pfennige(W.state.data, [BP]).verdient, 1 + 2);
+});
+
+test('Tal vollendet nur mit Urkunde und allen Bauplätzen fertig', () => {
+  const W = neu();
+  W.state.pruefungStarten(1, 45); W.state.pruefungBeenden({ punkte: 40, max: 40 });
+  eq(W.logic.vollendet(W.state.data, [BP]), false);
+  W.state.karteGesehen('pfalz', 1);
+  ['pfalz-u1', 'pfalz-u2', 'pfalz-u3', 'pfalz-u4'].forEach((id) => W.state.itemErgebnis(id, true));
+  W.state.erklSpeichern('pfalz-e1', { prozent: 1 }); W.state.erklSpeichern('pfalz-e2', { prozent: 1 });
+  eq(W.logic.vollendet(W.state.data, [BP]), true);
+});
+
+test('Import sichert den alten Stand', () => {
+  const W = neu();
+  W.state.setName('Alt');
+  const code = W.state.exportCode().replace('"name":"Alt"', '"name":"Neu"');
+  eq(W.state.importCode(code), true);
+  eq(W.state.data.name, 'Neu');
+  eq(W.store.get('stein-auf-stein-v1-vorher', {}).name, 'Alt');
+});
+
+test('codeLesen liefert den Stand aus einem Code oder null', () => {
+  const W = neu();
+  W.state.setName('Kim');
+  eq(W.state.codeLesen(W.state.exportCode()).name, 'Kim');
+  eq(W.state.codeLesen('quatsch'), null);
+});
+
+test('laufender Hoftag ohne Zahlen wird verworfen, kaputte Läufe gefiltert', () => {
+  const W = laden(DATEIEN);
+  W.store.set('stein-auf-stein-v1', { v: 1, pruefung: { laufend: { start: 1, antworten: {} }, laeufe: [5, null, { punkte: 3, max: 40 }] } });
+  const d = W.state.load();
+  eq(d.pruefung.laufend, null);
+  eq(d.pruefung.laeufe.length, 1);
+});
+
+test('Richtfest wird nur einmal gefeiert', () => {
+  const W = neu();
+  eq(W.state.feiern('pfalz'), true);
+  eq(W.state.feiern('pfalz'), false);
+});
+
 fertig('logic');

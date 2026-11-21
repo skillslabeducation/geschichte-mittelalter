@@ -8,7 +8,7 @@
   function fresh() {
     return {
       v: 1, name: '', ton: false, begruesst: false, datum: '',
-      items: {}, erkl: {}, entwurf: {}, karten: {}, schaeden: {}, orte: {}, repariert: 0, schatz: {},
+      items: {}, erkl: {}, entwurf: {}, karten: {}, schaeden: {}, orte: {}, repariert: 0, repariertIds: {}, gefeiert: {}, schatz: {},
       pruefung: { laeufe: [], best: 0, laufend: null, urkunde: null },
       geruechte: { best: 0 }
     };
@@ -27,9 +27,10 @@
     if (f.datum && !isoOk(f.datum)) f.datum = '';
     var p = objekt(d.pruefung) ? d.pruefung : {};
     f.pruefung = {
-      laeufe: Array.isArray(p.laeufe) ? p.laeufe : [],
+      laeufe: Array.isArray(p.laeufe) ? p.laeufe.filter(function (x) { return objekt(x) && typeof x.punkte === 'number' && typeof x.max === 'number'; }) : [],
       best: typeof p.best === 'number' ? p.best : 0,
-      laufend: objekt(p.laufend) && objekt(p.laufend.antworten) && typeof p.laufend.start === 'number' ? p.laufend : null,
+      laufend: objekt(p.laufend) && objekt(p.laufend.antworten) && typeof p.laufend.start === 'number' &&
+        typeof p.laufend.dauerMin === 'number' && typeof p.laufend.seed === 'number' ? p.laufend : null,
       urkunde: isoOk(p.urkunde) ? p.urkunde : null
     };
     f.geruechte = { best: objekt(d.geruechte) && typeof d.geruechte.best === 'number' ? d.geruechte.best : 0 };
@@ -65,7 +66,7 @@
       if (!richtig) S.data.schaeden[id] = 0;
       else if (id in S.data.schaeden) {
         S.data.schaeden[id]++;
-        if (S.data.schaeden[id] >= 2) { delete S.data.schaeden[id]; S.data.repariert++; behoben = true; }
+        if (S.data.schaeden[id] >= 2) { delete S.data.schaeden[id]; S.data.repariert++; S.data.repariertIds[id] = true; behoben = true; }
       }
       S.save();
       return { behoben: behoben };
@@ -80,7 +81,7 @@
       var k = 'e:' + id;
       if (ort) S.data.orte[k] = ort;
       if (p < W.logic.ERKL_OK - 1e-9) S.data.schaeden[k] = 0;
-      else if (p >= 0.8 - 1e-9 && k in S.data.schaeden) { delete S.data.schaeden[k]; S.data.repariert++; }
+      else if (p >= 0.8 - 1e-9 && k in S.data.schaeden) { delete S.data.schaeden[k]; S.data.repariert++; S.data.repariertIds[k] = true; }
       S.save();
     },
 
@@ -139,18 +140,33 @@
       return true;
     },
 
+    /** Richtfest feiern: true beim ersten Mal, danach false. */
+    feiern: function (id) {
+      if (S.data.gefeiert[id]) return false;
+      S.data.gefeiert[id] = true;
+      S.save();
+      return true;
+    },
+
     /** Fortschritt als Text, um ihn auf ein anderes Gerät zu übertragen. */
     exportCode: function () { return PREFIX + JSON.stringify(S.data); },
-    importCode: function (code) {
+    /** Stand aus einem Code lesen, ohne ihn zu übernehmen (null, wenn ungültig). */
+    codeLesen: function (code) {
       var t = String(code || '').trim();
-      if (t.indexOf(PREFIX) !== 0) return false;
+      if (t.indexOf(PREFIX) !== 0) return null;
       try {
         var d = JSON.parse(t.slice(PREFIX.length));
-        if (!objekt(d) || d.v !== 1) return false;
-        S.data = zusammen(d);
-        S.save();
-        return true;
-      } catch (e) { return false; }
+        return objekt(d) && d.v === 1 ? zusammen(d) : null;
+      } catch (e) { return null; }
+    },
+    /** Code übernehmen. Der bisherige Stand wird vorher unter stein-auf-stein-v1-vorher gesichert. */
+    importCode: function (code) {
+      var d = S.codeLesen(code);
+      if (!d) return false;
+      W.store.set(KEY + '-vorher', S.data);
+      S.data = d;
+      S.save();
+      return true;
     }
   });
 })();

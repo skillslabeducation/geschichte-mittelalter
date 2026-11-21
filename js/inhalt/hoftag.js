@@ -89,7 +89,13 @@
       gesamt += e; max += m;
       return { name: t.name, punkte: e, max: m, aufgaben: liste };
     });
-    return { punkte: gesamt, max: max, teile: teile, falsch: falsch, erklProzent: erklProzent };
+    // Nur beantwortete, aber falsche Aufgaben werden zu Rissen.
+    var falschBeantwortet = falsch.filter(function (k) {
+      var x = null;
+      pruefung.teile.forEach(function (t) { t.aufgaben.forEach(function (y) { if (y.key === k) x = y; }); });
+      return x && !W.aufgaben.leer(x.item, antworten[k]);
+    });
+    return { punkte: gesamt, max: max, teile: teile, falsch: falsch, falschBeantwortet: falschBeantwortet, erklProzent: erklProzent };
   }
 
   function itemNachId(id) {
