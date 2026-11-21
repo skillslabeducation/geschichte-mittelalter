@@ -34,9 +34,25 @@
       buch: false,
       vereinfacht: false,
       nachweis: 'Stundenbuch „Les Très Riches Heures du duc de Berry“, Kalenderblatt März (fol. 3v), Musée Condé, Chantilly, Ms. 65. ' +
+        'Die Handschrift wurde für Herzog Johann von Berry begonnen und nach seinem Tod (1416) für andere adlige Besitzer vollendet. ' +
         'Nicht dasselbe Bild wie im Buch: Das Buch zeigt auf S. 35 (M2) Monatsbilder aus einer anderen französischen Handschrift von 1480.',
       lizenz: 'gemeinfrei (Public domain)',
       herkunft: 'https://commons.wikimedia.org/wiki/File:Les_Tr%C3%A8s_Riches_Heures_du_duc_de_Berry_mars.jpg'
+    },
+    'dorf-juni': {
+      titel: 'Monatsbild Juni: Heuernte',
+      autor: 'Brüder von Limburg, Buchmaler des Herzogs Johann von Berry',
+      zeit: 'um 1412–1416',
+      art: 'bild',
+      datei: 'bilder/dorf-juni.jpg',
+      alt: 'Kalenderbild für den Juni. Im Vordergrund arbeiten zwei Frauen auf einer Wiese: Die linke recht das gemähte Heu mit einem Holzrechen zusammen, die rechte schichtet es mit einer Holzgabel auf. Dahinter stehen schon mehrere Heuhaufen. Rechts mähen drei Männer das Gras mit Sensen. Im Hintergrund eine Mauer und ein großer Palast mit einer hohen gotischen Kapelle, darüber ein Halbkreis mit Sternzeichen und Kalendertagen.',
+      buch: false,
+      vereinfacht: false,
+      nachweis: 'Stundenbuch „Les Très Riches Heures du duc de Berry“, Kalenderblatt Juni (fol. 6v), Musée Condé, Chantilly, Ms. 65. ' +
+        'Die Handschrift wurde für Herzog Johann von Berry begonnen und nach seinem Tod (1416) für andere adlige Besitzer vollendet. Im Hintergrund der Königspalast in Paris mit der Sainte-Chapelle. ' +
+        'Nicht dasselbe Bild wie im Buch: Das Buch zeigt auf S. 35 (M2) Monatsbilder aus einer anderen französischen Handschrift von 1480.',
+      lizenz: 'gemeinfrei (Public domain)',
+      herkunft: 'https://commons.wikimedia.org/wiki/File:Les_Tr%C3%A8s_Riches_Heures_du_duc_de_Berry_juin.jpg'
     }
   });
 })();

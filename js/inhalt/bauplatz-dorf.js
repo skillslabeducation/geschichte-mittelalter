@@ -36,7 +36,7 @@
           '<li><strong>Gesundheit:</strong> Parasiten verbreiteten Krankheiten, gegen die es kein Heilmittel gab. Toiletten waren Löcher in der Erde, oft neben dem Brunnen gegraben. Sie verunreinigten das Trinkwasser.</li></ul>' +
           '<p>Die Hälfte der Kinder starb in den ersten sechs Lebensjahren an <dfn>Unterernährung</dfn> oder Krankheiten. Wer Kindheit und Jugend überlebte, hatte eine <dfn>Lebenserwartung</dfn> von 30 bis 40 Jahren.</p>',
         merk: 'Getreidebrei, graue Kleidung, verunreinigtes Trinkwasser, Krankheiten ohne Heilmittel: Die Lebensbedingungen der Bauern waren schlecht. Die Hälfte der Kinder starb in den ersten sechs Lebensjahren.',
-        achtung: '<strong>Aufgepasst</strong>: „Lebenserwartung von 30 bis 40 Jahren“ heißt nicht, dass alle mit etwa 35 starben. Die Zahl gilt laut Buch für die, die Kindheit und Jugend überlebt hatten, und sie ist ein Durchschnitt. Manche wurden älter. Viele Kinder starben dagegen schon sehr früh.'
+        achtung: '<strong>Aufgepasst</strong>: „Lebenserwartung von 30 bis 40 Jahren“ heißt nicht, dass alle mit etwa 35 starben. Wer Kindheit und Jugend überlebte, hatte laut Buch eine Lebenserwartung von 30 bis 40 Jahren. Viele wurden auch deutlich älter. Viele Kinder starben dagegen schon sehr früh.'
       },
       {
         titel: 'Neue Techniken',
@@ -47,14 +47,15 @@
           '<li>Mit dem <dfn>Kummet</dfn> konnten Pferde die doppelte Last ziehen. Sie bekamen auch Hufeisen.</li>' +
           '<li>Ochsen bekamen ein gepolstertes Holzbrett zwischen die Hörner. Sie waren langsamer als Pferde, zogen aber viel schwerere Lasten.</li>' +
           '<li>Im 11. Jahrhundert ersetzte die <dfn>Sense</dfn> die Sichel.</li>' +
-          '<li>Gedüngt wurde mit Mist und <dfn>Mergel</dfn>.</li></ul>',
+          '<li>Gedüngt wurde mit Mist und <dfn>Mergel</dfn>.</li></ul>' +
+          '<p><span class="tag tag--zusatz">Zusatz</span> Ganz verschwunden ist die Sichel nicht: Auf dem Monatsbild von 1480 (S. 35, M2) schneidet eine Bäuerin Getreide noch mit der Sichel. Die Sense setzte sich zuerst beim Heumähen durch.</p>',
         merk: 'Mühlen, eiserner Räderpflug, Kummet und Hufeisen, Sense, Wagen und Dünger machten die Arbeit leichter und schneller und die Böden ertragreicher.',
-        achtung: '<strong>Aufgepasst</strong>: Das Kummet ist ein gepolsterter Halskragen für Zugpferde, kein Sattel. Und Ochsen waren nicht schneller als Pferde, sondern langsamer. Dafür zogen sie schwerere Lasten.',
+        achtung: '<strong>Aufgepasst</strong>: Das Kummet ist ein gepolsterter Halskragen für Zugpferde, kein Sattel. Und Ochsen waren nicht schneller als Pferde, sondern langsamer. Dafür zogen sie schwerere Lasten.<br><span class="tag tag--zusatz">Zusatz</span> Wassermühlen gab es schon früher, zum Beispiel auf Karls Königshöfen um 800. Ab dem 10. Jahrhundert wurden sie überall gebaut. Windmühlen sind in Europa erst ab dem Ende des 12. Jahrhunderts sicher belegt (zuerst 1185 in England). In der Arbeit darfst du die Angabe des Buchs verwenden.',
         abb: 'neuerungen', abbOpts: { beschriftet: true }
       },
       {
         titel: 'Die Dreifelderwirtschaft',
-        text: '<p>Bis zum 11. Jahrhundert ließen die Bauern ein Feld nach der Ernte ein Jahr unbearbeitet („brach“) liegen, damit sich der Boden erholte. Man nennt das <dfn>Zweifelderwirtschaft</dfn>.</p>' +
+        text: '<p>Bis zum 11. Jahrhundert ließen die Bauern ein Feld nach der Ernte ein Jahr unbearbeitet („brach“) liegen, damit sich der Boden erholte. Man nennt das heute oft <dfn>Zweifelderwirtschaft</dfn> (Begriff nicht im Buch).</p>' +
           '<p>Eine bedeutende Neuerung war der Übergang zur <dfn>Dreifelderwirtschaft</dfn>. Das Ackerland wurde in drei Felder geteilt. Auf jedem Feld wechselten <dfn>Wintersaat</dfn>, <dfn>Frühjahrssaat</dfn> und <dfn>Brache</dfn> einander ab. Das schonte den Boden, und der Ernteertrag stieg.</p>' +
           '<p><strong>So liest du das Schaubild:</strong> Eine Spalte von oben nach unten zeigt, wie ein Feld von Jahr zu Jahr genutzt wird. Eine Zeile zeigt alle Felder in einem Jahr. Zähle in einer Zeile, wie viele Felder brachliegen, und vergleiche mit der Zweifelderwirtschaft darunter.</p>',
         merk: 'Dreifelderwirtschaft: Auf jedem Feld folgen Wintersaat, Frühjahrssaat und Brache aufeinander. Jedes Jahr ruht nur ein Feld. Das schont den Boden, der Ertrag steigt.',
@@ -64,7 +65,7 @@
       {
         titel: 'Mehr Ertrag, mehr Menschen',
         text: '<p>Die neuen Techniken und die Dreifelderwirtschaft hatten große Folgen. Sie bilden eine Kette:</p>' +
-          '<ul><li>Räderpflug, Kummet, Sense, Mühlen und Dünger erleichterten die Arbeit. Die Dreifelderwirtschaft schonte den Boden.</li>' +
+          '<ul><li>Räderpflug, Kummet, Sense und Mühlen erleichterten die Arbeit. Dünger aus Mist und Mergel verbesserte die Böden, die Dreifelderwirtschaft schonte sie.</li>' +
           '<li>Der Ernteertrag stieg.</li>' +
           '<li>Durch die neuen Erfindungen konnten mehr Menschen ernährt werden.</li>' +
           '<li>Die Zahl der Bevölkerung wuchs: Im Jahr 1200 lebten auf der Fläche des heutigen Deutschlands fünfmal so viele Menschen wie im Jahr 800.</li></ul>' +
@@ -80,7 +81,7 @@
           '<p>Die wenigen <dfn>Textquellen</dfn> zum bäuerlichen Alltag wurden in Klöstern und auf Burgen verfasst. Sie zeigen die Bauern so, wie Mönche oder Adlige sie sahen.</p>' +
           '<p><strong>So prüfst du die Sichtweise einer Quelle:</strong></p>' +
           '<ul><li>Wer hat sie gemacht, wann und für wen?</li><li>Was zeigt sie, und was zeigt sie nicht?</li><li>Wessen Blick auf die Bauern sehe ich?</li></ul>' +
-          '<p>Beispiel: Das Monatsbild für den März wurde für Herzog Johann von Berry gemalt, im Hintergrund steht sein Schloss. Die Arbeit sieht ordentlich und schön aus. Enge Hütten, Hunger und Krankheit sieht man nicht.</p>',
+          '<p>Beispiel: Das Monatsbild für den März wurde für Herzog Johann von Berry begonnen und nach seinem Tod für andere adlige Besitzer vollendet. Im Hintergrund steht das Schloss des Herzogs. Die Arbeit sieht ordentlich und schön aus. Enge Hütten, Hunger und Krankheit sieht man nicht.</p>',
         merk: 'Den Alltag der Bauern kennen wir vor allem aus gegenständlichen Quellen und Bildquellen. Die wenigen Textquellen stammen aus Klöstern und von Burgen und zeigen die Bauern mit fremden Augen.',
         achtung: '<strong>Aufgepasst</strong>: Ein Bild aus dem Mittelalter ist kein Foto. Es zeigt, was der Maler oder sein Auftraggeber zeigen wollte.',
         quelle: 'dorf-maerz'
@@ -119,7 +120,7 @@
           ['Die Kleidung war vielfach ausgebessert und grau.', 1],
           ['Parasiten verbreiteten Krankheiten, gegen die es kein Heilmittel gab.', 2],
           ['Toiletten neben dem Brunnen verunreinigten das Trinkwasser.', 2],
-          ['Die Hälfte der Kinder starb in den ersten sechs Lebensjahren.', 2]
+          ['Wer Kindheit und Jugend überlebte, hatte eine Lebenserwartung von 30 bis 40 Jahren.', 2]
         ]
       },
       {
@@ -133,7 +134,7 @@
           'Die Zahl gilt nur für Adlige auf den Burgen. Bauern wurden im Durchschnitt älter.'
         ],
         richtig: 0,
-        erkl: 'Zwei Dinge auseinanderhalten: Die Hälfte der Kinder starb sehr früh. Wer Kindheit und Jugend überstand, wurde im Durchschnitt 30 bis 40 Jahre alt, manche auch älter.'
+        erkl: 'Zwei Dinge auseinanderhalten: Die Hälfte der Kinder starb sehr früh. Wer Kindheit und Jugend überlebte, hatte laut Buch eine Lebenserwartung von 30 bis 40 Jahren. Viele wurden auch deutlich älter.'
       },
       {
         id: 'dorf-u5', typ: 'mehrfach',
@@ -219,15 +220,16 @@
       {
         id: 'dorf-u13', typ: 'zeitleiste',
         frage: 'Ordne die Ereignisse und Entwicklungen auf der Zeitleiste ein.',
-        abschnitte: ['um 800', 'ab dem 10. Jh.', 'um 1000', '11. Jh.', 'um 1200'],
+        abschnitte: ['um 800', '10. Jh.', '11. Jh.', '12. Jh.'],
         ereignisse: [
           ['Karl der Große wird in Rom zum Kaiser gekrönt.', 0, '800'],
           ['Überall entstehen Mühlen.', 1, 'ab dem 10. Jh.'],
-          ['Riesige Wälder bedecken große Teile Europas.', 2, 'um 1000'],
-          ['Die Sense ersetzt die Sichel.', 3, '11. Jh.'],
-          ['Übergang zur Dreifelderwirtschaft. Bis dahin lag ein Feld nach der Ernte ein Jahr brach.', 3, '11. Jh.'],
-          ['Im Gebiet des heutigen Deutschlands leben fünfmal so viele Menschen wie im Jahr 800.', 4, '1200']
-        ]
+          ['Bauern roden Wald, legen Sümpfe trocken und bauen Deiche.', 1, 'um 1000'],
+          ['Die Sense ersetzt die Sichel.', 2, '11. Jh.'],
+          ['Übergang zur Dreifelderwirtschaft. Bis dahin lag ein Feld nach der Ernte ein Jahr brach.', 2, '11. Jh.'],
+          ['Im Gebiet des heutigen Deutschlands leben fünfmal so viele Menschen wie im Jahr 800.', 3, '1200']
+        ],
+        erkl: 'Das Jahr 1000 gehört noch zum 10. Jahrhundert (901–1000), das Jahr 1200 zum 12. Jahrhundert (1101–1200).'
       },
       {
         id: 'dorf-u14', typ: 'mehrfach',
@@ -299,6 +301,20 @@
         frage: 'Ein Rechenbeispiel: Ein Dorf hat 60 gleich große Ackerstücke. Bei der Zweifelderwirtschaft lag jedes Jahr die Hälfte brach, bei der Dreifelderwirtschaft ein Drittel. Wie viele Ackerstücke kann das Dorf mit der Dreifelderwirtschaft jedes Jahr mehr bestellen?',
         antwort: 10, einheit: 'Ackerstücke', tol: 0,
         erkl: 'Vorher: 60 : 2 = 30 bestellt. Jetzt: 60 − 20 = 40 bestellt. Also 10 Ackerstücke mehr.'
+      },
+      {
+        id: 'dorf-u20', typ: 'mehrfach',
+        quelle: 'dorf-juni',
+        frage: 'Monatsbild Juni: Welche Arbeiten übernehmen die Frauen auf dem Bild? Wähle alle richtigen (vgl. Buch S. 35, A1a).',
+        optionen: [
+          'Sie rechen das gemähte Heu zusammen.',
+          'Sie schichten das Heu mit einer Gabel auf.',
+          'Sie mähen das Gras mit der Sense.',
+          'Sie pflügen die Wiese mit zwei Ochsen.',
+          'Sie tragen das Heu in Körben zum Palast.'
+        ],
+        richtig: [0, 1],
+        erkl: 'Die Frauen rechen und häufen das Heu, die drei Männer im Hintergrund mähen mit der Sense. Auch auf den Monatsbildern im Buch (S. 35, M2) arbeiten Bäuerinnen mit, zum Beispiel bei der Getreideernte mit der Sichel und mit den Garben beim Dreschen.'
       }
     ],
 
@@ -392,7 +408,7 @@
         },
         {
           id: 'dorf-hw3', typ: 'wahl',
-          frage: 'Was ersetzte im 11. Jahrhundert die Sichel?',
+          frage: 'Mit welchem neuen Gerät konnten die Bauern ab dem 11. Jahrhundert schneller ernten als mit der Sichel?',
           optionen: ['die Sense', 'der Räderpflug', 'das Kummet', 'die Schubkarre'],
           richtig: 0
         },
@@ -517,7 +533,7 @@
               id: 'dorf-hm2-4', typ: 'wahl', p: 1,
               frage: 'Für wen wurde das Monatsbild gemalt?',
               optionen: [
-                'für Herzog Johann von Berry, einen reichen Adligen',
+                'für reiche Adlige, zuerst für Herzog Johann von Berry',
                 'für die Bauern des Dorfes, damit sie den Kalender kennen',
                 'für den Pflüger, der es in seiner Hütte aufhängte',
                 'für eine Dorfschule, in der Bauernkinder lesen lernten'
@@ -550,10 +566,10 @@
               { text: 'Beschreibung: Pflügen mit zwei Ochsen und Räderpflug, Arbeit im Weinberg, Saatgut, Hirte mit Schafen; im Hintergrund ein Schloss', p: 1 },
               { text: 'Das Bild zeigt die Arbeit geordnet, ruhig und schön, die Landschaft gepflegt', p: 1 },
               { text: 'Es fehlt, was das Buch über die Lebensbedingungen sagt: enge Hütten, Hunger, Krankheit', p: 1 },
-              { text: 'Grund: Das Bild wurde für einen Herzog gemalt, im Hintergrund steht sein Schloss; es zeigt die Bauern von außen, nicht aus ihrer eigenen Sicht', p: 1 }
+              { text: 'Grund: Das Bild wurde für reiche Adlige gemalt (begonnen für Herzog Johann von Berry, nach seinem Tod für andere adlige Besitzer vollendet), im Hintergrund steht das Schloss des Herzogs; es zeigt die Bauern von außen, nicht aus ihrer eigenen Sicht', p: 1 }
             ],
             muster: '<p>Das Monatsbild zeigt die Arbeit im März: Im Vordergrund pflügt ein Bauer mit zwei Ochsen und einem Räderpflug, dahinter arbeiten Bauern in einem Weinberg, ein Mann holt Saatgut aus einem Sack, und ein Hirte hütet Schafe. Im Hintergrund steht ein großes Schloss.</p>' +
-              '<p>Die Arbeit wirkt geordnet und ruhig, die Landschaft ist gepflegt und schön. Was das Buch über die Lebensbedingungen der Bauern sagt, also enge Hütten, Hunger und Krankheiten, sieht man nicht. Das liegt daran, dass das Bild für Herzog Johann von Berry gemalt wurde, dem das Schloss gehörte. Es zeigt die Bauern von außen, mit dem Blick eines reichen Auftraggebers, und nicht aus ihrer eigenen Sicht.</p>'
+              '<p>Die Arbeit wirkt geordnet und ruhig, die Landschaft ist gepflegt und schön. Was das Buch über die Lebensbedingungen der Bauern sagt, also enge Hütten, Hunger und Krankheiten, sieht man nicht. Das liegt daran, dass das Bild für reiche Adlige gemalt wurde: Die Handschrift wurde für Herzog Johann von Berry begonnen, dem das Schloss gehörte, und nach seinem Tod für andere adlige Besitzer vollendet. Es zeigt die Bauern von außen, mit dem Blick eines reichen Auftraggebers, und nicht aus ihrer eigenen Sicht.</p>'
           }
         }
       ],
@@ -571,8 +587,8 @@
             { name: 'Bevölkerung', muster: ['bevoelkerung'] }
           ],
           punkte: [
-            { text: 'Früher (bis zum 11. Jh.): Ein Feld lag nach der Ernte ein Jahr brach, damit sich der Boden erholte', p: 1 },
-            { text: 'Dabei lag jedes Jahr die Hälfte des Ackerlands brach', p: 1 },
+            { text: 'Früher (bis zum 11. Jh.): Die Bauern ließen Felder brach liegen, damit sich der Boden erholte', p: 1 },
+            { text: 'Nach jeder Ernte ruhte das Feld ein Jahr, viel Land blieb ungenutzt', p: 1 },
             { text: 'Dreifelderwirtschaft: Das Ackerland ist in drei Felder geteilt', p: 1 },
             { text: 'Auf jedem Feld wechseln Wintersaat, Frühjahrssaat und Brache von Jahr zu Jahr ab', p: 1 },
             { text: 'Jedes Jahr liegt nur ein Drittel brach, also wird mehr Land bebaut', p: 1 },
@@ -580,7 +596,7 @@
             { text: 'Zusammen mit neuen Techniken (z. B. Räderpflug, Kummet, Dünger) konnten mehr Menschen ernährt werden', p: 1 },
             { text: 'Die Bevölkerung wuchs: um 1200 fünfmal so viele Menschen wie 800 (Fläche des heutigen Deutschlands)', p: 1 }
           ],
-          muster: '<p>Bis zum 11. Jahrhundert ließen die Bauern ein Feld nach der Ernte ein Jahr brach liegen, damit sich der Boden erholte. Dadurch lag jedes Jahr die Hälfte des Ackerlands ungenutzt.</p>' +
+          muster: '<p>Bis zum 11. Jahrhundert ließen die Bauern ein Feld nach der Ernte ein Jahr brach liegen, damit sich der Boden erholte. Nach jeder Ernte ruhte das Feld also ein Jahr, und viel Land blieb ungenutzt.</p>' +
             '<p>Bei der Dreifelderwirtschaft wurde das Ackerland in drei Felder geteilt. Auf jedem Feld wechselten Wintersaat, Frühjahrssaat und Brache von Jahr zu Jahr einander ab. Deshalb lag jedes Jahr nur noch ein Drittel des Landes brach, und es konnte mehr Land bebaut werden. Außerdem schonte der Wechsel den Boden, sodass der Ernteertrag stieg.</p>' +
             '<p>Zusammen mit neuen Techniken wie dem eisernen Räderpflug, dem Kummet und der Düngung mit Mist und Mergel konnten so mehr Menschen ernährt werden. Die Bevölkerung wuchs: Im Jahr 1200 lebten auf der Fläche des heutigen Deutschlands fünfmal so viele Menschen wie im Jahr 800.</p>'
         },
@@ -602,11 +618,11 @@
             { text: 'Dagegen: Wohnen und Arbeitstag blieben hart (Hütten mit einem Raum, Arbeit bis zur Dunkelheit)', p: 1 },
             { text: 'Dagegen: Krankheiten ohne Heilmittel, verunreinigtes Trinkwasser, hohe Kindersterblichkeit', p: 1 },
             { text: 'Dagegen: Die meisten Bauern blieben vom Grundherrn abhängig und mussten Abgaben und Dienste leisten', p: 1 },
-            { text: 'Begründetes Fazit als Sachurteil ohne heutige Maßstäbe, z. B.: Die Ernährung wurde besser, die Lebensbedingungen blieben aber hart', p: 1 }
+            { text: 'Begründetes Fazit als Sachurteil ohne heutige Maßstäbe, z. B.: Vor allem konnten mehr Menschen ernährt werden und die Bevölkerung wuchs; grundlegend besser wurde das Leben der einzelnen Bauern dadurch nicht', p: 1 }
           ],
           muster: '<p>Um das zu beurteilen, schaue ich auf die Arbeit, die Ernährung und die Gesundheit der Bauern. Einerseits brachten die Neuerungen große Vorteile: Mit dem eisernen Räderpflug, dem Kummet, der Sense und den Mühlen wurde die Arbeit leichter und schneller. Die Dreifelderwirtschaft schonte den Boden, und der Ernteertrag stieg. Deshalb konnten mehr Menschen ernährt werden. Das zeigt sich daran, dass um 1200 auf der Fläche des heutigen Deutschlands fünfmal so viele Menschen lebten wie im Jahr 800.</p>' +
             '<p>Andererseits blieben die Lebensbedingungen hart: Die Familien wohnten weiter in einfachen Hütten, arbeiteten von Sonnenaufgang bis zur Dunkelheit und hatten kaum Schutz vor Krankheiten. Die Hälfte der Kinder starb in den ersten sechs Lebensjahren. Außerdem blieben die meisten Bauern von ihrem Grundherrn abhängig und mussten Abgaben und Dienste leisten.</p>' +
-            '<p>Insgesamt verbesserten die Neuerungen vor allem die Ernährung. Grundlegend besser wurde das Leben der Bauern dadurch aber nicht, denn ihr Alltag blieb arm, anstrengend und gefährlich.</p>'
+            '<p>Insgesamt sorgten die Neuerungen vor allem dafür, dass mehr Menschen ernährt werden konnten und die Bevölkerung wuchs. Grundlegend besser wurde das Leben der einzelnen Bauern dadurch nicht, denn ihr Alltag blieb arm, anstrengend und gefährlich.</p>'
         }
       ]
     },
@@ -617,7 +633,7 @@
       { id: 'dorf-g3', aussage: 'Mit dem Kummet konnten Pferde die doppelte Last ziehen.', stimmt: true, erkl: 'Stimmt. Das Kummet ist ein mit Leder gepolsterter Halskragen.' },
       { id: 'dorf-g4', aussage: 'Ochsen waren schneller als Pferde.', stimmt: false, erkl: 'Erfunden. Ochsen waren langsamer, zogen aber viel schwerere Lasten.' },
       { id: 'dorf-g5', aussage: 'Bei der Dreifelderwirtschaft liegt jedes Jahr ein Feld brach.', stimmt: true, erkl: 'Stimmt. Jedes Jahr ruht ein anderes der drei Felder.' },
-      { id: 'dorf-g6', aussage: 'Im 11. Jahrhundert ersetzte die Sichel die Sense.', stimmt: false, erkl: 'Erfunden. Umgekehrt: Die Sense ersetzte die Sichel.' },
+      { id: 'dorf-g6', aussage: 'Im 11. Jahrhundert ersetzte die Sichel die Sense.', stimmt: false, erkl: 'Erfunden. Umgekehrt: Die Sense ersetzte laut Buch die Sichel. Ganz verschwunden ist die Sichel aber nicht.' },
       { id: 'dorf-g7', aussage: 'Um 1200 lebten im Gebiet des heutigen Deutschlands fünfmal so viele Menschen wie 800.', stimmt: true, erkl: 'Stimmt. Mehr Ertrag ernährte mehr Menschen.' },
       { id: 'dorf-g8', aussage: 'Bauern trugen bunte Kleidung, weil Färbemittel billig waren.', stimmt: false, erkl: 'Erfunden. Färbemittel waren teuer, die Kleidung war grau und ausgebessert.' },
       { id: 'dorf-g9', aussage: 'Mergel ist ein Gestein aus Ton und Kalk.', stimmt: true, erkl: 'Stimmt. Mit Mergel düngte man vor allem Sandböden.' },

@@ -6,20 +6,20 @@
   Object.assign(W.quellen, {
     'kirche-lichtenberger': {
       titel: 'Christus und die drei Stände',
-      autor: 'Holzschnitt aus Johannes Lichtenbergers Buch „Prognosticatio“, gedruckt von Jacob Meydenbach',
+      autor: 'Holzschnitt aus Johannes Lichtenbergers Buch „Prognosticatio“ (Erstausgabe 1488; dieselben Holzschnitte auch in der Mainzer Ausgabe von Jacob Meydenbach, 1492)',
       zeit: '1488',
       art: 'bild',
       datei: 'bilder/kirche-lichtenberger.jpg',
       alt: 'Holzschnitt in Schwarz-Weiß. Oben sitzt Christus mit ausgebreiteten Armen auf einem Regenbogen. Links stehen Geistliche, darunter der Papst mit dreifacher Krone und Kreuzstab. Rechts stehen Adlige, vorn der Kaiser mit Krone. Unten bearbeiten zwei Bauern mit Hacken den Boden. Lateinische Inschriften: Tu supplex ora (links), Tu protege (rechts), Tuque labora (unten).',
       buch: true,
       vereinfacht: false,
-      nachweis: 'Buch S. 32, M1. Die Beschriftung lautet: Tu supplex ora – du bete demütig! Tu protege – du beschütze! Tuque labora – und du arbeite! Im Buch ist der Holzschnitt farbig abgebildet, hier derselbe Holzschnitt ohne Farbe (Wikimedia Commons, Datei „Ständeordnung.jpg“).',
+      nachweis: 'Buch S. 32, M1. Die Beschriftung lautet: Tu supplex ora – du bete demütig! Tu protege – du beschütze! Tuque labora – und du arbeite! Im Buch ist der Holzschnitt farbig abgebildet und auf 1488 datiert (Erstausgabe, Heidelberg). Hier dieselbe Darstellung ohne Farbe aus Wikimedia Commons (Datei „Ständeordnung.jpg“). Commons nennt als Urheber Jacob Meydenbach; das Bild stammt daher wohl aus seinem Mainzer Nachdruck von 1492 (lateinische Ausgabe vom 8. Juni 1492, ISTC il00205000), der die Holzschnitte der Erstausgabe übernahm.',
       lizenz: 'gemeinfrei (Public domain)',
       herkunft: 'https://commons.wikimedia.org/wiki/File:St%C3%A4ndeordnung.jpg'
     },
     'kirche-adalbero': {
       titel: 'Dreigeteilt ist das Haus Gottes',
-      autor: 'Bischof Adalbero von Laon (971–1030), Gedicht für König Robert II. von Frankreich',
+      autor: 'Bischof Adalbero von Laon (Bischof 977–1030), Gedicht für König Robert II. von Frankreich',
       zeit: 'um 1025',
       art: 'text',
       text: '<p>Dreigeteilt ist das Haus Gottes, welches als eine Einheit zu sehen ist.</p>' +
@@ -28,7 +28,7 @@
         '<p>Durch die gegenseitigen Dienste bereiten sie sich gegenseitig Zuversicht.</p>',
       buch: true,
       vereinfacht: false,
-      nachweis: 'Buch S. 33, M3 (zit. nach Stefan Weinfurter, Die Ständegesellschaft, in: Praxis Geschichte 5 (2018), S. 6)'
+      nachweis: 'Buch S. 33, M3 (zit. nach Stefan Weinfurter, Die Ständegesellschaft, in: Praxis Geschichte 5 (2018), S. 6). Das Buch gibt als Lebensdaten 971–1030 an; belegt ist Adalbero als Bischof von Laon ab 977 bis zu seinem Tod um 1030, sein Geburtsjahr ist unsicher.'
     },
     'kirche-priester': {
       titel: 'Aufruf eines Priesters an die Bauern',

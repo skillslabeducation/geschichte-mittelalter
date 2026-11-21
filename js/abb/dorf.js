@@ -115,7 +115,7 @@
       rad(222, 74, 18, F.holz) +
       '<line x1="222" y1="74" x2="236" y2="50" stroke="' + F.holz + '" stroke-width="3"/>' +
       '<line x1="276" y1="50" x2="284" y2="88" stroke="' + F.grau + '" stroke-width="4"/>' +
-      '<path d="M286,82 L330,94 L284,94 Z" fill="' + F.grau + '" stroke="' + F.tinte + '" stroke-width="1.2"/>' +
+      '<path d="M284,94 L328,82 L330,94 Z" fill="' + F.grau + '" stroke="' + F.tinte + '" stroke-width="1.2"/>' +
       '<line x1="300" y1="50" x2="304" y2="86" stroke="' + F.holz + '" stroke-width="4"/>' +
       '<line x1="314" y1="52" x2="346" y2="20" stroke="' + F.holz + '" stroke-width="4" stroke-linecap="round"/>' +
       '<line x1="304" y1="60" x2="340" y2="30" stroke="' + F.holz + '" stroke-width="4" stroke-linecap="round"/>';

@@ -13,15 +13,15 @@
 
   W.bauplaetze.push({
     id: 'kirche', nr: 4, titel: 'Dorfkirche', thema: 'Ständegesellschaft', zeit: 'ab dem 11. Jh.', buch: 'S. 32/33', checkliste: 3,
-    chronist: 'Die Dorfkirche ist das kleinste „Haus Gottes“ im Tal, aber an ihr hängt das größte Gedankengebäude. Wer betet, wer kämpft und wer arbeitet, war im Mittelalter schon bei der Geburt entschieden.',
-    leitfrage: 'Warum hatte im Mittelalter jeder Mensch von Geburt an seinen festen Platz, und wie wurde diese Ungleichheit gerechtfertigt?',
+    chronist: 'Die Dorfkirche ist ein Gotteshaus. Bischof Adalbero nannte sogar die ganze Gesellschaft ein „Haus Gottes“. Wer kämpfte und wer arbeitete, war meist schon bei der Geburt entschieden.',
+    leitfrage: 'Warum hatte im Mittelalter fast jeder Mensch von Geburt an seinen festen Platz, und wie wurde diese Ungleichheit gerechtfertigt?',
 
     karten: [
       {
         titel: 'Frei oder unfrei',
         text: '<p>In der Antike war die Gesellschaft in zwei Gruppen eingeteilt: Freie und Sklaven. Die Rechtsgelehrten Karls des Großen übernahmen diese Auffassung und legten im Jahr 803 fest: <strong>„Es gibt nichts außer frei und unfrei.“</strong></p>' +
           '<p>Die Unfreien des Mittelalters waren aber nicht völlig rechtlos wie die Sklaven im Altertum. Im Laufe der Jahrhunderte hatten sich Zwischengruppen gebildet, zum Beispiel <dfn>Freigelassene</dfn> oder Hörige.</p>' +
-          '<p>Bis ins 19. Jahrhundert entschieden Herkunft, Vermögen und unterschiedliche Rechte über die Stellung eines Menschen. Im Mittelalter war jedem Menschen von Geburt an ein bestimmter Platz zugewiesen.</p>',
+          '<p>Bis ins 19. Jahrhundert entschieden Herkunft, Vermögen und unterschiedliche Rechte über die Stellung eines Menschen. Im Mittelalter war den meisten Menschen schon von Geburt an ein bestimmter Platz zugewiesen.</p>',
         merk: 'Um 800 hieß es: frei oder unfrei. Doch die Unfreien des Mittelalters waren keine rechtlosen Sklaven.',
         achtung: '<strong>Aufgepasst</strong> 803 gehört zum 9. Jahrhundert, nicht zum 8. Das 9. Jahrhundert umfasst die Jahre 801 bis 900.'
       },
@@ -45,14 +45,15 @@
           '<li>Eine <strong>Heirat</strong> war nur innerhalb eines Standes möglich.</li></ul>' +
           '<p>Die Ständeordnung wurde als <strong>von Gott gegeben</strong> anerkannt. Daher durfte sich niemand gegen sie auflehnen. Diese <dfn>Ständegesellschaft</dfn> galt in den meisten europäischen Ländern bis weit ins 19. Jahrhundert.</p>',
         merk: 'Die ersten beiden Stände waren von Abgaben befreit und lebten von der Arbeit des dritten Standes, des mit Abstand größten.',
-        achtung: '<strong>Aufgepasst</strong> Die Bauern waren nicht der kleinste, sondern der größte Stand. Wenige Adlige und Geistliche lebten von sehr vielen Bauern.'
+        achtung: '<strong>Aufgepasst</strong> Die Bauern waren nicht der kleinste, sondern der größte Stand. Wenige Adlige und Geistliche lebten von sehr vielen Bauern. Und „keine körperliche Arbeit“ galt vor allem für Adlige und für Geistliche wie Bischöfe und Priester. Mönche und Nonnen arbeiteten nach der Regel Benedikts auch mit den Händen: „ora et labora“ (S. 40/41).'
       },
       {
         titel: 'Außerhalb der Ordnung',
         text: '<p>Nicht jeder Mensch hatte in dieser Ordnung einen Platz:</p>' +
           '<ul><li><strong>Nicht erfasst</strong> wurden Frauen, Kinder oder Juden.</li>' +
           '<li>„Unehrenhafte“ Berufe wie der des Totengräbers und des Henkers und Gruppen wie Schausteller und Bettler zählten zu keinem Stand. Sie waren <dfn>Standeslose</dfn>.</li></ul>' +
-          '<p>Auch innerhalb eines Standes gab es große Unterschiede. Ein Dorfpriester war arm im Vergleich zu einem Bischof. Und bei einem Adligen war es ein Unterschied, ob er wenig Besitz hatte oder Sohn eines Fürsten war.</p>',
+          '<p>Auch innerhalb eines Standes gab es große Unterschiede. Ein Dorfpriester war arm im Vergleich zu einem Bischof. Und bei einem Adligen war es ein Unterschied, ob er wenig Besitz hatte oder Sohn eines Fürsten war.</p>' +
+          '<p><span class="tag tag--zusatz">Zusatz</span> Der erste Stand ist eine Ausnahme: Geistliche hatten keine Kinder, die den Stand erbten. Bischöfe stammten meist aus dem Adel, Dorfpriester und viele Mönche aus dem Bauernstand.</p>',
         merk: 'Standeslose wie Henker, Totengräber, Schausteller und Bettler gehörten zu keinem Stand. Frauen, Kinder und Juden wurden in der Ordnung nicht erfasst.',
         achtung: '<strong>Aufgepasst</strong> Standeslos ist nicht dasselbe wie unfrei. Hörige zum Beispiel waren unfrei, gehörten als Bauern aber zum dritten Stand.'
       },
@@ -70,7 +71,7 @@
       {
         titel: 'Das „Haus Gottes“: Begründung und Kritik',
         text: '<p>Warum sollte man diese Ungleichheit hinnehmen? Die Antwort kam aus dem Glauben:</p>' +
-          '<ul><li><strong>Bischof Adalbero von Laon</strong> (um 1025, M3): Die Gesellschaft ist das dreigeteilte <dfn>Haus Gottes</dfn>. Die einen beten, die anderen kämpfen, wieder andere arbeiten. Die Stände brauchen einander und dienen sich gegenseitig.</li>' +
+          '<ul><li><strong>Bischof Adalbero von Laon</strong> (um 1025, M3): Die Gesellschaft ist das dreigeteilte <dfn>Haus Gottes</dfn>. „Haus Gottes“ meint bei Adalbero kein Gebäude, sondern die ganze Gesellschaft. Die einen beten, die anderen kämpfen, wieder andere arbeiten. Die Stände brauchen einander und dienen sich gegenseitig.</li>' +
           '<li><strong>Äbtissin Hildegard von Bingen</strong> (1150, M5): Gott teilt sein Volk auf Erden in Stände, so wie die Engel im Himmel geordnet sind. Der niedere Stand soll sich nicht über den höheren erheben.</li></ul>' +
           '<p>Es gab aber auch Kritik. Ein <strong>Priester</strong> rief 1381 die Bauern auf (M4): Wenn alle von Adam und Eva abstammen, warum sollen die Herren dann bessere Menschen sein?</p>' +
           '<p>Für heutige Historikerinnen und Historiker beginnt mit der Lehre von den drei Ständen die <dfn>arbeitsteilige Gesellschaft</dfn>: Jeder Stand sollte seinen Teil dazu beitragen, das „Haus Gottes“ in einen guten Zustand zu bringen.</p>',
@@ -84,7 +85,7 @@
           '<ul><li><strong>1. Beschreiben:</strong> Was ist zu sehen? Personen, Kleidung, Gegenstände, Inschriften. Hier noch nichts deuten.</li>' +
           '<li><strong>2. Untersuchen und einordnen:</strong> Wer hat das Bild wann gemacht? Wie ist es aufgebaut: Wer ist oben, wer unten? Was weißt du über die Zeit?</li>' +
           '<li><strong>3. Deuten:</strong> Was will das Bild aussagen? Wie sollte es auf die Menschen damals wirken?</li></ul>' +
-          '<p>Am <dfn>Holzschnitt</dfn> von 1488: Oben sitzt Christus auf einem Regenbogen, unter ihm stehen Geistliche und Adlige, ganz unten arbeiten Bauern. Die Inschriften geben jedem Stand seine Aufgabe. Deutung: Die Ordnung der Stände kommt von Gott.</p>' +
+          '<p>Am <dfn>Holzschnitt</dfn> von 1488: Oben sitzt Christus auf einem Regenbogen. Neben ihm stehen links die Geistlichen mit dem Papst, rechts die Adligen mit dem Kaiser. Ganz unten arbeiten Bauern. Die Inschriften geben jedem Stand seine Aufgabe. Deutung: Die Ordnung der Stände kommt von Gott.</p>' +
           '<p>Die genauen Arbeitsschritte deiner Klasse stehen im Buch auf S. 27. Gleiche sie dort ab.</p>',
         quelle: 'kirche-lichtenberger',
         merk: 'Erst beschreiben, dann untersuchen und einordnen, zuletzt deuten. Wer sofort deutet, übersieht leicht, was wirklich im Bild steht.',
@@ -125,7 +126,7 @@
         frage: 'Was galt im Mittelalter für Geistliche und Adlige? Wähle alle richtigen Aussagen.',
         optionen: ['Sie waren von Abgaben befreit.', 'Sie durften keine körperliche Arbeit verrichten.', 'Sie lebten von den Abgaben und Diensten der Bauern.', 'Sie durften in jeden anderen Stand einheiraten.', 'Sie mussten Frondienste auf den Feldern leisten.'],
         richtig: [0, 1, 2],
-        erkl: 'Eine Heirat war nur innerhalb eines Standes möglich, auch für Adlige. Frondienste leisteten die Bauern.'
+        erkl: 'Eine Heirat war nur innerhalb eines Standes möglich, auch für Adlige. Frondienste leisteten die Bauern. Keine körperliche Arbeit: Das galt vor allem für Adlige, Bischöfe und Priester. Mönche und Nonnen arbeiteten nach der Regel Benedikts auch mit den Händen („ora et labora“).'
       },
       {
         id: 'kirche-u6', typ: 'behauptung',
@@ -293,13 +294,41 @@
         ],
         richtig: 1,
         erkl: 'Die erste Antwort beschreibt nur, die dritte bewertet. Erklären heißt: Gründe und Zusammenhänge nennen, mit „weil“ und „deshalb“.'
+      },
+      {
+        id: 'kirche-u21', typ: 'sortieren', abb: 'staendeschaubild', abbOpts: { beschriftet: true },
+        frage: 'Ordne die Gruppen aus dem Schaubild M2 den drei Ständen zu (vgl. Buch S. 33, A3).',
+        kategorien: ['1. Stand', '2. Stand', '3. Stand'],
+        items: [
+          ['hohe Geistlichkeit', 0],
+          ['niedere Geistlichkeit', 0],
+          ['Hochadel', 1],
+          ['Ministeriale', 1],
+          ['Ritter', 1],
+          ['freie Bauern', 2],
+          ['abhängige Bauern', 2],
+          ['unterbäuerliche Schicht ohne Landbesitz', 2]
+        ],
+        erkl: 'Die Geistlichkeit steht im Schaubild rechts, Hochadel, Ministeriale und Ritter links. Zum dritten Stand gehören laut Darstellungstext „alle anderen wie die Bauern“, also auch Menschen ohne eigenes Land, die auf dem Land arbeiteten.'
+      },
+      {
+        id: 'kirche-u22', typ: 'wahl', abb: 'staendeschaubild', abbOpts: { beschriftet: true },
+        frage: 'Welche Gruppe des dritten Standes fehlt im Schaubild M2? Nimm den Darstellungstext zu Hilfe (vgl. Buch S. 33, A3).',
+        optionen: [
+          'Handwerker und Bürger in den Städten, denn M2 zeigt nur die ländliche Gesellschaft.',
+          'Die abhängigen Bauern, denn sie hatten keine Rechte und wurden nicht mitgezählt.',
+          'Die Ritter, denn sie gehörten weder zum Adel noch zu den Bauern.',
+          'Die Dorfpriester, denn sie waren arm und zählten deshalb zum dritten Stand.'
+        ],
+        richtig: 0,
+        erkl: 'Laut Darstellungstext gehören zum dritten Stand Bauern, Handwerker und später die Bürger in den Städten. M2 ist aber ein Schema der ländlichen Gesellschaft.'
       }
     ],
 
     erklaeren: [
       {
         id: 'kirche-e1', operator: 'erklaeren',
-        frage: 'Erkläre mithilfe von M3 und M5, wie die Einteilung in Stände religiös begründet wurde (vgl. Buch S. 33, A2a).',
+        frage: 'Erkläre mithilfe von M3 und M5, wie die Einteilung in Stände religiös begründet wurde (vgl. Buch S. 33, A2a. Buch: „Arbeitet heraus“; die Checkliste verlangt „erklären“).',
         material: M3() + M5(),
         tipp: 'Nutze den Wortschatz von S. 32: in Stände eingeteilt sein, einem Stand angehören, über oder unter jemandem stehen, von Gott gegeben.',
         begriffe: [
@@ -314,17 +343,17 @@
           { text: 'Jeder Stand hat eine Aufgabe: Geistliche beten, Adlige kämpfen, Bauern arbeiten.', p: 1 },
           { text: 'Die Stände sind aufeinander angewiesen und dienen sich gegenseitig, deshalb gehören sie zusammen.', p: 1 },
           { text: 'Hildegard (M5): Gott selbst teilt sein Volk in Stände, so wie die Engel im Himmel in Engel und Erzengel geordnet sind.', p: 1 },
-          { text: 'Der niedere Stand soll sich nicht über den höheren erheben (wie Satan), sonst käme alles durcheinander (Vergleich mit dem Stall).', p: 1 },
+          { text: 'Der niedere Stand soll sich nicht über den höheren erheben, wie es einst Satan und der erste Mensch getan haben, sonst käme alles durcheinander (Vergleich mit dem Stall).', p: 1 },
           { text: 'Folgerung: Die Ordnung galt als von Gott gegeben, deshalb durfte sich niemand gegen sie auflehnen.', p: 1 }
         ],
-        muster: 'Die Ständeordnung wurde mit dem Glauben an Gott begründet. Bischof Adalbero von Laon schreibt um 1025, dass das „Haus Gottes“ dreigeteilt ist, aber eine Einheit bildet: Die einen beten, die anderen kämpfen und wieder andere arbeiten. Damit meint er die Geistlichen, die Adligen und die Bauern. Jeder Stand hat also eine Aufgabe in Gottes Ordnung. Die Stände gehören zusammen, weil die Arbeit des einen Standes die Werke der anderen erst möglich macht. Sie dienen sich gegenseitig. Hildegard von Bingen begründet die Einteilung 1150 noch deutlicher mit Gott: Gott selbst teilt sein Volk auf Erden in Stände, so wie die Engel im Himmel in Engel und Erzengel geordnet sind. Deshalb soll sich der niedere Stand nicht über den höheren erheben, wie es Satan getan hat. Mit dem Vergleich vom Stall zeigt sie, dass sonst alles durcheinandergeraten würde. Weil die Ordnung also als von Gott gegeben galt, durfte sich niemand gegen sie auflehnen.'
+        muster: 'Die Ständeordnung wurde mit dem Glauben an Gott begründet. Bischof Adalbero von Laon schreibt um 1025, dass das „Haus Gottes“ dreigeteilt ist, aber eine Einheit bildet: Die einen beten, die anderen kämpfen und wieder andere arbeiten. Damit meint er die Geistlichen, die Adligen und die Bauern. Jeder Stand hat also eine Aufgabe in Gottes Ordnung. Die Stände gehören zusammen, weil die Arbeit des einen Standes die Werke der anderen erst möglich macht. Sie dienen sich gegenseitig. Hildegard von Bingen begründet die Einteilung 1150 noch deutlicher mit Gott: Gott selbst teilt sein Volk auf Erden in Stände, so wie die Engel im Himmel in Engel und Erzengel geordnet sind. Deshalb soll sich der niedere Stand nicht über den höheren erheben, wie es einst Satan und der erste Mensch getan haben. Mit dem Vergleich vom Stall zeigt sie, dass sonst alles durcheinandergeraten würde. Weil die Ordnung also als von Gott gegeben galt, durfte sich niemand gegen sie auflehnen.'
       },
       {
         id: 'kirche-e2', operator: 'vergleichen',
-        frage: 'Vergleiche die Begründung der Ständeordnung in M3 und M5 mit dem Aufruf des Priesters (M4). Zeige dabei, inwiefern es auch Kritik an der Einteilung gab (vgl. Buch S. 33, A2b).',
+        frage: 'Vergleiche, wie Adalbero (M3) und Hildegard (M5) die Einteilung begründen. Überprüfe dann mithilfe von M4, inwiefern es auch Kritik gab (vgl. Buch S. 33, A2b).',
         quelle: 'kirche-priester',
         material: M3() + M5(),
-        tipp: 'Lege dir zwei Spalten an: Begründung (M3, M5) und Kritik (M4). Suche dann eine Gemeinsamkeit und mehrere Unterschiede.',
+        tipp: 'Vergleiche zuerst M3 und M5: Worin stimmen sie überein, was betont Adalbero, was Hildegard? Prüfe dann mit M4, welche Kritik es gab.',
         begriffe: [
           { name: 'Stand', muster: ['stand', 'stände'] },
           { name: 'Gott', muster: ['gott', 'bibel'] },
@@ -334,13 +363,14 @@
         ],
         punkte: [
           { text: 'Gemeinsamkeit: Alle drei argumentieren religiös, mit Gott oder der Bibel.', p: 1 },
-          { text: 'M3 und M5: Die Einteilung in Stände ist von Gott gewollt; jeder Stand hat seine Aufgabe, der niedere soll sich nicht erheben.', p: 1 },
+          { text: 'M3: Adalbero betont die Einheit und die gegenseitigen Dienste. Alle drei Stände brauchen einander.', p: 1 },
+          { text: 'M5: Hildegard betont die Rangordnung von oben nach unten (Engel und Erzengel) und die Trennung der Stände (Stall). Der niedere Stand soll sich fügen.', p: 1 },
           { text: 'M4: Weil alle von Adam und Eva abstammen, können die Herren nicht beweisen, dass sie mit besserem Grund Herren sind.', p: 1 },
           { text: 'M4 kritisiert, dass die Herren die Bauern in Knechtschaft halten und von ihrer Arbeit leben.', p: 1 },
           { text: 'Unterschied der Sichtweise: Adalbero und Hildegard gehören als Bischof und Äbtissin zur hohen Geistlichkeit; der Priester wendet sich an die Bauern und stellt sich auf ihre Seite.', p: 1 },
           { text: 'Fazit: Schon im Mittelalter gab es Kritik an der Einteilung, obwohl sie als von Gott gegeben galt.', p: 1 }
         ],
-        muster: 'Adalbero (M3) und Hildegard (M5) begründen die Ständeordnung beide mit Gott. Für Adalbero ist die Gesellschaft das dreigeteilte „Haus Gottes“, in dem jeder Stand eine Aufgabe hat und alle sich gegenseitig dienen. Hildegard schreibt, Gott selbst habe sein Volk in Stände geteilt wie die Engel im Himmel, und der niedere Stand dürfe sich nicht über den höheren erheben. Der Priester von 1381 (M4) argumentiert ebenfalls mit der Bibel, kommt aber zum gegenteiligen Ergebnis: Wenn alle Menschen von Adam und Eva abstammen, können die Herren nicht beweisen, dass sie mit besserem Grund Herren sind. Er kritisiert, dass die Herren die Bauern in Knechtschaft halten und von dem leben, was die Bauern erarbeiten. Auch die Sichtweise ist verschieden: Adalbero und Hildegard gehören als Bischof und Äbtissin zur hohen Geistlichkeit. Der Priester wendet sich dagegen an die Bauern und stellt sich auf ihre Seite. Der Vergleich zeigt, dass es schon im Mittelalter Kritik an der Einteilung gab, obwohl sie als von Gott gegeben galt.'
+        muster: 'Adalbero (M3) und Hildegard (M5) begründen die Ständeordnung beide mit Gott, setzen aber verschiedene Schwerpunkte. Adalbero betont die Einheit: Das „Haus Gottes“ ist dreigeteilt, aber eins. Die einen beten, die anderen kämpfen, wieder andere arbeiten, und durch die gegenseitigen Dienste brauchen alle drei Stände einander. Hildegard betont dagegen die Rangordnung von oben nach unten: Gott teilt sein Volk in Stände, so wie die Engel im Himmel in einfache Engel und Erzengel geordnet sind. Mit dem Vergleich vom Stall zeigt sie, dass die Stände getrennt bleiben sollen. Der niedere Stand soll sich fügen und sich nicht über den höheren erheben. Überprüft man das mit M4, zeigt sich Kritik: Der Priester von 1381 argumentiert ebenfalls mit der Bibel, kommt aber zum gegenteiligen Ergebnis: Wenn alle Menschen von Adam und Eva abstammen, können die Herren nicht beweisen, dass sie mit besserem Grund Herren sind. Er kritisiert, dass die Herren die Bauern in Knechtschaft halten und von dem leben, was die Bauern erarbeiten. Auch die Sichtweise ist verschieden: Adalbero und Hildegard gehören als Bischof und Äbtissin zur hohen Geistlichkeit. Der Priester wendet sich dagegen an die Bauern und stellt sich auf ihre Seite. Der Vergleich zeigt, dass es schon im Mittelalter Kritik an der Einteilung gab, obwohl sie als von Gott gegeben galt.'
       },
       {
         id: 'kirche-e3', operator: 'erlaeutern',
@@ -355,14 +385,14 @@
           { name: 'von Gott gegeben', muster: ['gott'] }
         ],
         punkte: [
-          { text: 'Heute haben alle Menschen die gleichen Rechte, egal aus welcher Familie sie kommen. Damals war jedem von Geburt an ein Platz zugewiesen.', p: 1 },
+          { text: 'Heute haben alle Menschen die gleichen Rechte, egal aus welcher Familie sie kommen. Damals war den meisten Menschen von Geburt an ein Platz zugewiesen.', p: 1 },
           { text: 'Heute kann man durch Fleiß, Bildung und Können aufsteigen (mit Beispiel).', p: 1 },
           { text: 'Beispiel Heirat: damals nur innerhalb eines Standes, heute darf man frei heiraten.', p: 1 },
           { text: 'Beispiel Abgaben: Damals waren Geistliche und Adlige befreit und lebten von der Arbeit der Bauern, heute zahlen alle nach denselben Gesetzen Steuern.', p: 1 },
           { text: 'Frauen, Kinder und Juden waren nicht erfasst, Standeslose ausgeschlossen. Heute darf niemand benachteiligt werden.', p: 1 },
           { text: 'Die Begründung „von Gott gegeben“ trägt nicht mehr: Nicht alle glauben an Gott, und Gesetze beschließen gewählte Abgeordnete.', p: 1 }
         ],
-        muster: 'Die Ständeordnung würde heute nicht mehr funktionieren, weil sie unseren heutigen Grundsätzen widerspricht. Heute haben alle Menschen die gleichen Rechte, egal aus welcher Familie sie kommen. In der Ständeordnung war dagegen jedem Menschen von Geburt an ein Platz zugewiesen. Heute kann man durch Fleiß, Bildung und Können aufsteigen, zum Beispiel kann das Kind eines Bäckers Ärztin werden. Auch das Heiraten ist heute frei, während früher eine Heirat nur innerhalb eines Standes möglich war. Dass Adlige und Geistliche keine Abgaben zahlen und von der Arbeit der Bauern leben, würde heute niemand hinnehmen, denn alle zahlen nach denselben Gesetzen Steuern. Außerdem wurden Frauen, Kinder und Juden in der Ordnung gar nicht erfasst, und Standeslose wie Henker oder Bettler hatten keinen Platz. Heute darf niemand benachteiligt werden. Schließlich trägt auch die Begründung nicht mehr: Die Ordnung galt als von Gott gegeben. Heute glauben nicht alle Menschen an Gott, und die Gesetze werden von gewählten Abgeordneten gemacht.'
+        muster: 'Die Ständeordnung würde heute nicht mehr funktionieren, weil sie unseren heutigen Grundsätzen widerspricht. Heute haben alle Menschen die gleichen Rechte, egal aus welcher Familie sie kommen. In der Ständeordnung war dagegen den meisten Menschen von Geburt an ein Platz zugewiesen. Heute kann man durch Fleiß, Bildung und Können aufsteigen, zum Beispiel kann das Kind eines Bäckers Ärztin werden. Auch das Heiraten ist heute frei, während früher eine Heirat nur innerhalb eines Standes möglich war. Dass Adlige und Geistliche keine Abgaben zahlen und von der Arbeit der Bauern leben, würde heute niemand hinnehmen, denn alle zahlen nach denselben Gesetzen Steuern. Außerdem wurden Frauen, Kinder und Juden in der Ordnung gar nicht erfasst, und Standeslose wie Henker oder Bettler hatten keinen Platz. Heute darf niemand benachteiligt werden. Schließlich trägt auch die Begründung nicht mehr: Die Ordnung galt als von Gott gegeben. Heute glauben nicht alle Menschen an Gott, und die Gesetze werden von gewählten Abgeordneten gemacht.'
       },
       {
         id: 'kirche-e4', operator: 'nennen',
@@ -379,6 +409,32 @@
           { text: 'Die Bauern waren abhängig, und weil man nur im eigenen Stand heiraten durfte, blieben die Stände über Generationen getrennt.', p: 1 }
         ],
         muster: 'Die Ständeordnung galt als von Gott gegeben. Wer sich gegen sie auflehnte, stellte sich also gegen Gott, und das wagten nur wenige. Außerdem hatten Geistliche und Adlige die Macht und große Vorteile, zum Beispiel waren sie von Abgaben befreit. Sie hatten kein Interesse daran, etwas zu ändern. Die Bauern waren dagegen von ihren Herren abhängig. Weil man nur innerhalb des eigenen Standes heiraten durfte, blieben die Stände über viele Generationen getrennt.'
+      },
+      {
+        id: 'kirche-e5', operator: 'beurteilenBewerten',
+        frage: 'Beurteile, ob die Ständeordnung aus Sicht der Menschen damals gerecht war, und bewerte sie aus heutiger Sicht (vgl. Buch S. 33, M3, M4 und A4b).',
+        quelle: 'kirche-priester',
+        material: M3(),
+        tipp: 'Trenne die beiden Teile sichtbar: Beginne mit „Aus Sicht der Menschen damals …“ und schreibe danach „Aus heutiger Sicht …“. Nenne im Werturteil deinen Maßstab.',
+        begriffe: [
+          { name: 'Stand', muster: ['stand', 'stände'] },
+          { name: 'von Gott gegeben', muster: ['gott'] },
+          { name: 'gegenseitige Dienste', muster: ['gegenseitig', 'dienst'] },
+          { name: 'Adam und Eva', muster: ['adam'] },
+          { name: 'Gleichheit', muster: ['gleich'] },
+          { name: 'Grundgesetz', muster: ['grundgesetz'] },
+          { name: 'damals / heute', muster: ['damals', 'heute'] }
+        ],
+        punkte: [
+          { text: 'Sachurteil mit M3: Die Ordnung galt als von Gott gegeben; jeder Stand hat im „Haus Gottes“ seine Aufgabe, die Stände dienen sich gegenseitig.', p: 1, art: 'sach' },
+          { text: 'Kritik mit M4: Der Priester fragt, warum die Herren besser sein sollen, wenn alle von Adam und Eva abstammen, und spricht von Knechtschaft.', p: 1, art: 'sach' },
+          { text: 'Begründetes Fazit aus Sicht der Zeit, z. B.: Den meisten erschien die Ordnung gerecht, weil sie als gottgewollt galt; für die Bauern war sie eine Last, und manche kritisierten sie schon damals.', p: 1, art: 'sach' },
+          { text: 'Ein heutiger Maßstab wird genannt, z. B. Gleichheit vor dem Gesetz (Artikel 3 Grundgesetz) oder Chancengleichheit.', p: 1, art: 'wert' },
+          { text: 'Eigene, begründete Meinung („Ich finde …, weil …“), die zum genannten Maßstab passt.', p: 1, art: 'wert' },
+          { text: 'Sachurteil (damals) und Werturteil (heute) sind erkennbar getrennt.', p: 1 }
+        ],
+        muster: '<p>Aus Sicht vieler Menschen damals war die Ständeordnung gerecht, denn sie galt als von Gott gegeben. Bischof Adalbero (M3) beschreibt die Gesellschaft als „Haus Gottes“, in dem jeder Stand eine Aufgabe hat: Die Geistlichen beten, die Adligen kämpfen und schützen, die Bauern arbeiten. Durch diese gegenseitigen Dienste brauchen alle einander. Es gab aber schon damals Kritik: Der Priester von 1381 (M4) fragt, warum die Herren besser sein sollen, wenn doch alle Menschen von Adam und Eva abstammen, und er spricht von Knechtschaft. Insgesamt erschien die Ordnung den meisten Menschen damals als gerecht, weil sie als gottgewollt galt. Für die Bauern war sie aber eine schwere Last, und manche hielten sie schon damals für ungerecht.</p>' +
+          '<p>Aus heutiger Sicht bewerte ich die Ständeordnung als ungerecht. Mein Maßstab ist die Gleichheit vor dem Gesetz, wie sie in Artikel 3 des Grundgesetzes steht: Niemand darf wegen seiner Herkunft benachteiligt oder bevorzugt werden. In der Ständeordnung entschied dagegen meist die Geburt über das ganze Leben. Wer als Bauernkind geboren wurde, musste Abgaben leisten und hatte kaum eine Chance aufzusteigen, während Adlige davon befreit waren. Ich finde, jeder Mensch sollte die gleichen Chancen haben, egal aus welcher Familie er kommt.</p>'
       }
     ],
 
@@ -415,9 +471,9 @@
           id: 'kirche-hw5', typ: 'matrix',
           frage: 'Was traf auf welchen Stand zu? Kreuze an.',
           zeilenKopf: 'Merkmal', spaltenKopf: 'Stand',
-          zeilen: ['von Abgaben befreit', 'durften keinen Kriegsdienst leisten', 'zahlenmäßig größter Stand'],
+          zeilen: ['von Abgaben befreit', 'lebten von den Abgaben und Diensten der Bauern', 'zahlenmäßig größter Stand'],
           spalten: ['Geistliche', 'Adlige', 'Bauern'],
-          richtig: [[true, true, false], [true, false, false], [false, false, true]]
+          richtig: [[true, true, false], [true, true, false], [false, false, true]]
         },
         {
           id: 'kirche-hw6', typ: 'wahl',
@@ -543,13 +599,13 @@
             { text: 'Erster Stand: die Geistlichen (Klerus), ihre Aufgabe ist das Beten.', p: 1 },
             { text: 'Zweiter Stand: die Adligen, sie kämpfen und schützen.', p: 1 },
             { text: 'Dritter Stand: alle anderen wie Bauern, Handwerker und später Bürger; sie arbeiten. Die Bauern sind der größte Stand.', p: 1 },
-            { text: 'Geistliche und Adlige waren von Abgaben befreit und durften keine körperliche Arbeit verrichten.', p: 1 },
-            { text: 'Geistliche durften keinen Kriegsdienst leisten; Adlige und Geistliche lebten von den Abgaben und Diensten der Bauern.', p: 1 },
-            { text: 'Der Platz war von Geburt an zugewiesen, eine Heirat nur innerhalb eines Standes möglich.', p: 1 },
+            { text: 'Geistliche und Adlige waren von Abgaben befreit und durften keine körperliche Arbeit verrichten (vor allem Adlige, Bischöfe und Priester; Mönche arbeiteten auch mit den Händen). Geistliche durften keinen Kriegsdienst leisten.', p: 1 },
+            { text: 'Zusammenhang erläutert: Weil Adel und Geistliche nicht körperlich arbeiteten und keine Abgaben zahlten, trug der dritte Stand die Last. Sie lebten von den Abgaben und Diensten der Bauern.', p: 1 },
+            { text: 'Der Platz war meist von Geburt an zugewiesen (Ausnahme: Geistliche traten in ihren Stand ein), eine Heirat nur innerhalb eines Standes möglich.', p: 1 },
             { text: 'Standeslose: „unehrenhafte“ Berufe wie Henker und Totengräber, dazu Schausteller und Bettler.', p: 1 },
             { text: 'Nicht erfasst wurden Frauen, Kinder und Juden.', p: 1 }
           ],
-          muster: 'Ab dem 11. Jahrhundert wurde die Gesellschaft nach der Lehre von den drei Ständen eingeteilt. Zum ersten Stand gehörten die Geistlichen, also der Klerus. Ihre Aufgabe war das Beten. Den zweiten Stand bildeten die Adligen, die kämpfen und die anderen beschützen sollten. Zum dritten Stand gehörten alle anderen, vor allem die Bauern, aber auch Handwerker und später die Bürger in den Städten. Sie mussten arbeiten. Die Rechte waren sehr ungleich verteilt: Geistliche und Adlige waren von Abgaben befreit und durften keine körperliche Arbeit verrichten. Geistliche durften außerdem keinen Kriegsdienst leisten. Beide lebten von den Abgaben und Diensten der Bauern, die der zahlenmäßig weitaus größte Stand waren. Zu welchem Stand man gehörte, war von Geburt an festgelegt, und eine Heirat war nur innerhalb des eigenen Standes möglich. Manche Menschen standen ganz außerhalb: „Unehrenhafte“ Berufe wie Henker und Totengräber sowie Schausteller und Bettler waren Standeslose. Frauen, Kinder und Juden wurden in der Ordnung gar nicht erfasst.'
+          muster: 'Ab dem 11. Jahrhundert wurde die Gesellschaft nach der Lehre von den drei Ständen eingeteilt. Zum ersten Stand gehörten die Geistlichen, also der Klerus. Ihre Aufgabe war das Beten. Den zweiten Stand bildeten die Adligen, die kämpfen und die anderen beschützen sollten. Zum dritten Stand gehörten alle anderen, vor allem die Bauern, aber auch Handwerker und später die Bürger in den Städten. Sie mussten arbeiten. Die Rechte waren sehr ungleich verteilt: Geistliche und Adlige waren von Abgaben befreit und durften keine körperliche Arbeit verrichten. Das galt vor allem für Adlige, Bischöfe und Priester, denn Mönche arbeiteten auch mit den Händen. Geistliche durften außerdem keinen Kriegsdienst leisten. Weil Adel und Geistliche nicht körperlich arbeiteten und keine Abgaben zahlten, trug der dritte Stand die Last: Beide lebten von den Abgaben und Diensten der Bauern, die der zahlenmäßig weitaus größte Stand waren. Zu welchem Stand man gehörte, war meist von Geburt an festgelegt. Eine Ausnahme waren die Geistlichen: Geistlicher wurde man, indem man in diesen Stand eintrat. Eine Heirat war nur innerhalb des eigenen Standes möglich. Manche Menschen standen ganz außerhalb: „Unehrenhafte“ Berufe wie Henker und Totengräber sowie Schausteller und Bettler waren Standeslose. Frauen, Kinder und Juden wurden in der Ordnung gar nicht erfasst.'
         },
         {
           id: 'kirche-hs2', operator: 'beurteilen',
@@ -568,13 +624,13 @@
             { text: 'Nennt ein Kriterium für das Urteil, z. B. ob die Ordnung den Menschen damals als richtig und nützlich erschien.', p: 1 },
             { text: 'Aus Sicht der Kirche und vieler Menschen war sie gerecht, weil sie als von Gott gegeben galt.', p: 1 },
             { text: 'Adalbero (M3): Jeder Stand hat im „Haus Gottes“ seine Aufgabe, die Stände dienen sich gegenseitig.', p: 1 },
-            { text: 'Jeder kannte seinen Platz; die gegenseitigen Dienste sollten allen Zuversicht geben (M3).', p: 1 },
+            { text: 'Gegenleistung aus Sicht der Zeit: Die Bauern arbeiteten, dafür schützten die Adligen sie und die Geistlichen beteten für alle.', p: 1 },
             { text: 'Andererseits trugen die Bauern mit Abgaben und Diensten die Last, Geistliche und Adlige waren davon befreit.', p: 1 },
             { text: 'Ein Aufstieg war kaum möglich, eine Heirat nur innerhalb des Standes.', p: 1 },
             { text: 'Schon damals gab es Kritik: Der Priester (M4) fragt, warum die Herren besser sein sollen, wenn alle von Adam und Eva abstammen.', p: 1 },
             { text: 'Begründetes Fazit aus Sicht der Zeit, ohne eigene heutige Meinung.', p: 1 }
           ],
-          muster: 'Ob die Ständeordnung damals als gerecht galt, hängt davon ab, aus wessen Sicht man urteilt. Ein wichtiges Kriterium ist, ob die Menschen damals die Ordnung für richtig und nützlich halten konnten. Aus Sicht der Kirche und vieler Menschen war sie gerecht, denn sie galt als von Gott gegeben. Bischof Adalbero beschreibt sie als „Haus Gottes“, in dem jeder Stand eine Aufgabe hat: Die Geistlichen beten, die Adligen kämpfen, die Bauern arbeiten. So dienten sich die Stände gegenseitig, und jeder kannte seinen Platz. Andererseits trugen die Bauern die größte Last. Sie mussten Abgaben und Dienste leisten, während Adlige und Geistliche davon befreit waren. Aufsteigen konnten sie kaum, und heiraten durften sie nur im eigenen Stand. Dass nicht alle die Ordnung gerecht fanden, zeigt der Aufruf des Priesters von 1381: Wenn alle von Adam und Eva abstammen, warum sollen die Herren dann besser sein? Insgesamt galt die Ständeordnung den meisten Menschen damals als gottgewollt und deshalb als gerecht. Für die Bauern war sie aber eine schwere Last, und schon damals gab es Stimmen, die sie als ungerecht kritisierten.'
+          muster: 'Ob die Ständeordnung damals als gerecht galt, hängt davon ab, aus wessen Sicht man urteilt. Ein wichtiges Kriterium ist, ob die Menschen damals die Ordnung für richtig und nützlich halten konnten. Aus Sicht der Kirche und vieler Menschen war sie gerecht, denn sie galt als von Gott gegeben. Bischof Adalbero beschreibt sie als „Haus Gottes“, in dem jeder Stand eine Aufgabe hat: Die Geistlichen beten, die Adligen kämpfen, die Bauern arbeiten. So dienten sich die Stände gegenseitig: Die Bauern arbeiteten, dafür schützten die Adligen sie, und die Geistlichen beteten für alle. Andererseits trugen die Bauern die größte Last. Sie mussten Abgaben und Dienste leisten, während Adlige und Geistliche davon befreit waren. Aufsteigen konnten sie kaum, und heiraten durften sie nur im eigenen Stand. Dass nicht alle die Ordnung gerecht fanden, zeigt der Aufruf des Priesters von 1381: Wenn alle von Adam und Eva abstammen, warum sollen die Herren dann besser sein? Insgesamt galt die Ständeordnung den meisten Menschen damals als gottgewollt und deshalb als gerecht. Für die Bauern war sie aber eine schwere Last, und schon damals gab es Stimmen, die sie als ungerecht kritisierten.'
         }
       ]
     },

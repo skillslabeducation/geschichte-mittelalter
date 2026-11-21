@@ -103,9 +103,9 @@
     /* Kittel */
     s += poly((cx - 14) + ',112 ' + (cx + 14) + ',112 ' + (cx + 19) + ',170 ' + (cx - 19) + ',170', C.freie);
     s += '<line x1="' + (cx - 16) + '" y1="146" x2="' + (cx + 16) + '" y2="146" stroke="' + F.holz + '" stroke-width="2"/>';
-    /* Hacke: Stiel und Blatt */
-    s += '<line x1="' + (cx - 8) + '" y1="124" x2="' + (cx + 32) + '" y2="192" stroke="' + F.holz + '" stroke-width="4" stroke-linecap="round"/>';
-    s += poly((cx + 24) + ',190 ' + (cx + 42) + ',186 ' + (cx + 44) + ',200 ' + (cx + 30) + ',202', '#8a8f96');
+    /* Hacke: Stiel und Blatt (Blatt quer zum Stiel, zum Boden hin) */
+    s += '<line x1="' + (cx - 8) + '" y1="124" x2="' + (cx + 30) + '" y2="186" stroke="' + F.holz + '" stroke-width="4" stroke-linecap="round"/>';
+    s += poly((cx + 27) + ',182 ' + (cx + 33) + ',189 ' + (cx + 19) + ',200 ' + (cx + 12) + ',191', '#8a8f96');
     /* Arme */
     s += '<line x1="' + (cx - 12) + '" y1="116" x2="' + (cx + 2) + '" y2="140" stroke="#86a86c" stroke-width="6" stroke-linecap="round"/>';
     s += '<line x1="' + (cx + 12) + '" y1="116" x2="' + (cx + 12) + '" y2="156" stroke="#86a86c" stroke-width="6" stroke-linecap="round"/>';
